@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Study House — Learn English & Coding</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button id="langToggle" class="lang-toggle" type="button" aria-label="Switch language">
+  <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 3c2.2 2.4 3.4 5.4 3.4 9s-1.2 6.6-3.4 9c-2.2-2.4-3.4-5.4-3.4-9S9.8 5.4 12 3z" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
+  <span class="lang-toggle-label">عربي</span>
+</button>
+
+<div id="siteView">
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#" class="brand">
+      <img src="logo.png" alt="Study House logo" class="brand-logo">
+      <div class="brand-text">
+        <span class="brand-name">Study <span class="accent">House</span></span>
+        <span class="brand-tagline" data-i18n="brand-tagline">Learn English & Coding</span>
+      </div>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#home" class="active" data-i18n="nav-home">Home</a>
+      <a href="#courses" data-i18n="nav-courses">Courses</a>
+      <a href="#practice" data-i18n="nav-practice">Practice</a>
+      <a href="#community" data-i18n="nav-community">Community</a>
+      <a href="#about" data-i18n="nav-about">About Us</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24" width="20" height="20"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <a href="#login" class="btn btn-primary btn-sm" data-i18n="btn-login" id="loginTrigger">Login</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" id="home">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <h1 class="hero-title">Study <span class="accent">House</span></h1>
+        <p class="hero-subtitle" data-i18n="hero-subtitle">Learn English &amp; Coding, Build Your Future.</p>
+        <p class="hero-desc" data-i18n="hero-desc">Improve your English and programming skills with interactive lessons, hands-on practice, and a supportive community made for everyone.</p>
+        <div class="hero-actions">
+          <a href="#courses" class="btn btn-primary"><span data-i18n="btn-start">Start Learning</span>
+            <svg viewBox="0 0 24 24" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#courses" class="btn btn-outline" data-i18n="btn-explore">Explore Courses</a>
+        </div>
+        <div class="hero-trust">
+          <div class="avatars">
+            <span class="avatar" style="--c:#e8a33d"></span>
+            <span class="avatar" style="--c:#d9694f"></span>
+            <span class="avatar" style="--c:#5c8a6b"></span>
+            <span class="avatar" style="--c:#4c6fa8"></span>
+          </div>
+          <span class="trust-text"><span data-i18n="trust-text">Trusted by thousands of learners</span> <strong>+10K</strong></span>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="scene">
+          <div class="swirl swirl-a"></div>
+          <div class="swirl swirl-b"></div>
+          <div class="orbit-dot orbit-dot-a"></div>
+          <div class="orbit-dot orbit-dot-b"></div>
+
+          <span class="code-chip chip-1">&lt;/&gt;</span>
+          <span class="code-chip chip-2">{ }</span>
+          <span class="code-chip chip-3">01</span>
+          <span class="code-chip chip-4">ABC</span>
+
+          <div class="laptop">
+            <div class="laptop-screen">
+              <span class="camera-dot"></span>
+              <div class="screen-logo">
+                <span class="screen-house">⌂</span>
+                <p>Study <span class="accent">House</span></p>
+                <small data-i18n="screen-tagline">English &amp; code your way to the future.</small>
+                <span class="play-btn">▶</span>
+              </div>
+              <div class="screen-glow"></div>
+            </div>
+            <div class="laptop-base">
+              <div class="keyboard-keys"></div>
+              <div class="trackpad"></div>
+            </div>
+          </div>
+
+          <div class="book-stack">
+            <div class="pencil-cup">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="book book-code"><span data-i18n="book-code">CODE</span><i class="book-spine"></i></div>
+            <div class="book book-english"><span data-i18n="book-english">ENGLISH</span><i class="book-spine"></i></div>
+            <div class="book book-line"><span data-i18n="book-grammar">Grammar</span></div>
+            <div class="book book-line"><span data-i18n="book-vocab">Vocabulary</span></div>
+            <div class="book book-line"><span data-i18n="book-speaking">Speaking</span></div>
+            <div class="book book-line"><span data-i18n="book-logic">Logic</span></div>
+          </div>
+
+          <div class="notebook">
+            <div class="notebook-lines"></div>
+            <div class="notebook-stitch"></div>
+            <div class="pen">
+              <span class="pen-tip"></span>
+              <span class="pen-clip"></span>
+            </div>
+            <div class="ink-trail"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wave-divider" aria-hidden="true"></div>
+  </section>
+
+  <section class="courses" id="courses">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow"><span data-i18n="courses-eyebrow">What You Can Learn</span> <i></i></span>
+        <h2 data-i18n="courses-title">One platform, five paths to mastery.</h2>
+        <p data-i18n="courses-desc">Pick a track and start building real, practical skills at your own pace.</p>
+      </div>
+      <div class="courses-grid">
+        <article class="course-card">
+          <div class="course-icon icon-en">
+            <svg viewBox="0 0 48 48" width="28" height="28"><text x="24" y="33" text-anchor="middle" font-size="27" font-weight="700" fill="currentColor" font-family="Georgia, 'Times New Roman', serif">A</text></svg>
+          </div>
+          <h3 data-i18n="course-en-title">English Language</h3>
+          <p data-i18n="course-en-desc">Grammar, vocabulary &amp; fluent speaking</p>
+        </article>
+
+        <article class="course-card">
+          <div class="course-icon icon-ar">
+            <svg viewBox="0 0 48 48" width="28" height="28"><text x="24" y="33" text-anchor="middle" font-size="25" font-weight="700" fill="currentColor" font-family="'Traditional Arabic', Tahoma, sans-serif">ع</text></svg>
+          </div>
+          <h3 data-i18n="course-ar-title">Arabic Language</h3>
+          <p data-i18n="course-ar-desc">Reading, grammar &amp; conversation</p>
+        </article>
+
+        <article class="course-card">
+          <div class="course-icon icon-code">
+            <svg viewBox="0 0 48 48" width="26" height="26"><text x="24" y="31" text-anchor="middle" font-size="18" font-weight="700" fill="currentColor" font-family="'Courier New', monospace">&lt;/&gt;</text></svg>
+          </div>
+          <h3 data-i18n="course-code-title">Programming</h3>
+          <p data-i18n="course-code-desc">Logic, web development &amp; real projects</p>
+        </article>
+
+        <article class="course-card">
+          <div class="course-icon icon-calligraphy">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path d="M4 20l11-11 4 4L8 24z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M15 9l4-4 3 3-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M4 20l3-1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3 data-i18n="course-calligraphy-title">Arabic Calligraphy</h3>
+          <p data-i18n="course-calligraphy-desc">Master the art of beautiful script</p>
+        </article>
+
+        <article class="course-card">
+          <div class="course-icon icon-quran">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 5c-2-1.5-5-2-8-1v14c3-1 6-.5 8 1 2-1.5 5-2 8-1V4c-3-1-6-.5-8 1z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 5v14" stroke="currentColor" stroke-width="1.6"/><path d="M17 3.5a2.2 2.2 0 1 0 2.3 2.6 2.6 2.6 0 0 1-2.3-2.6z" fill="currentColor"/></svg>
+          </div>
+          <h3 data-i18n="course-quran-title">Quran</h3>
+          <p data-i18n="course-quran-desc">Tajweed, recitation &amp; memorization</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="practice">
+    <div class="container features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 3 1 8l11 5 9-4.1V17h2V8L12 3z" fill="currentColor"/><path d="M5 10.5V15c0 1.5 3 3 7 3s7-1.5 7-3v-4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        </div>
+        <h3 data-i18n="feature1-title">Quality Courses</h3>
+        <p data-i18n="feature1-desc">Structured lessons in English and coding for every level</p>
+        <span class="card-underline"></span>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" width="26" height="26"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/></svg>
+        </div>
+        <h3 data-i18n="feature2-title">Practice &amp; Tests</h3>
+        <p data-i18n="feature2-desc">Sharpen your skills with exercises, quizzes and coding challenges</p>
+        <span class="card-underline"></span>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" width="26" height="26"><circle cx="8" cy="9" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="9" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M2 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M14 20c0-2.7 1.9-4.6 4.5-4.6S22 17.3 22 20" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        </div>
+        <h3 data-i18n="feature3-title">Live Sessions</h3>
+        <p data-i18n="feature3-desc">Join live classes and interactive discussions</p>
+        <span class="card-underline"></span>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path d="M7 4h10v4a5 5 0 0 1-10 0V4z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7 5H4v2a3 3 0 0 0 3 3M17 5h3v2a3 3 0 0 1-3 3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 13v4M9 20h6M10 17h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h3 data-i18n="feature4-title">Track Progress</h3>
+        <p data-i18n="feature4-desc">Track your progress step by step</p>
+        <span class="card-underline"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats" id="community">
+    <div class="container stats-bar">
+      <div class="stat">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24"><circle cx="8" cy="9" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="16" cy="9" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M2 19c0-3 2.6-5 6-5s6 2 6 5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M14 19c0-2.5 1.8-4.2 4-4.2s4 1.7 4 4.2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        </div>
+        <span class="stat-num" data-target="25" data-suffix="K+">0</span>
+        <span class="stat-label" data-i18n="stat1-label">Active Learners</span>
+      </div>
+      <div class="stat">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H12v16H5.5A1.5 1.5 0 0 1 4 18.5v-13z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M20 5.5c0-.8-.7-1.5-1.5-1.5H12v16h6.5a1.5 1.5 0 0 0 1.5-1.5v-13z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        </div>
+        <span class="stat-num" data-target="300" data-suffix="+">0</span>
+        <span class="stat-label" data-i18n="stat2-label">Courses</span>
+      </div>
+      <div class="stat">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24"><path d="m12 2 2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8-4.2-4.1 5.9-.9L12 2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <span class="stat-num" data-target="98" data-suffix="%">0</span>
+        <span class="stat-label" data-i18n="stat3-label">Success Rate</span>
+      </div>
+      <div class="stat">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        </div>
+        <span class="stat-num" data-target="50" data-suffix="+">0</span>
+        <span class="stat-label" data-i18n="stat4-label">Countries</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="about">
+    <div class="container cta-inner">
+      <div class="cta-content">
+        <span class="eyebrow"><span data-i18n="cta-eyebrow">Start Your Journey Today</span> <i></i></span>
+        <h2 data-i18n="cta-title">Every day is a new step towards fluency &amp; code mastery.</h2>
+        <p data-i18n="cta-desc">With Study House, learning English and coding becomes easier, structured and more enjoyable.</p>
+        <a href="#courses" class="btn btn-primary"><span data-i18n="btn-join">Join Now</span>
+          <svg viewBox="0 0 24 24" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <div class="cta-visual" aria-hidden="true">
+        <div class="cta-blob"></div>
+        <div class="cta-dots"></div>
+        <span class="cta-sparkle spark-1">✦</span>
+        <span class="cta-sparkle spark-2">✦</span>
+        <span class="cta-sparkle spark-3">✦</span>
+
+        <div class="headphones-float">
+          <div class="headphones">
+            <div class="headband"></div>
+            <div class="ear ear-l"><i></i></div>
+            <div class="ear ear-r"><i></i></div>
+          </div>
+          <div class="note note-1">♪</div>
+          <div class="note note-2">♫</div>
+        </div>
+
+        <div class="cta-books">
+          <div class="cta-book cta-book-1"><span>Study House</span><i class="book-spine"></i></div>
+          <div class="cta-book cta-book-2"></div>
+          <div class="cta-book cta-book-3"></div>
+        </div>
+
+        <div class="plant">
+          <div class="pot"><i class="pot-rim"></i></div>
+          <div class="leaf leaf-1"></div>
+          <div class="leaf leaf-2"></div>
+          <div class="leaf leaf-3"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a href="#" class="brand">
+      <img src="logo.png" alt="Study House logo" class="brand-logo">
+      <div class="brand-text">
+        <span class="brand-name">Study <span class="accent">House</span></span>
+        <span class="brand-tagline" data-i18n="brand-tagline">Learn English &amp; Coding</span>
+      </div>
+    </a>
+    <nav class="footer-links">
+      <a href="#home" data-i18n="nav-home">Home</a>
+      <a href="#courses" data-i18n="nav-courses">Courses</a>
+      <a href="#practice" data-i18n="nav-practice">Practice</a>
+      <a href="#community" data-i18n="nav-community">Community</a>
+      <a href="#about" data-i18n="nav-about">About Us</a>
+    </nav>
+    <p class="footer-copy" data-i18n="footer-copy">© 2026 Ahmed Afify.@AF@.</p>
+  </div>
+</footer>
+
+</div><!-- /siteView -->
+
+<!-- Login overlay + toast: عمدًا خارج siteView عشان يفضلوا ثابتين في نص الشاشة حتى لو الصفحة بتعمل سكرول -->
+<div class="login-overlay" id="loginOverlay">
+  <div class="login-panel">
+    <div class="login-brand">
+      <img src="logo.png" alt="Study House logo" class="login-logo">
+      <h2>Study <span class="accent">House</span></h2>
+    </div>
+    <div class="login-form-side">
+      <button class="login-close" id="loginClose" aria-label="إغلاق">&times;</button>
+      <h3>تسجيل الدخول</h3>
+      <p class="login-sub">أهلاً بعودتك، سجّل دخولك للمتابعة</p>
+      <form id="loginForm" class="login-form">
+        <label>
+          اسم المستخدم
+          <input type="text" id="loginUsername" autocomplete="username" required>
+        </label>
+        <label>
+          كلمة المرور
+          <input type="password" id="loginPassword" autocomplete="current-password" required>
+        </label>
+        <p class="login-error" id="loginError"></p>
+        <button type="submit" class="btn btn-primary login-submit">
+          <span id="loginBtnText">دخول</span>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="login-toast" id="loginToast">
+  <span class="login-toast-icon">✓</span>
+  <div>
+    <strong>تم تسجيل الدخول</strong>
+    <p>أهلاً بك</p>
+  </div>
+</div>
+
+<!-- App View: تظهر بعد تسجيل الدخول بدل الموقع بالكامل -->
+<div class="app-view" id="appView">
+  <button class="app-menu-toggle" id="appMenuToggle" type="button" aria-label="Menu">
+    <svg viewBox="0 0 24 24" width="22" height="22"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+  <aside class="app-sidebar">
+    <div class="app-sidebar-profile">
+      <div class="app-avatar">
+        <svg viewBox="0 0 24 24" width="30" height="30"><circle cx="12" cy="8" r="4" fill="currentColor"/><path d="M4 20c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5" fill="currentColor"/></svg>
+      </div>
+      <div class="app-user-info">
+        <span class="app-username" id="appUsername">—</span>
+        <span class="app-role" data-i18n="sidebar-role">عضو مسجل</span>
+      </div>
+    </div>
+
+    <nav class="app-nav">
+      <a href="#" class="app-link active" id="appHomeLink">
+        <svg viewBox="0 0 24 24" width="19" height="19"><path d="M4 11l8-7 8 7M6 10v9h12v-9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        <span data-i18n="nav-home">الرئيسية</span>
+      </a>
+      <a href="#" class="app-link" id="appCoursesLink">
+        <svg viewBox="0 0 24 24" width="19" height="19"><path d="M4 6h16M4 12h16M4 18h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span data-i18n="nav-courses">الكورسات</span>
+      </a>
+      <a href="#" class="app-link" id="appCommunityLink">
+        <svg viewBox="0 0 24 24" width="19" height="19"><path d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM16.5 10.4a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M2 19.5c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5M14.2 19.5c0-2.6 1.9-4.5 4.4-4.5s4.4 1.9 4.4 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        <span data-i18n="nav-community">المجتمع</span>
+      </a>
+      <a href="#" class="app-link" id="appExamLink">
+        <svg viewBox="0 0 24 24" width="19" height="19"><path d="M9 12l2 2 4-4M4 6h16v14H4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        <span data-i18n="nav-exams">الاختبارات</span>
+      </a>
+
+      <a href="#" class="app-link" id="appSessionLink">
+        <svg viewBox="0 0 24 24" width="19" height="19"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 8l6 4-6 4V8z" fill="currentColor"/></svg>
+        <span data-i18n="nav-session">جلسة مباشرة</span>
+      </a>
+            <a href="#" class="app-link" id="appPronunciationLink">
+        <svg viewBox="0 0 24 24" width="19" height="19"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 8l6 4-6 4V8z" fill="currentColor"/></svg>
+        <span data-i18n="nav-pronunciation">Pronunciation</span>
+      </a>
+    </nav>
+
+    
+
+    <div class="app-sidebar-bottom">
+      <a href="#" class="app-link" id="appSettingsLink">
+        <svg viewBox="0 0 24 24" width="19" height="19"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M19 12a7 7 0 0 0-.1-1.2l2-1.6-2-3.4-2.4 1a7 7 0 0 0-2-1.2L14 3h-4l-.5 2.6a7 7 0 0 0-2 1.2l-2.4-1-2 3.4 2 1.6A7 7 0 0 0 5 12c0 .4 0 .8.1 1.2l-2 1.6 2 3.4 2.4-1a7 7 0 0 0 2 1.2L10 21h4l.5-2.6a7 7 0 0 0 2-1.2l2.4 1 2-3.4-2-1.6c.1-.4.1-.8.1-1.2z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+        <span data-i18n="sidebar-settings">الإعدادات</span>
+      </a>
+      <button class="app-link app-logout" id="appLogout" type="button">
+        <svg viewBox="0 0 24 24" width="19" height="19"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M16 17l5-5-5-5M21 12H9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span data-i18n="sidebar-logout">تسجيل الخروج</span>
+      </button>
+    </div>
+  </aside>
+
+  <section class="app-content">
+  <div class="app-content-inner" id="appHomeContent">
+
+  <!-- ===== الهيدر الشخصي ===== -->
+  <div class="home-profile-header">
+    <div class="home-brand">
+      <img src="logo.png" alt="Study House" class="home-brand-logo">
+      <div class="home-brand-text">
+        <span class="home-brand-name">Study <span class="accent">House</span></span>
+        <span class="home-brand-tagline" data-i18n="brand-tagline">Learn English & Coding</span>
+      </div>
+    </div>
+    <div class="home-user-info">
+      <span class="home-user-name" id="homeUserName">—</span>
+      <div class="home-user-avatar">
+        <svg viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="8" r="4" fill="currentColor"/><path d="M4 20c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5" fill="currentColor"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== الإحصائيات السريعة ===== -->
+  <div class="home-stats-grid" id="homeStatsGrid">
+    <div class="home-stat-card">
+      <span class="home-stat-number" id="statCourses">0</span>
+      <span class="home-stat-label" data-i18n="stat2-label">Courses</span>
+    </div>
+    <div class="home-stat-card">
+      <span class="home-stat-number" id="statVideos">0</span>
+      <span class="home-stat-label" data-i18n="hub-videos">Videos</span>
+    </div>
+    <div class="home-stat-card">
+      <span class="home-stat-number" id="statFiles">0</span>
+      <span class="home-stat-label" data-i18n="hub-files">References</span>
+    </div>
+    <div class="home-stat-card">
+      <span class="home-stat-number" id="statProgress">0%</span>
+      <span class="home-stat-label" data-i18n="feature4-title">Progress</span>
+    </div>
+  </div>
+
+  <!-- ===== قسم الكورسات (يظهر مباشرة) ===== -->
+  <div class="home-section-title">
+    <h2 data-i18n="nav-courses">📚 My Courses</h2>
+    <span class="home-section-badge" id="coursesCountBadge">0</span>
+  </div>
+  <div class="home-courses-grid" id="homeCoursesGrid">
+    <!-- سيتم إنشاء البطاقات بواسطة JavaScript -->
+  </div>
+
+  <!-- ===== قسم الوصول السريع (أقسام أخرى) ===== -->
+  <div class="home-section-title" style="margin-top: 40px;">
+    <h2>🚀 <span data-i18n="quick-access">Quick Access</span></h2>
+  </div>
+  <div class="home-quick-grid" id="homeQuickGrid">
+    <!-- مجتمع -->
+    <div class="home-quick-card" data-section="community">
+      <div class="home-quick-icon icon-community">👥</div>
+      <h3 data-i18n="nav-community">Community</h3>
+      <p data-i18n="community-choose-desc">تواصل مع زملائك</p>
+    </div>
+    <!-- اختبارات -->
+    <div class="home-quick-card" data-section="exam">
+      <div class="home-quick-icon icon-exam">📝</div>
+      <h3 data-i18n="nav-exams">Exams</h3>
+      <p>اختبر مستواك</p>
+    </div>
+    <!-- جلسة مباشرة -->
+    <div class="home-quick-card" data-section="session">
+      <div class="home-quick-icon icon-session">🎥</div>
+      <h3 data-i18n="nav-session">Live Session</h3>
+      <p>انضم للحصة</p>
+    </div>
+    <!-- النطق -->
+    <div class="home-quick-card" data-section="pronunciation">
+      <div class="home-quick-icon icon-pronunciation">🔊</div>
+      <h3 data-i18n="nav-pronunciation">Pronunciation</h3>
+      <p>تدرب على النطق</p>
+    </div>
+    <!-- الإعدادات -->
+    <div class="home-quick-card" data-section="settings">
+      <div class="home-quick-icon icon-settings">⚙️</div>
+      <h3 data-i18n="sidebar-settings">Settings</h3>
+      <p>إدارة حسابك</p>
+    </div>
+    <!-- الذكاء الاصطناعي -->
+    <div class="home-quick-card" id="homeAICard">
+      <div class="home-quick-icon icon-ai">❤️</div>
+      <h3>ACADEMY AI</h3>
+      <p>اسأل المساعد الذكي</p>
+    </div>
+  </div>
+
+</div>
+  <!-- شبكة اختيار الكورس -->
+  <div class="app-content-inner courses-list-content" id="appCoursesContent" style="display:none;">
+    <div class="app-courses-head">
+      <h2 data-i18n="app-courses-title">اختر الكورس</h2>
+      <p data-i18n="app-courses-desc">اضغط على أي كورس لعرض تفاصيله</p>
+    </div>
+    <div class="app-courses-grid">
+      <button type="button" class="app-course-card" data-course="english">
+        <span class="app-course-icon icon-en">
+          <svg viewBox="0 0 48 48" width="30" height="30"><text x="24" y="33" text-anchor="middle" font-size="27" font-weight="700" fill="currentColor" font-family="Georgia, 'Times New Roman', serif">A</text></svg>
+        </span>
+        <span class="app-course-name" data-i18n="course-en-title">English Language</span>
+      </button>
+
+      <button type="button" class="app-course-card" data-course="programming">
+        <span class="app-course-icon icon-code">
+          <svg viewBox="0 0 48 48" width="28" height="28"><text x="24" y="31" text-anchor="middle" font-size="18" font-weight="700" fill="currentColor" font-family="'Courier New', monospace">&lt;/&gt;</text></svg>
+        </span>
+        <span class="app-course-name" data-i18n="course-code-title">Programming</span>
+      </button>
+
+      <button type="button" class="app-course-card" data-course="arabic">
+        <span class="app-course-icon icon-ar">
+          <svg viewBox="0 0 48 48" width="30" height="30"><text x="24" y="33" text-anchor="middle" font-size="25" font-weight="700" fill="currentColor" font-family="'Traditional Arabic', Tahoma, sans-serif">ع</text></svg>
+        </span>
+        <span class="app-course-name" data-i18n="course-ar-title">Arabic Language</span>
+      </button>
+
+      <button type="button" class="app-course-card" data-course="other">
+        <span class="app-course-icon icon-other">
+          <svg viewBox="0 0 24 24" width="26" height="26"><rect x="3" y="3" width="8" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="3" width="8" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="13" width="8" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="13" width="8" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        </span>
+        <span class="app-course-name" data-i18n="course-other-title">Other Materials</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- تفاصيل الكورس -->
+  <div class="app-content-inner app-course-detail" id="appCourseDetailContent" style="display:none;">
+    <div class="app-course-detail-header">
+      <button class="app-course-back" id="appCourseBack" type="button">
+        <svg viewBox="0 0 24 24" width="16" height="16"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span data-i18n="app-course-back">رجوع</span>
+      </button>
+      <div class="app-course-brand">
+        <span class="brand-study">Study</span> <span class="brand-house-black">House</span>
+      </div>
+    </div>
+
+    <div class="app-course-body app-course-body-hub" data-course-body="english" data-course-key="english">
+      <div class="app-course-icon-lg icon-en">
+        <svg viewBox="0 0 48 48" width="38" height="38"><text x="24" y="33" text-anchor="middle" font-size="27" font-weight="700" fill="currentColor" font-family="Georgia, 'Times New Roman', serif">A</text></svg>
+      </div>
+      <h3 data-i18n="course-en-title">English Language</h3>
+      <p data-i18n="course-en-desc">Grammar, vocabulary &amp; fluent speaking</p>
+
+      <div class="course-hub-icons" data-hub-icons>
+        <button type="button" class="course-hub-btn" data-hub-action="video">
+          <span class="course-hub-icon-circle icon-hub-video">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path d="M4 6.5A1.5 1.5 0 0 1 5.5 5h9A1.5 1.5 0 0 1 16 6.5v11A1.5 1.5 0 0 1 14.5 19h-9A1.5 1.5 0 0 1 4 17.5v-11z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m16 10 4-2.5v9L16 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </span>
+          <span data-i18n="hub-videos">الفيديوهات</span>
+        </button>
+
+        <button type="button" class="course-hub-btn" data-hub-action="files">
+          <span class="course-hub-icon-circle icon-hub-files">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path d="M6 3.5h8l4 4V19a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 19V5a1.5 1.5 0 0 1 1.5-1.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 3.5V8h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </span>
+          <span data-i18n="hub-files">المراجع</span>
+        </button>
+      </div>
+
+      <div class="course-hub-list" data-hub-list style="display:none;">
+        <div class="course-hub-list-head">
+          <button type="button" class="app-course-back" data-hub-back-to-hub>
+            <svg viewBox="0 0 24 24" width="16" height="16"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-i18n="app-course-back">رجوع</span>
+          </button>
+          <h4 data-hub-list-title>—</h4>
+          <span class="course-hub-count" data-hub-list-count>0</span>
+        </div>
+        <ul class="course-hub-items" data-hub-items></ul>
+      </div>
+
+      <div class="course-hub-player" data-hub-player style="display:none;">
+        <button type="button" class="app-course-back" data-hub-back-to-list>
+          <svg viewBox="0 0 24 24" width="16" height="16"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span data-i18n="app-course-back">رجوع</span>
+        </button>
+        <div class="course-hub-player-frame" data-hub-player-frame></div>
+        <p class="course-hub-player-meta" data-hub-player-meta></p>
+      </div>
+    </div>
+
+    <div class="app-course-body app-course-body-hub" data-course-body="programming" data-course-key="programming" style="display:none;">
+      <div class="app-course-icon-lg icon-code">
+        <svg viewBox="0 0 48 48" width="34" height="34"><text x="24" y="31" text-anchor="middle" font-size="18" font-weight="700" fill="currentColor" font-family="'Courier New', monospace">&lt;/&gt;</text></svg>
+      </div>
+      <h3 data-i18n="course-code-title">Programming</h3>
+      <p data-i18n="course-code-desc">Logic, web development &amp; real projects</p>
+
+      <div class="course-hub-icons" data-hub-icons>
+        <button type="button" class="course-hub-btn" data-hub-action="video">
+          <span class="course-hub-icon-circle icon-hub-video">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path d="M4 6.5A1.5 1.5 0 0 1 5.5 5h9A1.5 1.5 0 0 1 16 6.5v11A1.5 1.5 0 0 1 14.5 19h-9A1.5 1.5 0 0 1 4 17.5v-11z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m16 10 4-2.5v9L16 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </span>
+          <span data-i18n="hub-videos">الفيديوهات</span>
+        </button>
+
+        <button type="button" class="course-hub-btn" data-hub-action="files">
+          <span class="course-hub-icon-circle icon-hub-files">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path d="M6 3.5h8l4 4V19a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 19V5a1.5 1.5 0 0 1 1.5-1.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 3.5V8h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </span>
+          <span data-i18n="hub-files">المراجع</span>
+        </button>
+
+        <button type="button" class="course-hub-btn" data-hub-action="editor">
+          <span class="course-hub-icon-circle icon-hub-editor">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13 5l-2 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span data-i18n="hub-editor">المحرر</span>
+        </button>
+      </div>
+
+      <div class="course-hub-list" data-hub-list style="display:none;">
+        <div class="course-hub-list-head">
+          <button type="button" class="app-course-back" data-hub-back-to-hub>
+            <svg viewBox="0 0 24 24" width="16" height="16"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-i18n="app-course-back">رجوع</span>
+          </button>
+          <h4 data-hub-list-title>—</h4>
+          <span class="course-hub-count" data-hub-list-count>0</span>
+        </div>
+        <ul class="course-hub-items" data-hub-items></ul>
+      </div>
+
+      <div class="course-hub-player" data-hub-player style="display:none;">
+        <button type="button" class="app-course-back" data-hub-back-to-list>
+          <svg viewBox="0 0 24 24" width="16" height="16"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span data-i18n="app-course-back">رجوع</span>
+        </button>
+        <div class="course-hub-player-frame" data-hub-player-frame></div>
+        <p class="course-hub-player-meta" data-hub-player-meta></p>
+      </div>
+
+      <div class="course-hub-editor" data-hub-editor style="display:none;">
+        <div class="course-hub-editor-toolbar">
+  <button type="button" class="app-course-back" data-hub-back-to-hub>
+    <svg viewBox="0 0 24 24" width="16" height="16"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span data-i18n="app-course-back">رجوع</span>
+  </button>
+  <button type="button" class="course-hub-switch-btn" data-hub-editor-switch>
+    <svg viewBox="0 0 24 24" width="16" height="16"><path d="M17 3l4 4-4 4M21 7H9M7 21l-4-4 4-4M3 17h12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span data-hub-editor-switch-label>سويتش</span>
+  </button>
+  <button type="button" class="course-hub-fullscreen-btn" data-hub-fullscreen-toggle>
+    <svg viewBox="0 0 24 24" width="16" height="16"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span data-i18n="hub-fullscreen">ملء الشاشة</span>
+  </button>
+</div>
+<div class="course-hub-editor-frame-wrap" data-hub-editor-framewrap>
+  <button type="button" class="course-hub-editor-close" data-hub-fullscreen-close aria-label="إغلاق">&times;</button>
+  <iframe class="course-hub-editor-frame" src="editor.html" title="Code Editor" data-hub-editor-iframe></iframe>
+</div>
+      </div>
+    </div>
+
+    <div class="app-course-body app-course-body-hub" data-course-body="arabic" data-course-key="arabic" style="display:none;">
+      <div class="app-course-icon-lg icon-ar">
+        <svg viewBox="0 0 48 48" width="38" height="38"><text x="24" y="33" text-anchor="middle" font-size="25" font-weight="700" fill="currentColor" font-family="'Traditional Arabic', Tahoma, sans-serif">ع</text></svg>
+      </div>
+      <h3 data-i18n="course-ar-title">Arabic Language</h3>
+      <p data-i18n="course-ar-desc">Reading, grammar &amp; conversation</p>
+
+      <div class="course-hub-icons" data-hub-icons>
+        <button type="button" class="course-hub-btn" data-hub-action="video">
+          <span class="course-hub-icon-circle icon-hub-video">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path d="M4 6.5A1.5 1.5 0 0 1 5.5 5h9A1.5 1.5 0 0 1 16 6.5v11A1.5 1.5 0 0 1 14.5 19h-9A1.5 1.5 0 0 1 4 17.5v-11z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m16 10 4-2.5v9L16 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </span>
+          <span data-i18n="hub-videos">الفيديوهات</span>
+        </button>
+
+        <button type="button" class="course-hub-btn" data-hub-action="files">
+          <span class="course-hub-icon-circle icon-hub-files">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path d="M6 3.5h8l4 4V19a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 19V5a1.5 1.5 0 0 1 1.5-1.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 3.5V8h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </span>
+          <span data-i18n="hub-files">المراجع</span>
+        </button>
+      </div>
+
+      <div class="course-hub-list" data-hub-list style="display:none;">
+        <div class="course-hub-list-head">
+          <button type="button" class="app-course-back" data-hub-back-to-hub>
+            <svg viewBox="0 0 24 24" width="16" height="16"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-i18n="app-course-back">رجوع</span>
+          </button>
+          <h4 data-hub-list-title>—</h4>
+          <span class="course-hub-count" data-hub-list-count>0</span>
+        </div>
+        <ul class="course-hub-items" data-hub-items></ul>
+      </div>
+
+      <div class="course-hub-player" data-hub-player style="display:none;">
+        <button type="button" class="app-course-back" data-hub-back-to-list>
+          <svg viewBox="0 0 24 24" width="16" height="16"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span data-i18n="app-course-back">رجوع</span>
+        </button>
+        <div class="course-hub-player-frame" data-hub-player-frame></div>
+        <p class="course-hub-player-meta" data-hub-player-meta></p>
+      </div>
+    </div>
+
+    <div class="app-course-body app-course-body-hub" data-course-body="other" data-course-key="other" style="display:none;">
+      <div class="app-course-icon-lg icon-other">
+        <svg viewBox="0 0 24 24" width="34" height="34"><rect x="3" y="3" width="8" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="3" width="8" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="13" width="8" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="13" width="8" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+      </div>
+      <h3 data-i18n="course-other-title">Other Materials</h3>
+      <p data-i18n="course-other-desc">Diverse educational content covering extra topics</p>
+
+      <div class="course-hub-icons" data-hub-icons>
+        <button type="button" class="course-hub-btn" data-hub-action="video">
+          <span class="course-hub-icon-circle icon-hub-video">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path d="M4 6.5A1.5 1.5 0 0 1 5.5 5h9A1.5 1.5 0 0 1 16 6.5v11A1.5 1.5 0 0 1 14.5 19h-9A1.5 1.5 0 0 1 4 17.5v-11z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m16 10 4-2.5v9L16 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </span>
+          <span data-i18n="hub-videos">الفيديوهات</span>
+        </button>
+
+        <button type="button" class="course-hub-btn" data-hub-action="files">
+          <span class="course-hub-icon-circle icon-hub-files">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path d="M6 3.5h8l4 4V19a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 19V5a1.5 1.5 0 0 1 1.5-1.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 3.5V8h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </span>
+          <span data-i18n="hub-files">المراجع</span>
+        </button>
+      </div>
+
+      <div class="course-hub-list" data-hub-list style="display:none;">
+        <div class="course-hub-list-head">
+          <button type="button" class="app-course-back" data-hub-back-to-hub>
+            <svg viewBox="0 0 24 24" width="16" height="16"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-i18n="app-course-back">رجوع</span>
+          </button>
+          <h4 data-hub-list-title>—</h4>
+          <span class="course-hub-count" data-hub-list-count>0</span>
+        </div>
+        <ul class="course-hub-items" data-hub-items></ul>
+      </div>
+
+      <div class="course-hub-player" data-hub-player style="display:none;">
+        <button type="button" class="app-course-back" data-hub-back-to-list>
+          <svg viewBox="0 0 24 24" width="16" height="16"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span data-i18n="app-course-back">رجوع</span>
+        </button>
+        <div class="course-hub-player-frame" data-hub-player-frame></div>
+        <p class="course-hub-player-meta" data-hub-player-meta></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- قسم المجتمع -->
+  <div class="app-content-inner community-content" id="appCommunityContent" style="display:none;">
+
+    <!-- اختيار الشات لو فيه أكثر من كورس متاح -->
+    <div class="community-chooser" data-community-chooser>
+      <div class="app-courses-head">
+        <h2 data-i18n="community-choose-title">اختر شات المجتمع</h2>
+        <p data-i18n="community-choose-desc"> اختر المجتمع الذي تدرس معه</p>
+      </div>
+      <div class="community-chooser-grid" data-community-chooser-grid>
+        <button type="button" class="community-course-btn" data-community-course="english">
+          <span class="community-course-icon icon-en">
+            <svg viewBox="0 0 48 48" width="26" height="26"><text x="24" y="33" text-anchor="middle" font-size="27" font-weight="700" fill="currentColor" font-family="Georgia, 'Times New Roman', serif">A</text></svg>
+          </span>
+          <span data-i18n="course-en-title">English Language</span>
+        </button>
+        <button type="button" class="community-course-btn" data-community-course="programming">
+          <span class="community-course-icon icon-code">
+            <svg viewBox="0 0 48 48" width="24" height="24"><text x="24" y="31" text-anchor="middle" font-size="18" font-weight="700" fill="currentColor" font-family="'Courier New', monospace">&lt;/&gt;</text></svg>
+          </span>
+          <span data-i18n="course-code-title">Programming</span>
+        </button>
+        <button type="button" class="community-course-btn" data-community-course="arabic">
+          <span class="community-course-icon icon-ar">
+            <svg viewBox="0 0 48 48" width="26" height="26"><text x="24" y="33" text-anchor="middle" font-size="25" font-weight="700" fill="currentColor" font-family="'Traditional Arabic', Tahoma, sans-serif">ع</text></svg>
+          </span>
+          <span data-i18n="course-ar-title">Arabic Language</span>
+        </button>
+        <button type="button" class="community-course-btn" data-community-course="other">
+          <span class="community-course-icon icon-other">
+            <svg viewBox="0 0 24 24" width="24" height="24"><rect x="3" y="3" width="8" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="3" width="8" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="13" width="8" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="13" width="8" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          </span>
+          <span data-i18n="course-other-title">Other Materials</span>
+        </button>
+      </div>
+      <p class="community-empty" data-community-empty style="display:none;" data-i18n="community-no-access">لا يوجد كورسات متاحة لك حاليًا للانضمام لشاتها</p>
+    </div>
+
+    <!-- الشات نفسه -->
+    <div class="community-chat" data-community-chat style="display:none;">
+      <div class="community-chat-header">
+        <button type="button" class="app-course-back" data-community-back>
+          <svg viewBox="0 0 24 24" width="16" height="16"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span data-i18n="app-course-back">رجوع</span>
+        </button>
+        <h4 data-community-chat-title>—</h4>
+        <span class="community-chat-badge">●</span>
+      </div>
+
+      <div class="community-messages" data-community-messages>
+        <p class="community-loading" data-i18n="community-loading">جارٍ تحميل الرسائل...</p>
+      </div>
+
+      <form class="community-input-row" data-community-form>
+        <input type="text" class="community-input" data-community-input dir="auto" maxlength="500" autocomplete="off" placeholder="اكتب رسالتك هنا..." data-i18n-placeholder="community-placeholder">
+        <button type="submit" class="community-send-btn" data-community-send aria-label="إرسال">
+          <svg viewBox="0 0 24 24" width="19" height="19"><path d="M4 12l16-8-6 16-3-6-7-2z" fill="currentColor"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- قسم الاختبارات -->
+  <div class="app-content-inner exam-content" id="appExamContent" style="display:none;">
+
+    <!-- عنوان قابل للضغط 4 مرات (المعلم) -->
+    <div class="app-courses-head">
+      <h2 id="examTitleClick" data-i18n="nav-exams" style="cursor:pointer; user-select:none;">الاختبارات</h2>
+      <p>اختر الكورس</p>
+    </div>
+
+    
+    <!-- اختيار الكورس -->
+    <div class="community-chooser" data-exam-chooser>
+      <div class="community-chooser-grid" data-exam-chooser-grid>
+        <button type="button" class="community-course-btn" data-exam-course="english">
+          <span class="community-course-icon icon-en"><svg viewBox="0 0 48 48" width="26" height="26"><text x="24" y="33" text-anchor="middle" font-size="27" font-weight="700" fill="currentColor" font-family="Georgia, 'Times New Roman', serif">A</text></svg></span>
+          <span>English Language</span>
+        </button>
+        <button type="button" class="community-course-btn" data-exam-course="programming">
+          <span class="community-course-icon icon-code"><svg viewBox="0 0 48 48" width="24" height="24"><text x="24" y="31" text-anchor="middle" font-size="18" font-weight="700" fill="currentColor" font-family="'Courier New', monospace">&lt;/&gt;</text></svg></span>
+          <span>Programming</span>
+        </button>
+        <button type="button" class="community-course-btn" data-exam-course="arabic">
+          <span class="community-course-icon icon-ar"><svg viewBox="0 0 48 48" width="26" height="26"><text x="24" y="33" text-anchor="middle" font-size="25" font-weight="700" fill="currentColor" font-family="'Traditional Arabic', Tahoma, sans-serif">ع</text></svg></span>
+          <span>Arabic Language</span>
+        </button>
+        <button type="button" class="community-course-btn" data-exam-course="other">
+          <span class="community-course-icon icon-other"><svg viewBox="0 0 24 24" width="24" height="24"><rect x="3" y="3" width="8" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="3" width="8" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="13" width="8" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="13" width="8" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          <span>Other Materials</span>
+        </button>
+      </div>
+      <p class="community-empty" data-exam-empty style="display:none;">لا يوجد كورسات متاحة لك حاليًا للدخول لاختباراتها</p>
+    </div>
+
+    
+
+    <!-- قائمة الاختبارات المتاحة للكورس -->
+    <div class="course-hub-list" data-exam-list style="display:none; flex:1; min-height:0;">
+      <div class="course-hub-list-head">
+        <button type="button" class="app-course-back" data-exam-back-to-chooser>
+          <svg viewBox="0 0 24 24" width="16" height="16"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>رجوع</span>
+        </button>
+        <h4 data-exam-list-title>—</h4>
+      </div>
+      <ul class="course-hub-items" data-exam-items></ul>
+    </div>
+
+    <!-- تفاصيل/بدء اختبار -->
+    <div class="course-hub-player" data-exam-intro style="display:none;">
+      <button type="button" class="app-course-back" data-exam-back-to-list>
+        <svg viewBox="0 0 24 24" width="16" height="16"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>رجوع</span>
+      </button>
+      <h3 data-exam-intro-title style="margin-top:14px;">—</h3>
+      <p data-exam-intro-meta style="color:var(--muted);"></p>
+      <button type="button" class="btn btn-primary" data-exam-start-btn style="margin-top:18px;">ابدأ الاختبار</button>
+    </div>
+
+    <!-- شاشة أداء الاختبار -->
+    <div class="exam-run" data-exam-run style="display:none; flex:1; min-height:0; flex-direction:column; text-align:start; width:100%;">
+      <div class="exam-run-head">
+        <span data-exam-timer class="exam-timer">--:--</span>
+        <span data-exam-progress class="exam-progress">0/0</span>
+      </div>
+      <div class="exam-question-box" data-exam-question-box></div>
+      <div class="exam-run-nav">
+        <button type="button" class="btn btn-outline" data-exam-prev>السابق</button>
+        <button type="button" class="btn btn-primary" data-exam-next>التالي</button>
+        <button type="button" class="btn btn-primary" data-exam-submit style="display:none;">تسليم</button>
+      </div>
+    </div>
+
+    <!-- نتيجة الطالب -->
+    <div class="exam-result" data-exam-result style="display:none;">
+      <h3>نتيجتك</h3>
+      <p class="exam-result-score" data-exam-result-score>0/0</p>
+      <button type="button" class="btn btn-outline" data-exam-back-to-list-2>رجوع للاختبارات</button>
+    </div>
+
+    <!-- كود المعلم -->
+    <div class="exam-teacher-gate" data-exam-teacher-gate style="display:none;">
+      <h3>كود المعلم</h3>
+      <input type="password" class="community-input" data-exam-teacher-code placeholder="أدخل كود المعلم">
+      <button type="button" class="btn btn-primary" data-exam-teacher-submit style="margin-top:10px;">دخول</button>
+      <p class="login-error" data-exam-teacher-error></p>
+    </div>
+
+        <!-- لوحة المعلم -->
+    <div class="exam-teacher-panel" data-exam-teacher-panel style="display:none;">
+      <div class="app-courses-head">
+        <h2>إنشاء اختبار جديد</h2>
+      </div>
+
+      <label class="settings-label" style="display:block; margin-bottom:6px;">اختر الكورس</label>
+      <select class="community-input" data-exam-t-course>
+        <option value="english">English</option>
+        <option value="programming">Programming</option>
+        <option value="arabic">Arabic</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label class="settings-label" style="display:block; margin:12px 0 6px;">اسم الاختبار</label>
+      <input type="text" class="community-input" data-exam-t-name placeholder="مثال: اختبار الوحدة الأولى">
+
+      <label class="settings-label" style="display:block; margin:12px 0 6px;">مدة الاختبار (بالدقائق)</label>
+      <input type="number" class="community-input" data-exam-t-duration value="15" min="1">
+
+      <!-- حاوية تمرير للأسئلة -->
+      <div class="exam-t-questions-scroll" style="padding-right: 6px;">
+        <div data-exam-t-questions style="margin-top:16px; display:flex; flex-direction:column; gap:14px;"></div>
+      </div>
+
+      <button type="button" class="btn btn-outline exam-t-add-btn" data-exam-t-add-q style="margin-top:10px;">+ إضافة سؤال</button>
+      <button type="button" class="btn btn-primary exam-t-save-btn" data-exam-t-save style="margin-top:16px;">حفظ الاختبار</button>
+      <p class="login-error" data-exam-t-error></p>
+
+      <div class="app-courses-head" style="margin-top:30px;">
+        <h2>درجات الطلاب</h2>
+      </div>
+      <div data-exam-t-scores></div>
+
+      <button type="button" class="btn btn-outline exam-t-exit-btn" data-exam-t-exit>خروج من وضع المعلم</button>
+    </div>
+  </div>
+
+  <div class="app-content-inner settings-content" id="appSettingsContent" style="display:none;">
+    <div class="settings-header">
+      <img src="logo.png" alt="Study House logo" class="settings-logo">
+      <h2 id="settingsUserName">—</h2>
+    </div>
+
+    <div class="settings-card">
+      <div class="settings-icon">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11.5 21 3 12.5 3 2c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="settings-info">
+        <span class="settings-label">الدعم الفني - رقم الهاتف</span>
+        <a class="settings-value" href="tel:+201126700081" dir="ltr">011 26700081</a>
+      </div>
+    </div>
+
+    <div class="settings-card">
+      <div class="settings-icon">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11A1.5 1.5 0 0 1 19.5 19h-15A1.5 1.5 0 0 1 3 17.5v-11z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="settings-info">
+        <span class="settings-label">الدعم الفني - البريد الإلكتروني</span>
+        <a class="settings-value" href="mailto:cc.mk.jn@gmail.com" dir="ltr">cc.mk.jn@gmail.com</a>
+      </div>
+    </div>
+
+    <div class="settings-card settings-teachers-card">
+      <div class="settings-icon">
+        <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="8.5" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M2 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M14 20c0-2.7 1.9-4.6 4.5-4.6S23 17.3 23 20" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+      </div>
+      <div class="settings-info">
+        <span class="settings-label">المدربون</span>
+        <ul class="teachers-list" id="teachersList">
+          <li class="teachers-status">جارٍ تحميل الأسماء...</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- زر تبديل الثيم -->
+  <div class="settings-card" id="themeToggleCard">
+    <div class="settings-icon">
+      <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 2a10 10 0 0 1 0 20 10 10 0 0 1 0-20z" fill="currentColor" opacity="0.2"/><circle cx="12" cy="12" r="4" fill="currentColor"/></svg>
+    </div>
+    <div class="settings-info">
+      <span class="settings-label" data-i18n="theme-label">المظهر</span>
+      <button class="settings-value theme-toggle-btn" id="themeToggleBtn" type="button" style="background:none;border:none;cursor:pointer;font-weight:700;color:var(--gold-dark);font-size:0.98rem;padding:0;text-align:right;font-family:inherit;">
+        <span id="themeToggleText" data-i18n="theme-brown">الثيم البني الفاخر</span>
+      </button>
+    </div>
+  </div>
+
+    <a href="https://maps.app.goo.gl/5wQ1UrqShrg7VmHCA" target="_blank" rel="noopener noreferrer" class="btn btn-primary settings-map-btn">
+      <span>موقع الأكاديمية على الخريطة</span>
+      <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 22s7-7.4 7-12.5A7 7 0 0 0 5 9.5C5 14.6 12 22 12 22z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.4" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+    </a>
+  </div>
+<div class="app-content-inner session-content" id="appSessionContent" style="display:none;">
+    <div class="session-header">
+      <h2 data-i18n="nav-session">جلسة مباشرة</h2>
+      <a href="session.html"><span class="session-live-badge"><i class="session-dot"></i> Live</span></a>
+    </div>
+    <div class="session-frame-wrap">
+      <iframe src="session.html" title="Live Session"></iframe>
+    </div>
+
+  </div>
+    <div class="app-content-inner pronunciation-content" id="appPronunciationContent" style="display:none;">
+    <div class="pronunciation-header">
+      <h2 data-i18n="nav-pronunciation">Pronunciation</h2>
+      <span class="pronunciation-status" id="pronunciationStatus">⏸️</span>
+    </div>
+    <div class="pronunciation-body">
+      <textarea class="pronunciation-textarea" id="pronunciationText" placeholder="Type or paste English text here..." dir="ltr" spellcheck="true"></textarea>
+      <div class="pronunciation-controls">
+        <button class="btn btn-primary" id="pronunciationPlayBtn"><span data-i18n="btn-play">▶ Play</span></button>
+        <button class="btn btn-outline" id="pronunciationStopBtn"><span data-i18n="btn-stop">⏹ Stop</span></button>
+        <button class="btn btn-outline" id="pronunciationRepeatBtn"><span data-i18n="btn-repeat">🔄 Repeat</span></button>
+      </div>
+      <div class="pronunciation-voice-info">
+        <span id="voiceInfo">Voice: British English (Male)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <div class="app-sidebar-backdrop" id="appSidebarBackdrop"></div>
+  
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

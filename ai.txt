@@ -1,0 +1,3829 @@
+السؤال: كيف أذاكر البرمجة؟
+الجواب: ابدأ بفهم أساسيات البرمجة، ثم طبّق ما تتعلمه بنفسك من خلال كتابة الأكواد وحل المشكلات وإنشاء مشاريع صغيرة. لا تعتمد على مشاهدة الشروحات فقط، فالتطبيق العملي هو أهم جزء في تعلم البرمجة.
+
+السؤال: كيف يمكنني تعلم البرمجة من الصفر؟
+الجواب: ابدأ بلغة برمجة واحدة، وتعلم أساسياتها خطوة بخطوة، ثم تدرب باستمرار وحاول إنشاء مشاريع بسيطة لتطبيق ما تعلمته.
+
+السؤال: هل يجب أن أذاكر البرمجة كل يوم؟
+الجواب: نعم، الاستمرارية مهمة جداً. حتى لو درست لمدة قصيرة يومياً، فإن الاستمرار والتطبيق المنتظم سيساعدانك على التطور.
+
+السؤال: ماذا أفعل إذا لم أفهم درساً في البرمجة؟
+الجواب: حاول مشاهدة الشرح مرة أخرى، وابحث عن أمثلة عملية، ثم جرّب تطبيق الفكرة بنفسك. وإذا احتجت للمساعدة يمكنك التواصل مع المدرب أو الدعم الفني.
+
+السؤال: هل مشاهدة فيديوهات البرمجة كافية؟
+الجواب: لا، مشاهدة الشروحات وحدها لا تكفي. يجب أن تكتب الأكواد بنفسك وتجرب وتخطئ وتتعلم من أخطائك.
+
+السؤال: كيف أبدأ تعلم HTML؟
+الجواب: ابدأ بتعلم أساسيات HTML مثل العناوين والفقرات والروابط والصور والجداول والنماذج، ثم طبّق من خلال إنشاء صفحات ويب بسيطة.
+
+السؤال: كيف أتعلم CSS؟
+الجواب: بعد تعلم HTML، ابدأ بتعلم الألوان والخطوط والمسافات والتنسيقات وFlexbox وGrid والتصميم المتجاوب مع الهاتف والكمبيوتر.
+
+السؤال: كيف أتعلم JavaScript؟
+الجواب: ابدأ بتعلم المتغيرات والشروط والحلقات والدوال، ثم تعلم كيفية التعامل مع صفحات الويب والأحداث وDOM، وبعد ذلك طبّق من خلال إنشاء مشاريع عملية.
+
+السؤال: هل أتعلم أكثر من لغة برمجة في نفس الوقت؟
+الجواب: يفضل أن تركز على لغة برمجة واحدة في البداية حتى تفهم أساسيات البرمجة جيداً، وبعد ذلك يمكنك تعلم لغات أخرى بسهولة أكبر.
+
+السؤال: كيف أضع خطة لتعلم البرمجة؟
+الجواب: حدد هدفك أولاً، ثم اختر اللغة المناسبة، وقسم التعلم إلى مراحل، وخصص وقتاً يومياً للتعلم والتطبيق، وراجع تقدمك كل أسبوع.
+
+السؤال: كيف أذاكر اللغة الإنجليزية؟
+الجواب: قسم وقتك بين الاستماع والتحدث والقراءة والكتابة، وتعلم كلمات جديدة يومياً، وحاول استخدام الكلمات والقواعد في جمل ومحادثات.
+
+السؤال: كيف أطور مستواي في اللغة الإنجليزية؟
+الجواب: مارس اللغة يومياً، واستمع إلى محتوى مناسب لمستواك، واقرأ نصوصاً قصيرة، وتحدث باللغة الإنجليزية قدر الإمكان.
+
+السؤال: كم كلمة إنجليزية يجب أن أتعلم كل يوم؟
+الجواب: يمكنك البدء بتعلم من 5 إلى 10 كلمات يومياً، والأهم هو فهم الكلمات واستخدامها في جمل بدلاً من حفظ عدد كبير دون تطبيق.
+
+السؤال: كيف أحفظ كلمات اللغة الإنجليزية؟
+الجواب: استخدم الكلمة في جملة، وراجعها بشكل متكرر، وحاول ربطها بموقف أو صورة أو معنى يساعدك على تذكرها.
+
+السؤال: كيف أطور مهارة الاستماع في اللغة الإنجليزية؟
+الجواب: استمع يومياً إلى مقاطع مناسبة لمستواك، وابدأ بمحتوى واضح وبسيط، ثم انتقل تدريجياً إلى محتوى أكثر صعوبة.
+
+السؤال: كيف أتدرب على التحدث باللغة الإنجليزية؟
+الجواب: تحدث مع نفسك، واقرأ بصوت عالٍ، وكرر الجمل التي تسمعها، وحاول استخدام الكلمات الجديدة في محادثات.
+
+السؤال: هل يجب أن أكون جيداً في القواعد حتى أتعلم الإنجليزية؟
+الجواب: القواعد مهمة، لكن لا تجعلها تمنعك من التحدث والاستماع. تعلم القواعد مع التطبيق والممارسة المستمرة.
+
+السؤال: كيف أذاكر اللغة العربية؟
+الجواب: قسم مذاكرتك إلى فروع مثل النحو والبلاغة والأدب والقراءة، وراجع القواعد مع حل الكثير من التدريبات والأسئلة.
+
+السؤال: كيف أذاكر النحو؟
+الجواب: افهم القاعدة أولاً، ثم شاهد أمثلة عليها، وبعد ذلك حل تدريبات متنوعة وراجع الأخطاء التي وقعت فيها.
+
+السؤال: ماذا أفعل إذا كنت أنسى ما ذاكرته؟
+الجواب: استخدم المراجعة المتكررة، واختبر نفسك بدون النظر إلى الإجابة، وحاول شرح ما تعلمته بطريقة بسيطة.
+
+السؤال: كيف أعمل جدول مذاكرة؟
+الجواب: حدد المواد والمهام المطلوبة، ثم قسمها على الأيام والوقت المتاح لك، واترك وقتاً للمراجعة والراحة.
+
+السؤال: كم ساعة يجب أن أذاكر يومياً؟
+الجواب: لا يوجد عدد ثابت يناسب الجميع. المهم أن تذاكر بتركيز وأن يكون جدولك واقعياً ويمكنك الاستمرار عليه.
+
+السؤال: كيف أتخلص من التسويف؟
+الجواب: ابدأ بمهمة صغيرة لمدة قصيرة، وأبعد المشتتات، وقسم المهام الكبيرة إلى خطوات بسيطة حتى لا تشعر بصعوبتها.
+
+السؤال: كيف أركز أثناء المذاكرة؟
+الجواب: أغلق الإشعارات، وضع الهاتف بعيداً، وحدد هدفاً واضحاً لكل جلسة مذاكرة، وخذ فترات راحة قصيرة عند الحاجة.
+
+السؤال: ما أفضل طريقة للمراجعة؟
+الجواب: اختبر نفسك، وحل الأسئلة، وراجع أخطاءك، وكرر المعلومات على فترات متباعدة حتى تثبت في ذاكرتك.
+
+السؤال: هل المذاكرة لفترات طويلة أفضل؟
+الجواب: ليس دائماً. المذاكرة بتركيز مع أخذ فترات راحة أفضل من الجلوس لساعات طويلة دون تركيز.
+
+السؤال: ماذا أفعل إذا شعرت أنني لا أتقدم؟
+الجواب: راجع ما تعلمته، وقارن تقدمك بنفسك وليس بالآخرين، وحدد المهارات التي تحتاج إلى مزيد من التدريب.
+
+السؤال: كيف أتعلم من أخطائي؟
+الجواب: لا تكتفِ بمعرفة أن الإجابة خاطئة، بل حاول فهم سبب الخطأ وسجل الأخطاء المتكررة وراجعها باستمرار.
+
+السؤال: هل يمكنني التعلم من خلال الهاتف؟
+الجواب: نعم، يمكنك التعلم من خلال مشاهدة الدروس وقراءة المحتوى وحل التدريبات وممارسة البرمجة باستخدام الأدوات المناسبة.
+
+السؤال: كيف أبدأ التعلم على منصة Study House؟
+الجواب: ابدأ بتصفح الكورسات المتاحة، واختر المجال الذي يناسبك، ثم ابدأ الدروس والتدريبات الموجودة داخل الكورس.
+
+السؤال: كيف أختار الكورس المناسب لي؟
+الجواب: حدد هدفك ومستواك الحالي، ثم اختر الكورس الذي يساعدك على الوصول إلى هدفك. وإذا كنت محتاراً يمكنك التواصل مع الدعم الفني.
+
+السؤال: هل أبدأ من المستوى المبتدئ؟
+الجواب: إذا كنت جديداً في المجال فمن الأفضل أن تبدأ من الأساسيات، أما إذا كان لديك خبرة فيمكنك اختيار المستوى الذي يناسب معرفتك.
+
+السؤال: كيف أتعلم مهارة جديدة بسرعة؟
+الجواب: حدد هدفاً واضحاً، وتعلم الأساسيات، ومارس المهارة يومياً، وطبق ما تتعلمه في مشاريع أو تدريبات عملية.
+
+السؤال: هل التعلم يحتاج إلى وقت طويل؟
+الجواب: يختلف الوقت حسب المهارة ووقت التدريب، لكن الاستمرارية اليومية والتطبيق العملي يساعدانك على تحقيق تقدم واضح.
+
+السؤال: ماذا أفعل عندما أشعر بالملل أثناء المذاكرة؟
+الجواب: غير طريقة المذاكرة، واستخدم التطبيق العملي والأسئلة والمشاريع، وخذ استراحة قصيرة ثم عد إلى التعلم.
+
+السؤال: كيف أستفيد من وقتي في المذاكرة؟
+الجواب: حدد أولوياتك، وابدأ بالمهام المهمة، وابتعد عن المشتتات، واستخدم وقتك في التعلم والتطبيق بدلاً من المشاهدة فقط.
+
+السؤال: هل يمكنني تعلم البرمجة بدون أن أكون جيداً في الرياضيات؟
+الجواب: نعم، يمكنك تعلم العديد من مجالات البرمجة دون الحاجة إلى مستوى متقدم في الرياضيات. الأهم هو التفكير المنطقي والتدريب المستمر.
+
+السؤال: كيف أعرف أنني أصبحت جيداً في البرمجة؟
+الجواب: عندما تستطيع فهم الأكواد وكتابتها وحل المشكلات وإنشاء مشاريع بنفسك، ستعرف أنك تتطور بشكل جيد.
+
+السؤال: هل يجب أن أحفظ أكواد البرمجة؟
+الجواب: لا تحتاج إلى حفظ كل الأكواد، بل يجب أن تفهم طريقة عملها وكيف تبحث عن المعلومات وتستخدمها بشكل صحيح.
+
+السؤال: ما أهمية حل التمارين أثناء التعلم؟
+الجواب: حل التمارين يساعدك على تثبيت المعلومات واكتشاف نقاط ضعفك وتحسين قدرتك على التفكير وحل المشكلات.
+
+السؤال: كيف أتعلم اللغة الإنجليزية بطريقة ممتعة؟
+الجواب: استخدم طرقاً متنوعة مثل مشاهدة المحتوى المناسب لمستواك والاستماع والتحدث وقراءة القصص والتدرب على الكلمات الجديدة.
+
+السؤال: هل أستطيع تحسين الإنجليزية في وقت قصير؟
+الجواب: يمكنك تحقيق تقدم واضح في وقت قصير إذا كنت تتدرب باستمرار، لكن الوصول إلى مستوى قوي يحتاج إلى ممارسة وصبر واستمرارية.
+
+السؤال: كيف أراجع كلمات اللغة الإنجليزية؟
+الجواب: راجع الكلمات القديمة بشكل متكرر، واستخدمها في جمل، وحاول اختبار نفسك بدلاً من قراءة القائمة فقط.
+
+السؤال: كيف أحسن الكتابة باللغة الإنجليزية؟
+الجواب: اقرأ نصوصاً جيدة، وتعلم الكلمات والقواعد، ثم اكتب جمل وفقرات قصيرة وراجع أخطاءك باستمرار.
+
+السؤال: كيف أطور القراءة باللغة العربية؟
+الجواب: اقرأ بشكل مستمر في موضوعات مختلفة، وحاول فهم المعنى العام للنص، ثم راجع الكلمات والتعبيرات الجديدة.
+
+السؤال: كيف أحسن مهاراتي في اللغة العربية؟
+الجواب: اقرأ كثيراً، وراجع القواعد، وحل التدريبات، وتعلم من أخطائك، وحاول استخدام اللغة بشكل صحيح في الكتابة والتحدث.
+
+السؤال: ماذا أفعل إذا لم أستطع الالتزام بخطة المذاكرة؟
+الجواب: لا تتوقف تماماً، بل عدل الخطة لتناسب وقتك وقدرتك، وابدأ من جديد بخطوات صغيرة ومنظمة.
+
+السؤال: كيف أضع أهدافاً تعليمية؟
+الجواب: اجعل هدفك واضحاً ومحدداً، وقسمه إلى أهداف صغيرة، وحدد وقتاً مناسباً لتحقيق كل هدف، ثم تابع تقدمك باستمرار.
+
+السؤال: ما أهم نصيحة للطلاب؟
+الجواب: لا تعتمد على الحفظ والمشاهدة فقط، بل حاول أن تفهم وتطبق وتراجع أخطاءك، والأهم هو الاستمرار وعدم الاستسلام.
+
+السؤال: هل يمكنني التواصل مع الدعم إذا واجهت مشكلة؟
+الجواب: نعم، يمكنك التواصل مع الدعم الفني على الرقم 01126700081 أو البريد الإلكتروني [cc.mk.jn@gmail.com](mailto:cc.mk.jn@gmail.com) للحصول على المساعدة.
+
+السؤال: How can I study programming?
+الجواب: Start by understanding the basics of programming, then practice what you learn by writing code, solving problems, and building small projects. Do not rely only on watching tutorials; practical application is the most important part of learning programming.
+
+السؤال: How can I learn programming from scratch?
+الجواب: Start with one programming language and learn its basics step by step. Then practice regularly and try to build simple projects to apply what you have learned.
+
+السؤال: Should I study programming every day?
+الجواب: Yes, consistency is very important. Even if you study for a short time every day, regular practice will help you improve.
+
+السؤال: What should I do if I do not understand a programming lesson?
+الجواب: Try watching the explanation again, look for practical examples, and try to apply the idea yourself. If you need help, you can contact the trainer or support team.
+
+السؤال: Is watching programming videos enough?
+الجواب: No, watching tutorials alone is not enough. You should write code yourself, experiment, make mistakes, and learn from them.
+
+السؤال: How do I start learning HTML?
+الجواب: Start by learning HTML basics such as headings, paragraphs, links, images, tables, and forms. Then practice by creating simple webpages.
+
+السؤال: How can I learn CSS?
+الجواب: After learning HTML, start learning colors, fonts, spacing, layouts, Flexbox, Grid, and responsive design for phones and computers.
+
+السؤال: How can I learn JavaScript?
+الجواب: Start by learning variables, conditions, loops, and functions. Then learn how to work with webpages, events, and the DOM. After that, practice by building real projects.
+
+السؤال: Should I learn more than one programming language at the same time?
+الجواب: It is better to focus on one programming language at first so you can understand programming fundamentals well. Later, you can learn other languages more easily.
+
+السؤال: How can I create a programming learning plan?
+الجواب: Set your goal first, choose the right programming language, divide your learning into stages, study and practice every day, and review your progress every week.
+
+السؤال: How can I study English?
+الجواب: Divide your time between listening, speaking, reading, and writing. Learn new words every day and try to use vocabulary and grammar in sentences and conversations.
+
+السؤال: How can I improve my English level?
+الجواب: Practice English every day, listen to content suitable for your level, read short texts, and speak English as much as possible.
+
+السؤال: How many English words should I learn every day?
+الجواب: You can start by learning 5 to 10 words every day. The most important thing is to understand and use the words instead of memorizing many words without practice.
+
+السؤال: How can I memorize English vocabulary?
+الجواب: Use each word in a sentence, review it regularly, and try to connect it with a situation, image, or meaning that helps you remember it.
+
+السؤال: How can I improve my English listening skills?
+الجواب: Listen to content suitable for your level every day. Start with clear and simple content, then gradually move to more difficult material.
+
+السؤال: How can I practice speaking English?
+الجواب: Talk to yourself, read aloud, repeat sentences you hear, and try to use new words in conversations.
+
+السؤال: Do I need to be good at grammar to learn English?
+الجواب: Grammar is important, but do not let it stop you from speaking and listening. Learn grammar together with regular practice.
+
+السؤال: How can I study Arabic?
+الجواب: Divide your study into areas such as grammar, rhetoric, literature, and reading. Review the rules and solve many exercises and questions.
+
+السؤال: How can I study Arabic grammar?
+الجواب: Understand the rule first, study examples, then solve different exercises and review the mistakes you make.
+
+السؤال: What should I do if I forget what I studied?
+الجواب: Use regular revision, test yourself without looking at the answer, and try to explain what you learned in a simple way.
+
+السؤال: How can I create a study schedule?
+الجواب: List the subjects and tasks you need to complete, divide them across your available days and time, and leave time for revision and rest.
+
+السؤال: How many hours should I study every day?
+الجواب: There is no fixed number that works for everyone. The important thing is to study with focus and follow a realistic schedule that you can maintain.
+
+السؤال: How can I stop procrastinating?
+الجواب: Start with a small task for a short period of time, remove distractions, and divide large tasks into small and simple steps.
+
+السؤال: How can I focus while studying?
+الجواب: Turn off notifications, keep your phone away, set a clear goal for each study session, and take short breaks when needed.
+
+السؤال: What is the best way to revise?
+الجواب: Test yourself, solve questions, review your mistakes, and repeat information at regular intervals so it stays in your memory.
+
+السؤال: Is studying for long hours better?
+الجواب: Not always. Studying with focus and taking breaks is better than sitting for many hours without concentration.
+
+السؤال: What should I do if I feel that I am not improving?
+الجواب: Review what you have learned, compare your progress with your past performance instead of comparing yourself to others, and identify the skills that need more practice.
+
+السؤال: How can I learn from my mistakes?
+الجواب: Do not just know that an answer is wrong. Try to understand why it is wrong, record repeated mistakes, and review them regularly.
+
+السؤال: Can I learn using my phone?
+الجواب: Yes, you can learn by watching lessons, reading educational content, solving exercises, and practicing programming using suitable tools.
+
+السؤال: How do I start learning on the Study House platform?
+الجواب: Start by browsing the available courses, choose the field that suits you, and begin the lessons and exercises available inside the course.
+
+السؤال: How do I choose the right course for me?
+الجواب: Identify your goal and current level, then choose the course that helps you reach your goal. If you are unsure, you can contact the support team.
+
+السؤال: Should I start at the beginner level?
+الجواب: If you are new to the field, it is better to start with the basics. If you already have experience, you can choose a level that matches your knowledge.
+
+السؤال: How can I learn a new skill quickly?
+الجواب: Set a clear goal, learn the basics, practice the skill every day, and apply what you learn through real projects or practical exercises.
+
+السؤال: Does learning take a long time?
+الجواب: The time depends on the skill and the amount of practice, but daily consistency and practical application can help you make clear progress.
+
+السؤال: What should I do when I feel bored while studying?
+الجواب: Change your study method, use practical activities, questions, and projects, take a short break, and then return to learning.
+
+السؤال: How can I make better use of my study time?
+الجواب: Set your priorities, start with important tasks, avoid distractions, and use your time for learning and practice instead of only watching tutorials.
+
+السؤال: Can I learn programming without being good at mathematics?
+الجواب: Yes, you can learn many areas of programming without advanced mathematics. Logical thinking and regular practice are more important.
+
+السؤال: How do I know if I am becoming good at programming?
+الجواب: When you can understand and write code, solve problems, and build projects by yourself, you know that you are making good progress.
+
+السؤال: Do I need to memorize programming code?
+الجواب: You do not need to memorize every piece of code. You should understand how code works and learn how to find and use information correctly.
+
+السؤال: Why is solving exercises important while learning?
+الجواب: Solving exercises helps you remember information, discover your weaknesses, and improve your ability to think and solve problems.
+
+السؤال: How can I learn English in a fun way?
+الجواب: Use different methods such as watching content suitable for your level, listening, speaking, reading stories, and practicing new vocabulary.
+
+السؤال: Can I improve my English in a short time?
+الجواب: You can make clear progress in a short time if you practice consistently, but reaching a strong level requires practice, patience, and consistency.
+
+السؤال: How should I review English vocabulary?
+الجواب: Review old words regularly, use them in sentences, and test yourself instead of only reading the vocabulary list.
+
+السؤال: How can I improve my English writing?
+الجواب: Read good texts, learn vocabulary and grammar, then write short sentences and paragraphs and review your mistakes regularly.
+
+السؤال: How can I improve my Arabic reading skills?
+الجواب: Read regularly about different topics, try to understand the general meaning of the text, and review new words and expressions.
+
+السؤال: How can I improve my Arabic language skills?
+الجواب: Read a lot, review grammar, solve exercises, learn from your mistakes, and try to use the language correctly in writing and speaking.
+
+السؤال: What should I do if I cannot follow my study plan?
+الجواب: Do not stop completely. Adjust the plan to match your time and ability, then start again with small and organized steps.
+
+السؤال: How can I set educational goals?
+الجواب: Make your goal clear and specific, divide it into small goals, set a suitable time for each goal, and track your progress regularly.
+
+السؤال: What is the most important advice for students?
+الجواب: Do not depend only on memorization and watching tutorials. Try to understand, practice, review your mistakes, and most importantly, stay consistent and never give up.
+
+السؤال: Can I contact the support team if I have a problem?
+الجواب: Yes, you can contact the technical support team at 01126700081 or by email at [cc.mk.jn@gmail.com](mailto:cc.mk.jn@gmail.com) for assistance.
+
+السؤال: ما هي HTML؟
+الجواب: HTML هي لغة تُستخدم لإنشاء هيكل صفحات الويب وتنظيم محتوى الصفحة مثل النصوص والصور والروابط والجداول والنماذج.
+
+السؤال: ماذا تعني HTML؟
+الجواب: HTML تعني HyperText Markup Language، أي لغة ترميز النص التشعبي.
+
+السؤال: هل HTML لغة برمجة؟
+الجواب: لا، HTML ليست لغة برمجة، بل هي لغة ترميز تُستخدم لبناء هيكل صفحات الويب.
+
+السؤال: كيف أبدأ كتابة كود HTML؟
+الجواب: يمكنك إنشاء ملف جديد بامتداد .html، ثم فتحه باستخدام محرر أكواد وكتابة عناصر HTML بداخله.
+
+السؤال: ما هو امتداد ملف HTML؟
+الجواب: امتداد ملفات HTML هو .html، ويمكن أيضاً استخدام الامتداد .htm.
+
+السؤال: ما هو الشكل الأساسي لصفحة HTML؟
+الجواب: الشكل الأساسي يحتوي على DOCTYPE ثم وسم html، وداخله وسم head ووسم body.
+
+السؤال: ما فائدة <!DOCTYPE html>؟
+الجواب: يخبر المتصفح أن الصفحة مكتوبة باستخدام HTML5 ويساعد المتصفح على عرض الصفحة بطريقة صحيحة.
+
+السؤال: ما هو وسم html؟
+الجواب: وسم html هو العنصر الرئيسي الذي يحتوي على جميع عناصر صفحة HTML.
+
+السؤال: ما هو وسم head؟
+الجواب: وسم head يحتوي على معلومات عن الصفحة مثل عنوان الصفحة والـ meta tags والروابط الخاصة بملفات CSS.
+
+السؤال: ما هو وسم body؟
+الجواب: وسم body يحتوي على جميع المحتويات التي تظهر للمستخدم داخل صفحة الويب.
+
+السؤال: ما هو وسم title؟
+الجواب: وسم title يحدد عنوان الصفحة الذي يظهر في تبويب المتصفح.
+
+السؤال: كيف أكتب عنواناً في HTML؟
+الجواب: يمكنك استخدام وسوم العناوين من h1 إلى h6، مثل h1 للعناوين الرئيسية وh6 للعناوين الأصغر.
+
+السؤال: ما الفرق بين h1 وh6؟
+الجواب: h1 هو أكبر وأهم عنوان من ناحية الترتيب، بينما h6 هو أصغر مستوى من مستويات العناوين.
+
+السؤال: كيف أكتب فقرة في HTML؟
+الجواب: تستخدم وسم p لكتابة الفقرات النصية داخل صفحة HTML.
+
+السؤال: كيف أكتب نصاً عريضاً؟
+الجواب: يمكنك استخدام وسم strong أو وسم b لجعل النص عريضاً، ويفضل استخدام strong عندما يكون النص مهماً.
+
+السؤال: كيف أجعل النص مائلاً؟
+الجواب: يمكنك استخدام وسم em أو وسم i لجعل النص مائلاً.
+
+السؤال: كيف أضع خطاً تحت النص؟
+الجواب: يمكنك استخدام وسم u لوضع خط تحت النص، ولكن يفضل استخدام CSS في التصميم.
+
+السؤال: كيف أنشئ رابطاً في HTML؟
+الجواب: تستخدم وسم a مع الخاصية href لتحديد الرابط الذي سينتقل إليه المستخدم.
+
+السؤال: ما فائدة الخاصية href؟
+الجواب: الخاصية href تحدد عنوان الرابط الذي سيتم الانتقال إليه عند الضغط على عنصر الرابط.
+
+السؤال: كيف أفتح الرابط في تبويب جديد؟
+الجواب: يمكنك استخدام الخاصية target="_blank" داخل وسم a لفتح الرابط في تبويب جديد.
+
+السؤال: كيف أضيف صورة في HTML؟
+الجواب: تستخدم وسم img مع الخاصية src لتحديد مسار الصورة.
+
+السؤال: ما فائدة الخاصية src؟
+الجواب: الخاصية src تحدد مصدر الملف مثل مسار الصورة أو الفيديو أو ملف آخر.
+
+السؤال: ما فائدة الخاصية alt في الصور؟
+الجواب: الخاصية alt تقدم وصفاً للصورة وتظهر في حالة عدم تحميل الصورة، كما تساعد في تحسين الوصول لمحركات البحث.
+
+السؤال: هل وسم img يحتاج إلى وسم إغلاق؟
+الجواب: لا، وسم img من العناصر التي لا تحتاج إلى وسم إغلاق.
+
+السؤال: كيف أضيف فيديو في HTML؟
+الجواب: تستخدم وسم video ويمكنك إضافة الخاصية controls لإظهار أدوات التحكم في الفيديو.
+
+السؤال: كيف أضيف صوتاً في HTML؟
+الجواب: تستخدم وسم audio مع الخاصية controls لإظهار أدوات التحكم في الصوت.
+
+السؤال: كيف أضيف ملفاً صوتياً؟
+الجواب: يمكنك وضع مسار الملف داخل الخاصية src في وسم audio أو استخدام وسم source بداخله.
+
+السؤال: كيف أنشئ قائمة مرتبة؟
+الجواب: تستخدم وسم ol، وتضع عناصر القائمة داخل وسوم li.
+
+السؤال: كيف أنشئ قائمة غير مرتبة؟
+الجواب: تستخدم وسم ul، وتضع كل عنصر داخل وسم li.
+
+السؤال: ما هو وسم li؟
+الجواب: وسم li يستخدم لكتابة عنصر داخل قائمة مرتبة أو غير مرتبة.
+
+السؤال: كيف أنشئ جدولاً في HTML؟
+الجواب: تستخدم وسم table، وتستخدم tr للصفوف وth لعناوين الأعمدة وtd للخلايا.
+
+السؤال: ما هو وسم table؟
+الجواب: وسم table يستخدم لإنشاء جدول داخل صفحة HTML.
+
+السؤال: ما هو وسم tr؟
+الجواب: وسم tr يستخدم لإنشاء صف داخل الجدول.
+
+السؤال: ما هو وسم th؟
+الجواب: وسم th يستخدم لإنشاء خلية عنوان داخل الجدول.
+
+السؤال: ما هو وسم td؟
+الجواب: وسم td يستخدم لإنشاء خلية بيانات داخل الجدول.
+
+السؤال: كيف أدمج خلايا الجدول؟
+الجواب: يمكنك استخدام colspan لدمج الأعمدة أو rowspan لدمج الصفوف.
+
+السؤال: ما هو وسم form؟
+الجواب: وسم form يستخدم لإنشاء نماذج تسمح للمستخدم بإدخال البيانات.
+
+السؤال: ما هو وسم input؟
+الجواب: وسم input يستخدم لإنشاء حقول إدخال مختلفة مثل النص وكلمة المرور والبريد الإلكتروني.
+
+السؤال: ما فائدة الخاصية type في input؟
+الجواب: تحدد الخاصية type نوع حقل الإدخال مثل text أو password أو email أو number.
+
+السؤال: كيف أنشئ حقل إدخال نص؟
+الجواب: تستخدم وسم input وتحدد type="text".
+
+السؤال: كيف أنشئ حقل كلمة مرور؟
+الجواب: تستخدم وسم input وتحدد type="password" لإخفاء الأحرف التي يكتبها المستخدم.
+
+السؤال: كيف أنشئ زر إرسال؟
+الجواب: يمكنك استخدام input من النوع submit أو استخدام وسم button.
+
+السؤال: ما الفرق بين button وinput؟
+الجواب: كلاهما يمكن استخدامه لإنشاء أزرار، لكن button أكثر مرونة لأنه يمكن أن يحتوي على نص أو عناصر HTML أخرى بداخله.
+
+السؤال: ما فائدة الخاصية placeholder؟
+الجواب: تعرض نصاً إرشادياً داخل حقل الإدخال يوضح للمستخدم نوع البيانات المطلوبة.
+
+السؤال: ما فائدة الخاصية required؟
+الجواب: تجعل إدخال البيانات في الحقل إجبارياً قبل إرسال النموذج.
+
+السؤال: ما هو وسم label؟
+الجواب: وسم label يستخدم لكتابة اسم أو وصف لحقل الإدخال ويساعد على تحسين سهولة استخدام النموذج.
+
+السؤال: ما هو وسم textarea؟
+الجواب: وسم textarea يستخدم لإنشاء حقل يسمح بكتابة نصوص طويلة ومتعددة الأسطر.
+
+السؤال: ما هو وسم select؟
+الجواب: وسم select يستخدم لإنشاء قائمة منسدلة يختار المستخدم منها أحد الخيارات.
+
+السؤال: ما هو وسم option؟
+الجواب: وسم option يستخدم لإضافة اختيار داخل القائمة المنسدلة التي يتم إنشاؤها باستخدام select.
+
+السؤال: ما الفرق بين class وid؟
+الجواب: id يستخدم غالباً لتعريف عنصر واحد بشكل مميز، بينما class يمكن استخدامه مع عدة عناصر.
+
+السؤال: ما فائدة الخاصية class؟
+الجواب: تستخدم class لتجميع العناصر التي لها نفس التنسيق أو السلوك، ويمكن استخدامها مع CSS وJavaScript.
+
+السؤال: ما فائدة الخاصية id؟
+الجواب: تستخدم id لإعطاء عنصر HTML معرفاً فريداً يمكن استخدامه في CSS أو JavaScript.
+
+السؤال: ما هو وسم div؟
+الجواب: وسم div يستخدم لتجميع العناصر وتنظيم أجزاء الصفحة، وهو عنصر عام يمكن استخدامه لبناء هيكل الصفحة.
+
+السؤال: ما هو وسم span؟
+الجواب: وسم span يستخدم لتحديد جزء صغير من النص أو المحتوى داخل السطر وتطبيق تنسيق أو كود عليه.
+
+السؤال: ما الفرق بين div وspan؟
+الجواب: div عنصر Block يبدأ عادةً في سطر جديد، بينما span عنصر Inline يبقى داخل نفس السطر.
+
+السؤال: ما هي عناصر Block؟
+الجواب: هي عناصر تشغل عادةً عرضاً كاملاً وتبدأ في سطر جديد مثل div وp وh1.
+
+السؤال: ما هي عناصر Inline؟
+الجواب: هي عناصر لا تبدأ عادةً في سطر جديد وتظهر داخل نفس السطر مثل span وa وstrong.
+
+السؤال: ما هي التعليقات في HTML؟
+الجواب: التعليقات هي ملاحظات داخل الكود لا تظهر للمستخدم في الصفحة، وتستخدم لشرح الكود وتنظيمه.
+
+السؤال: كيف أكتب تعليقاً في HTML؟
+الجواب: يتم كتابة التعليق باستخدام بداية التعليق ونهايته الخاصة بلغة HTML.
+
+السؤال: ما هي Semantic Elements؟
+الجواب: هي عناصر HTML توضح معنى المحتوى مثل header وnav وmain وsection وarticle وfooter.
+
+السؤال: ما فائدة وسم header؟
+الجواب: يستخدم وسم header لتمثيل الجزء العلوي من الصفحة أو القسم، وغالباً يحتوي على الشعار أو العنوان أو القائمة.
+
+السؤال: ما فائدة وسم nav؟
+الجواب: يستخدم وسم nav لاحتواء روابط التنقل الرئيسية في الموقع.
+
+السؤال: ما فائدة وسم main؟
+الجواب: يستخدم وسم main لتحديد المحتوى الرئيسي في الصفحة.
+
+السؤال: ما فائدة وسم section؟
+الجواب: يستخدم وسم section لتقسيم الصفحة إلى أقسام منظمة حسب المحتوى.
+
+السؤال: ما فائدة وسم article؟
+الجواب: يستخدم وسم article للمحتوى المستقل مثل المقالات أو المنشورات أو الأخبار.
+
+السؤال: ما فائدة وسم footer؟
+الجواب: يستخدم وسم footer لتمثيل الجزء السفلي من الصفحة أو القسم، وغالباً يحتوي على معلومات التواصل وحقوق النشر والروابط.
+
+السؤال: كيف أربط ملف CSS بصفحة HTML؟
+الجواب: تستخدم وسم link داخل head وتحدد مسار ملف CSS باستخدام الخاصية href.
+
+السؤال: كيف أكتب CSS داخل HTML؟
+الجواب: يمكنك كتابة CSS داخل وسم style الموجود في head، أو استخدام ملف CSS خارجي.
+
+السؤال: كيف أكتب JavaScript داخل HTML؟
+الجواب: يمكنك كتابة JavaScript داخل وسم script أو ربط ملف JavaScript خارجي باستخدام الخاصية src.
+
+السؤال: ما فائدة meta charset="UTF-8"؟
+الجواب: تحدد ترميز الأحرف وتساعد على عرض اللغات المختلفة مثل اللغة العربية بشكل صحيح.
+
+السؤال: ما فائدة meta viewport؟
+الجواب: تساعد الصفحة على التكيف مع أحجام الشاشات المختلفة مثل الهاتف والتابلت والكمبيوتر.
+
+السؤال: كيف أجعل صفحة HTML متجاوبة مع الهاتف؟
+الجواب: استخدم meta viewport مع CSS Responsive Design مثل Media Queries وFlexbox وGrid.
+
+السؤال: ما الفرق بين HTML وCSS؟
+الجواب: HTML مسؤولة عن هيكل ومحتوى الصفحة، بينما CSS مسؤولة عن الألوان والتصميم والتنسيق والمظهر.
+
+السؤال: ما الفرق بين HTML وJavaScript؟
+الجواب: HTML تبني هيكل الصفحة، وCSS تنسق شكلها، بينما JavaScript تضيف التفاعل والوظائف الديناميكية.
+
+السؤال: كيف أتعلم HTML بشكل جيد؟
+الجواب: ابدأ بفهم الوسوم الأساسية، ثم طبق بنفسك من خلال إنشاء صفحات ومشاريع صغيرة، وحاول قراءة الأكواد وفهم طريقة عملها بدلاً من حفظها فقط.
+
+السؤال: What is HTML?
+الجواب: HTML is a markup language used to create the structure of web pages and organize content such as text, images, links, tables, and forms.
+
+السؤال: What does HTML stand for?
+الجواب: HTML stands for HyperText Markup Language.
+
+السؤال: Is HTML a programming language?
+الجواب: No, HTML is not a programming language. It is a markup language used to build the structure of web pages.
+
+السؤال: How do I start writing HTML code?
+الجواب: Create a new file with the .html extension, open it using a code editor, and start writing HTML elements inside it.
+
+السؤال: What is the extension of an HTML file?
+الجواب: The extension of an HTML file is .html. The .htm extension can also be used.
+
+السؤال: What is the basic structure of an HTML page?
+الجواب: The basic structure contains the DOCTYPE declaration, the html element, and inside it the head and body elements.
+
+السؤال: What is the purpose of <!DOCTYPE html>?
+الجواب: It tells the browser that the page uses HTML5 and helps the browser display the page correctly.
+
+السؤال: What is the html tag?
+الجواب: The html tag is the main element that contains all the elements of an HTML page.
+
+السؤال: What is the head tag?
+الجواب: The head tag contains information about the page, such as the page title, meta tags, and links to CSS files.
+
+السؤال: What is the body tag?
+الجواب: The body tag contains all the content that appears to the user on the webpage.
+
+السؤال: What is the title tag?
+الجواب: The title tag defines the title of the page that appears in the browser tab.
+
+السؤال: How do I write a heading in HTML?
+الجواب: You can use heading tags from h1 to h6. The h1 tag is used for the main heading, while h6 is the smallest heading level.
+
+السؤال: What is the difference between h1 and h6?
+الجواب: H1 is the largest and most important heading level, while h6 is the smallest heading level.
+
+السؤال: How do I write a paragraph in HTML?
+الجواب: You use the p tag to write text paragraphs inside an HTML page.
+
+السؤال: How do I make text bold?
+الجواب: You can use the strong or b tag to make text bold. The strong tag is preferred when the text has important meaning.
+
+السؤال: How do I make text italic?
+الجواب: You can use the em or i tag to make text italic.
+
+السؤال: How do I underline text?
+الجواب: You can use the u tag to underline text, although CSS is usually preferred for styling.
+
+السؤال: How do I create a link in HTML?
+الجواب: You use the a tag with the href attribute to create a link.
+
+السؤال: What is the purpose of the href attribute?
+الجواب: The href attribute defines the URL or destination that the user will visit when clicking the link.
+
+السؤال: How do I open a link in a new tab?
+الجواب: You can use target="_blank" inside the a tag to open the link in a new browser tab.
+
+السؤال: How do I add an image in HTML?
+الجواب: You use the img tag with the src attribute to specify the image path.
+
+السؤال: What is the purpose of the src attribute?
+الجواب: The src attribute specifies the source or path of a file, such as an image, video, or audio file.
+
+السؤال: What is the purpose of the alt attribute in images?
+الجواب: The alt attribute provides a description of the image and appears if the image cannot be loaded. It also helps with accessibility.
+
+السؤال: Does the img tag need a closing tag?
+الجواب: No, the img tag is a void element and does not need a closing tag.
+
+السؤال: How do I add a video in HTML?
+الجواب: You use the video tag, and you can add the controls attribute to display video controls.
+
+السؤال: How do I add audio in HTML?
+الجواب: You use the audio tag with the controls attribute to display audio controls.
+
+السؤال: How do I add an audio file?
+الجواب: You can add the file path using the src attribute inside the audio tag or use a source tag inside it.
+
+السؤال: How do I create an ordered list?
+الجواب: You use the ol tag and place each list item inside an li tag.
+
+السؤال: How do I create an unordered list?
+الجواب: You use the ul tag and place each item inside an li tag.
+
+السؤال: What is the li tag?
+الجواب: The li tag is used to create an item inside an ordered or unordered list.
+
+السؤال: How do I create a table in HTML?
+الجواب: You use the table tag. The tr tag is used for rows, th for heading cells, and td for data cells.
+
+السؤال: What is the table tag?
+الجواب: The table tag is used to create a table inside an HTML page.
+
+السؤال: What is the tr tag?
+الجواب: The tr tag is used to create a row inside an HTML table.
+
+السؤال: What is the th tag?
+الجواب: The th tag is used to create a heading cell inside a table.
+
+السؤال: What is the td tag?
+الجواب: The td tag is used to create a data cell inside a table.
+
+السؤال: How do I merge table cells?
+الجواب: You can use colspan to merge columns or rowspan to merge rows.
+
+السؤال: What is the form tag?
+الجواب: The form tag is used to create forms that allow users to enter and submit data.
+
+السؤال: What is the input tag?
+الجواب: The input tag is used to create different input fields such as text, password, email, and number fields.
+
+السؤال: What is the purpose of the type attribute in input?
+الجواب: The type attribute defines the type of input field, such as text, password, email, number, or submit.
+
+السؤال: How do I create a text input field?
+الجواب: You use the input tag with type="text".
+
+السؤال: How do I create a password field?
+الجواب: You use the input tag with type="password" to hide the characters entered by the user.
+
+السؤال: How do I create a submit button?
+الجواب: You can use an input element with type="submit" or use the button tag.
+
+السؤال: What is the difference between button and input?
+الجواب: Both can be used to create buttons, but the button tag is more flexible because it can contain text and other HTML elements.
+
+السؤال: What is the purpose of the placeholder attribute?
+الجواب: The placeholder attribute displays a helpful text inside an input field to show the user what type of information is required.
+
+السؤال: What is the purpose of the required attribute?
+الجواب: The required attribute makes entering data in a field mandatory before submitting the form.
+
+السؤال: What is the label tag?
+الجواب: The label tag is used to provide a name or description for an input field and improves the usability of forms.
+
+السؤال: What is the textarea tag?
+الجواب: The textarea tag is used to create a field for writing long text across multiple lines.
+
+السؤال: What is the select tag?
+الجواب: The select tag is used to create a dropdown list from which the user can choose an option.
+
+السؤال: What is the option tag?
+الجواب: The option tag is used to add an option inside a dropdown list created with the select tag.
+
+السؤال: What is the difference between class and id?
+الجواب: The id attribute is usually used to identify one unique element, while the class attribute can be used with multiple elements.
+
+السؤال: What is the purpose of the class attribute?
+الجواب: The class attribute is used to group elements that share the same style or behavior. It can be used with CSS and JavaScript.
+
+السؤال: What is the purpose of the id attribute?
+الجواب: The id attribute gives an HTML element a unique identifier that can be used with CSS or JavaScript.
+
+السؤال: What is the div tag?
+الجواب: The div tag is used to group elements and organize different sections of a webpage.
+
+السؤال: What is the span tag?
+الجواب: The span tag is used to select a small part of text or content inside a line and apply styling or code to it.
+
+السؤال: What is the difference between div and span?
+الجواب: The div element is a block-level element that usually starts on a new line, while span is an inline element that stays within the same line.
+
+السؤال: What are block-level elements?
+الجواب: Block-level elements usually take the full available width and start on a new line, such as div, p, and h1.
+
+السؤال: What are inline elements?
+الجواب: Inline elements usually do not start on a new line and appear within the same line, such as span, a, and strong.
+
+السؤال: What are comments in HTML?
+الجواب: Comments are notes inside the code that are not displayed to users. They are used to explain and organize the code.
+
+السؤال: How do I write a comment in HTML?
+الجواب: You write an HTML comment using the special HTML comment syntax.
+
+السؤال: What are semantic elements?
+الجواب: Semantic elements clearly describe the meaning of their content, such as header, nav, main, section, article, and footer.
+
+السؤال: What is the purpose of the header tag?
+الجواب: The header tag represents the top section of a page or section and may contain a logo, heading, or navigation menu.
+
+السؤال: What is the purpose of the nav tag?
+الجواب: The nav tag is used to contain the main navigation links of a website.
+
+السؤال: What is the purpose of the main tag?
+الجواب: The main tag identifies the main content of a webpage.
+
+السؤال: What is the purpose of the section tag?
+الجواب: The section tag is used to divide a webpage into organized sections based on the content.
+
+السؤال: What is the purpose of the article tag?
+الجواب: The article tag is used for independent content such as articles, posts, or news.
+
+السؤال: What is the purpose of the footer tag?
+الجواب: The footer tag represents the bottom section of a page or section and may contain contact information, copyright information, and links.
+
+السؤال: How do I link a CSS file to an HTML page?
+الجواب: You use the link tag inside the head element and specify the CSS file path using the href attribute.
+
+السؤال: How do I write CSS inside HTML?
+الجواب: You can write CSS inside a style tag in the head element or use an external CSS file.
+
+السؤال: How do I write JavaScript inside HTML?
+الجواب: You can write JavaScript inside a script tag or link an external JavaScript file using the src attribute.
+
+السؤال: What is the purpose of meta charset="UTF-8"?
+الجواب: It defines the character encoding and helps display different languages correctly, including Arabic.
+
+السؤال: What is the purpose of the meta viewport tag?
+الجواب: It helps the webpage adapt to different screen sizes such as phones, tablets, and computers.
+
+السؤال: How can I make an HTML page responsive?
+الجواب: Use the meta viewport tag with responsive CSS techniques such as media queries, Flexbox, and Grid.
+
+السؤال: What is the difference between HTML and CSS?
+الجواب: HTML is responsible for the structure and content of a webpage, while CSS is responsible for its colors, design, layout, and appearance.
+
+السؤال: What is the difference between HTML and JavaScript?
+الجواب: HTML builds the structure of the webpage, CSS controls its design, and JavaScript adds interaction and dynamic functionality.
+
+السؤال: How can I learn HTML effectively?
+الجواب: Start by understanding the basic tags, then practice by creating webpages and small projects. Try to read and understand the code instead of only memorizing it.
+
+السؤال: ما هي CSS؟
+الجواب: CSS هي لغة تستخدم لتنسيق وتصميم صفحات الويب والتحكم في الألوان والخطوط والمسافات والأحجام والتخطيط.
+
+السؤال: ماذا تعني CSS؟
+الجواب: CSS تعني Cascading Style Sheets، أي أوراق الأنماط المتتالية.
+
+السؤال: هل CSS لغة برمجة؟
+الجواب: لا، CSS ليست لغة برمجة، بل هي لغة تنسيق تستخدم لتحديد شكل ومظهر عناصر صفحات الويب.
+
+السؤال: كيف أكتب CSS؟
+الجواب: يمكنك كتابة CSS داخل وسم style أو داخل ملف CSS خارجي، ثم استخدام المحددات والخصائص والقيم لتنسيق عناصر HTML.
+
+السؤال: ما هي الطريقة الأفضل لكتابة CSS؟
+الجواب: استخدام ملف CSS خارجي يعتبر الأفضل في المشاريع الكبيرة لأنه يساعد على تنظيم الكود وإعادة استخدام التنسيقات.
+
+السؤال: كيف أربط ملف CSS بصفحة HTML؟
+الجواب: تستخدم وسم link داخل وسم head وتحدد مسار ملف CSS باستخدام الخاصية href.
+
+السؤال: ما هو Selector في CSS؟
+الجواب: هو المحدد الذي تستخدمه CSS لاختيار عنصر أو مجموعة من عناصر HTML وتطبيق التنسيقات عليها.
+
+السؤال: ما هو Universal Selector؟
+الجواب: هو المحدد * ويستخدم لتحديد جميع عناصر HTML في الصفحة.
+
+السؤال: كيف أختار عنصراً باستخدام اسم الوسم؟
+الجواب: تكتب اسم وسم HTML مباشرة في CSS، مثل p لتنسيق جميع الفقرات.
+
+السؤال: كيف أستخدم class في CSS؟
+الجواب: تكتب نقطة قبل اسم الـ class، مثل .box، لتطبيق التنسيق على جميع العناصر التي تحمل هذا الـ class.
+
+السؤال: كيف أستخدم id في CSS؟
+الجواب: تكتب علامة # قبل اسم الـ id، مثل #header، لتنسيق العنصر الذي يحمل هذا الـ id.
+
+السؤال: ما الفرق بين class وid في CSS؟
+الجواب: يمكن استخدام class مع عدة عناصر، بينما id يفضل أن يكون معرفاً فريداً لعنصر واحد.
+
+السؤال: ما هي الخاصية color؟
+الجواب: تستخدم الخاصية color لتغيير لون النص.
+
+السؤال: كيف أغير لون خلفية عنصر؟
+الجواب: تستخدم الخاصية background-color لتحديد لون خلفية العنصر.
+
+السؤال: ما الفرق بين color وbackground-color؟
+الجواب: color تغير لون النص، بينما background-color تغير لون خلفية العنصر.
+
+السؤال: كيف أضع صورة كخلفية؟
+الجواب: تستخدم الخاصية background-image وتحدد مسار الصورة باستخدام url.
+
+السؤال: كيف أجعل صورة الخلفية تغطي العنصر بالكامل؟
+الجواب: تستخدم background-size: cover لجعل صورة الخلفية تغطي مساحة العنصر بالكامل.
+
+السؤال: كيف أمنع تكرار صورة الخلفية؟
+الجواب: تستخدم الخاصية background-repeat: no-repeat لمنع تكرار الصورة.
+
+السؤال: كيف أغير حجم الخط؟
+الجواب: تستخدم الخاصية font-size لتحديد حجم النص.
+
+السؤال: كيف أغير نوع الخط؟
+الجواب: تستخدم الخاصية font-family لتحديد نوع الخط المستخدم.
+
+السؤال: كيف أجعل النص عريضاً؟
+الجواب: تستخدم الخاصية font-weight وتحدد قيمة مثل bold أو رقم مناسب لزيادة سمك الخط.
+
+السؤال: كيف أجعل النص مائلاً؟
+الجواب: تستخدم الخاصية font-style: italic لجعل النص مائلاً.
+
+السؤال: كيف أضع خطاً تحت النص؟
+الجواب: تستخدم الخاصية text-decoration: underline لوضع خط أسفل النص.
+
+السؤال: كيف أزيل الخط الموجود أسفل الروابط؟
+الجواب: تستخدم text-decoration: none لإزالة الخط الموجود أسفل الرابط.
+
+السؤال: كيف أجعل النص في المنتصف؟
+الجواب: تستخدم الخاصية text-align: center لتوسيط النص أفقياً.
+
+السؤال: كيف أغير المسافة بين الأسطر؟
+الجواب: تستخدم الخاصية line-height للتحكم في المسافة الرأسية بين الأسطر.
+
+السؤال: كيف أغير المسافة بين الحروف؟
+الجواب: تستخدم الخاصية letter-spacing للتحكم في المسافة بين الحروف.
+
+السؤال: كيف أغير المسافة بين الكلمات؟
+الجواب: تستخدم الخاصية word-spacing للتحكم في المسافة بين الكلمات.
+
+السؤال: ما هو margin؟
+الجواب: margin هي المسافة الخارجية حول العنصر، وتستخدم لإبعاده عن العناصر الأخرى.
+
+السؤال: ما هو padding؟
+الجواب: padding هي المسافة الداخلية بين محتوى العنصر وحدوده.
+
+السؤال: ما الفرق بين margin وpadding؟
+الجواب: margin مسافة خارج العنصر، بينما padding مسافة داخل العنصر بين المحتوى والحدود.
+
+السؤال: ما هو border؟
+الجواب: border هو الإطار المحيط بالعنصر ويمكن التحكم في لونه وحجمه ونوعه.
+
+السؤال: كيف أغير سمك الحدود؟
+الجواب: تستخدم الخاصية border-width لتحديد سمك الحدود.
+
+السؤال: كيف أغير لون الحدود؟
+الجواب: تستخدم الخاصية border-color لتحديد لون الحدود.
+
+السؤال: كيف أغير شكل الحدود؟
+الجواب: تستخدم الخاصية border-style ويمكن اختيار solid أو dashed أو dotted وغيرها.
+
+السؤال: كيف أجعل زوايا العنصر دائرية؟
+الجواب: تستخدم الخاصية border-radius لتدوير زوايا العنصر.
+
+السؤال: كيف أجعل العنصر دائرياً؟
+الجواب: يمكن استخدام border-radius: 50% مع جعل العرض والارتفاع متساويين.
+
+السؤال: ما هي خاصية width؟
+الجواب: تستخدم width لتحديد عرض العنصر.
+
+السؤال: ما هي خاصية height؟
+الجواب: تستخدم height لتحديد ارتفاع العنصر.
+
+السؤال: ما الفرق بين width وmax-width؟
+الجواب: width تحدد عرضاً معيناً، بينما max-width تحدد أكبر عرض يمكن أن يصل إليه العنصر.
+
+السؤال: ما هو display؟
+الجواب: display تحدد طريقة عرض العنصر في الصفحة مثل block أو inline أو flex أو grid أو none.
+
+السؤال: ما هو display: block؟
+الجواب: يجعل العنصر يبدأ في سطر جديد وغالباً يشغل العرض المتاح له.
+
+السؤال: ما هو display: inline؟
+الجواب: يجعل العنصر يظهر داخل نفس السطر ولا يبدأ عادةً في سطر جديد.
+
+السؤال: ما هو display: none؟
+الجواب: يخفي العنصر من الصفحة ولا يحجز مساحة له.
+
+السؤال: ما هو Flexbox؟
+الجواب: Flexbox هو نظام تخطيط في CSS يساعد على ترتيب العناصر وتوزيعها ومحاذاتها بسهولة.
+
+السؤال: كيف أستخدم Flexbox؟
+الجواب: تضع display: flex على العنصر الأب، ثم تستخدم خصائص مثل justify-content وalign-items لترتيب العناصر.
+
+السؤال: ما فائدة justify-content؟
+الجواب: تستخدم للتحكم في توزيع ومحاذاة العناصر على المحور الرئيسي داخل Flexbox.
+
+السؤال: ما فائدة align-items؟
+الجواب: تستخدم لمحاذاة العناصر على المحور المتقاطع داخل Flexbox.
+
+السؤال: ما فائدة flex-direction؟
+الجواب: تحدد اتجاه ترتيب العناصر داخل Flexbox مثل row أو column.
+
+السؤال: ما هو CSS Grid؟
+الجواب: CSS Grid هو نظام تخطيط يسمح بإنشاء تصميم يعتمد على الصفوف والأعمدة.
+
+السؤال: ما فائدة grid-template-columns؟
+الجواب: تستخدم لتحديد عدد الأعمدة وأحجامها داخل نظام Grid.
+
+السؤال: ما فائدة gap؟
+الجواب: تستخدم لتحديد المسافة بين العناصر داخل Flexbox أو Grid.
+
+السؤال: ما هو position؟
+الجواب: position تحدد طريقة تحديد موقع العنصر داخل الصفحة مثل static أو relative أو absolute أو fixed أو sticky.
+
+السؤال: ما الفرق بين relative وabsolute؟
+الجواب: relative يحافظ على مكان العنصر الأصلي، بينما absolute يخرج العنصر من التدفق الطبيعي ويتم تحديد موقعه بالنسبة إلى أقرب أب مناسب.
+
+السؤال: ما فائدة position: fixed؟
+الجواب: تجعل العنصر ثابتاً في مكان معين من الشاشة حتى عند تمرير الصفحة.
+
+السؤال: ما فائدة position: sticky؟
+الجواب: تجعل العنصر يتحرك مع الصفحة ثم يثبت عند الوصول إلى موضع معين أثناء التمرير.
+
+السؤال: ما هو z-index؟
+الجواب: z-index يتحكم في ترتيب العناصر فوق بعضها، حيث يظهر العنصر ذو القيمة الأعلى فوق العناصر ذات القيمة الأقل.
+
+السؤال: كيف أجعل الموقع متجاوباً مع الهاتف؟
+الجواب: تستخدم التصميم المتجاوب من خلال Media Queries وFlexbox وGrid ووحدات مرنة مثل النسب المئوية وrem وvw.
+
+السؤال: ما هي Media Queries؟
+الجواب: هي قواعد CSS تستخدم لتطبيق تنسيقات مختلفة حسب حجم الشاشة أو نوع الجهاز.
+
+السؤال: ما هو hover؟
+الجواب: هو حالة تحدث عندما يمرر المستخدم مؤشر الماوس فوق عنصر، ويمكن استخدامها لتغيير شكله أو لونه.
+
+السؤال: ما هي transition؟
+الجواب: transition تجعل تغيير الخصائص أكثر سلاسة بدلاً من حدوث التغيير بشكل مفاجئ.
+
+السؤال: ما هي transform؟
+الجواب: transform تستخدم لتحريك العناصر أو تدويرها أو تكبيرها أو تصغيرها.
+
+السؤال: ما هي animation في CSS؟
+الجواب: animation تستخدم لإنشاء حركات وتأثيرات متقدمة للعناصر باستخدام keyframes.
+
+السؤال: ما هو box-shadow؟
+الجواب: box-shadow تستخدم لإضافة ظل حول العنصر وإعطائه مظهراً أكثر احترافية.
+
+السؤال: ما هو opacity؟
+الجواب: opacity تتحكم في درجة شفافية العنصر، حيث تكون القيمة 0 شفافية كاملة والقيمة 1 ظهوراً كاملاً.
+
+السؤال: كيف أغير شكل مؤشر الماوس؟
+الجواب: تستخدم الخاصية cursor ويمكن تحديد شكل المؤشر مثل pointer عند المرور فوق الأزرار والروابط.
+
+السؤال: ما هو overflow؟
+الجواب: overflow تتحكم في المحتوى الذي يتجاوز حدود العنصر، ويمكن إظهاره أو إخفاؤه أو إضافة شريط تمرير.
+
+السؤال: كيف أكتب تعليقاً في CSS؟
+الجواب: يتم كتابة التعليق في CSS باستخدام /* ثم كتابة التعليق ثم */.
+
+السؤال: ما هي أولوية CSS؟
+الجواب: عند وجود أكثر من تنسيق لنفس العنصر، تحدد الأولوية حسب نوع المحدد ومكان كتابة الكود واستخدام !important.
+
+السؤال: ما هو !important؟
+الجواب: !important يعطي الخاصية أولوية عالية جداً، ولكن يفضل استخدامه بحذر لأنه قد يجعل إدارة CSS أكثر صعوبة.
+
+السؤال: What is CSS?
+الجواب: CSS is a language used to style and design web pages and control colors, fonts, spacing, sizes, and layouts.
+
+السؤال: What does CSS stand for?
+الجواب: CSS stands for Cascading Style Sheets.
+
+السؤال: Is CSS a programming language?
+الجواب: No, CSS is not a programming language. It is a style sheet language used to define the appearance and design of web pages.
+
+السؤال: How do I write CSS?
+الجواب: You can write CSS inside a style tag or in an external CSS file, then use selectors, properties, and values to style HTML elements.
+
+السؤال: What is the best way to write CSS?
+الجواب: Using an external CSS file is usually the best choice for large projects because it helps organize the code and reuse styles.
+
+السؤال: How do I link a CSS file to an HTML page?
+الجواب: You use the link tag inside the head tag and specify the CSS file path using the href attribute.
+
+السؤال: What is a selector in CSS?
+الجواب: A selector is used to select one or more HTML elements and apply styles to them.
+
+السؤال: What is the universal selector?
+الجواب: The universal selector is represented by * and is used to select all HTML elements on the page.
+
+السؤال: How do I select an element using its tag name?
+الجواب: You write the HTML tag name directly in CSS, such as p to style all paragraphs.
+
+السؤال: How do I use a class in CSS?
+الجواب: You write a dot before the class name, such as .box, to apply styles to all elements with that class.
+
+السؤال: How do I use an id in CSS?
+الجواب: You write a hash symbol before the id name, such as #header, to style the element with that id.
+
+السؤال: What is the difference between class and id in CSS?
+الجواب: A class can be used with multiple elements, while an id should generally be unique to one element.
+
+السؤال: What is the color property?
+الجواب: The color property is used to change the color of text.
+
+السؤال: How do I change the background color of an element?
+الجواب: You use the background-color property to set the background color of an element.
+
+السؤال: What is the difference between color and background-color?
+الجواب: The color property changes the text color, while background-color changes the background color of an element.
+
+السؤال: How do I add a background image?
+الجواب: You use the background-image property and specify the image path using url.
+
+السؤال: How do I make a background image cover the entire element?
+الجواب: You use background-size: cover to make the background image cover the entire area of the element.
+
+السؤال: How do I prevent a background image from repeating?
+الجواب: You use background-repeat: no-repeat to prevent the background image from repeating.
+
+السؤال: How do I change the font size?
+الجواب: You use the font-size property to set the size of the text.
+
+السؤال: How do I change the font type?
+الجواب: You use the font-family property to specify the font used for the text.
+
+السؤال: How do I make text bold?
+الجواب: You use the font-weight property and set a value such as bold or an appropriate number.
+
+السؤال: How do I make text italic?
+الجواب: You use font-style: italic to make text italic.
+
+السؤال: How do I underline text?
+الجواب: You use text-decoration: underline to add an underline below the text.
+
+السؤال: How do I remove the underline from links?
+الجواب: You use text-decoration: none to remove the underline from a link.
+
+السؤال: How do I center text?
+الجواب: You use text-align: center to center text horizontally.
+
+السؤال: How do I change the spacing between lines?
+الجواب: You use the line-height property to control the vertical space between lines.
+
+السؤال: How do I change the spacing between letters?
+الجواب: You use the letter-spacing property to control the space between letters.
+
+السؤال: How do I change the spacing between words?
+الجواب: You use the word-spacing property to control the space between words.
+
+السؤال: What is margin?
+الجواب: Margin is the outer space around an element and is used to separate it from other elements.
+
+السؤال: What is padding?
+الجواب: Padding is the inner space between the content of an element and its border.
+
+السؤال: What is the difference between margin and padding?
+الجواب: Margin is the space outside an element, while padding is the space inside the element between the content and the border.
+
+السؤال: What is a border?
+الجواب: A border is the line surrounding an element, and you can control its color, size, and style.
+
+السؤال: How do I change the border thickness?
+الجواب: You use the border-width property to set the thickness of the border.
+
+السؤال: How do I change the border color?
+الجواب: You use the border-color property to set the color of the border.
+
+السؤال: How do I change the border style?
+الجواب: You use the border-style property and can choose values such as solid, dashed, or dotted.
+
+السؤال: How do I make the corners of an element rounded?
+الجواب: You use the border-radius property to round the corners of an element.
+
+السؤال: How do I make an element circular?
+الجواب: You can use border-radius: 50% and make the width and height equal.
+
+السؤال: What is the width property?
+الجواب: The width property is used to set the width of an element.
+
+السؤال: What is the height property?
+الجواب: The height property is used to set the height of an element.
+
+السؤال: What is the difference between width and max-width?
+الجواب: Width sets a specific width, while max-width sets the maximum width an element can reach.
+
+السؤال: What is display?
+الجواب: The display property controls how an element is displayed, such as block, inline, flex, grid, or none.
+
+السؤال: What is display: block?
+الجواب: It makes the element start on a new line and usually take the available width.
+
+السؤال: What is display: inline?
+الجواب: It makes the element appear within the same line and usually prevents it from starting on a new line.
+
+السؤال: What is display: none?
+الجواب: It hides the element from the page and removes the space it would normally occupy.
+
+السؤال: What is Flexbox?
+الجواب: Flexbox is a CSS layout system that helps arrange, align, and distribute elements easily.
+
+السؤال: How do I use Flexbox?
+الجواب: You set display: flex on the parent element, then use properties such as justify-content and align-items to arrange the elements.
+
+السؤال: What is the purpose of justify-content?
+الجواب: It controls the distribution and alignment of items along the main axis in Flexbox.
+
+السؤال: What is the purpose of align-items?
+الجواب: It aligns items along the cross axis in Flexbox.
+
+السؤال: What is the purpose of flex-direction?
+الجواب: It defines the direction in which items are arranged in Flexbox, such as row or column.
+
+السؤال: What is CSS Grid?
+الجواب: CSS Grid is a layout system that allows you to create designs based on rows and columns.
+
+السؤال: What is the purpose of grid-template-columns?
+الجواب: It is used to define the number and sizes of columns in a Grid layout.
+
+السؤال: What is the purpose of gap?
+الجواب: The gap property defines the space between elements in Flexbox or Grid.
+
+السؤال: What is position?
+الجواب: The position property defines how an element is positioned on the page, such as static, relative, absolute, fixed, or sticky.
+
+السؤال: What is the difference between relative and absolute?
+الجواب: Relative keeps the element's original position in the layout, while absolute removes the element from the normal flow and positions it relative to a suitable positioned parent.
+
+السؤال: What is the purpose of position: fixed?
+الجواب: It keeps an element fixed in a specific position on the screen even when the page is scrolled.
+
+السؤال: What is the purpose of position: sticky?
+الجواب: It allows an element to move with the page and then stick to a specific position while scrolling.
+
+السؤال: What is z-index?
+الجواب: z-index controls the stacking order of elements. An element with a higher value appears above elements with lower values.
+
+السؤال: How do I make a website responsive on mobile devices?
+الجواب: You use responsive design techniques such as Media Queries, Flexbox, Grid, and flexible units like percentages, rem, and vw.
+
+السؤال: What are Media Queries?
+الجواب: Media Queries are CSS rules used to apply different styles depending on the screen size or device.
+
+السؤال: What is hover?
+الجواب: Hover is a state that occurs when the user moves the mouse pointer over an element, allowing you to change its appearance.
+
+السؤال: What is transition?
+الجواب: Transition makes changes to CSS properties smoother instead of making them happen suddenly.
+
+السؤال: What is transform?
+الجواب: Transform is used to move, rotate, scale, or resize elements.
+
+السؤال: What is animation in CSS?
+الجواب: Animation is used to create advanced movements and effects using keyframes.
+
+السؤال: What is box-shadow?
+الجواب: box-shadow is used to add a shadow around an element and give it a more professional appearance.
+
+السؤال: What is opacity?
+الجواب: Opacity controls the transparency of an element. A value of 0 means fully transparent, while 1 means fully visible.
+
+السؤال: How do I change the mouse cursor?
+الجواب: You use the cursor property and can set a cursor style such as pointer for buttons and links.
+
+السؤال: What is overflow?
+الجواب: Overflow controls content that goes beyond the boundaries of an element. It can be shown, hidden, or displayed with a scrollbar.
+
+السؤال: How do I write a comment in CSS?
+الجواب: You write a CSS comment using /*, then the comment, and then */.
+
+السؤال: What is CSS specificity?
+الجواب: CSS specificity determines which style is applied when multiple rules target the same element. It depends on the type of selector and the location of the code.
+
+السؤال: What is !important in CSS?
+الجواب: !important gives a CSS property very high priority, but it should be used carefully because it can make CSS code more difficult to manage.
+
+السؤال: What is JavaScript?
+الجواب: JavaScript is a programming language used to make websites interactive and dynamic.
+
+السؤال: Where can JavaScript be used?
+الجواب: JavaScript can be used in websites, web applications, servers, mobile applications, and games.
+
+السؤال: How do I write JavaScript code in HTML?
+الجواب: You can write JavaScript inside the <script> tag in an HTML file.
+
+السؤال: How do I link an external JavaScript file?
+الجواب: You use the <script> tag with the src attribute to connect an external JavaScript file.
+
+السؤال: What is a variable in JavaScript?
+الجواب: A variable is used to store data that can be used and changed in a program.
+
+السؤال: What is the difference between let and var?
+الجواب: let has block scope, while var has function scope and is an older way to declare variables.
+
+السؤال: What is const in JavaScript?
+الجواب: const is used to declare a variable whose value cannot be reassigned.
+
+السؤال: How do I declare a variable?
+الجواب: You can declare a variable using keywords such as let, const, or var.
+
+السؤال: What are data types in JavaScript?
+الجواب: Data types define the kind of value stored in a variable, such as String, Number, Boolean, Object, and Undefined.
+
+السؤال: What is a String?
+الجواب: A String is a data type used to store text and characters.
+
+السؤال: What is a Number?
+الجواب: A Number is a data type used to store numerical values.
+
+السؤال: What is a Boolean?
+الجواب: A Boolean can have only two values: true or false.
+
+السؤال: What is Undefined?
+الجواب: Undefined means that a variable has been declared but has not been assigned a value.
+
+السؤال: What is Null?
+الجواب: Null represents an intentional empty or missing value.
+
+السؤال: What is an Array?
+الجواب: An Array is used to store multiple values in a single variable.
+
+السؤال: How do I create an Array?
+الجواب: You can create an Array using square brackets [] and separate the values with commas.
+
+السؤال: What is an Object in JavaScript?
+الجواب: An Object is used to store data in the form of key-value pairs.
+
+السؤال: What is a function?
+الجواب: A function is a block of code designed to perform a specific task.
+
+السؤال: How do I create a function?
+الجواب: You can create a function using the function keyword followed by the function name and parentheses.
+
+السؤال: What is a parameter?
+الجواب: A parameter is a variable that receives a value when a function is called.
+
+السؤال: What is an argument?
+الجواب: An argument is the actual value passed to a function when it is called.
+
+السؤال: What does return do?
+الجواب: return sends a value back from a function.
+
+السؤال: What is an arrow function?
+الجواب: An arrow function is a shorter way to write a function using the => syntax.
+
+السؤال: What is an operator?
+الجواب: An operator is a symbol used to perform operations on values and variables.
+
+السؤال: What are arithmetic operators?
+الجواب: Arithmetic operators are used to perform mathematical operations such as addition, subtraction, multiplication, and division.
+
+السؤال: What are comparison operators?
+الجواب: Comparison operators compare two values and return a Boolean result.
+
+السؤال: What is the difference between == and ===?
+الجواب: == compares values after possible type conversion, while === compares both value and data type.
+
+السؤال: What are logical operators?
+الجواب: Logical operators such as &&, ||, and ! are used to combine or reverse conditions.
+
+السؤال: What is an if statement?
+الجواب: An if statement runs a block of code when a specified condition is true.
+
+السؤال: What is else?
+الجواب: else runs a block of code when the if condition is false.
+
+السؤال: What is else if?
+الجواب: else if is used to check another condition if the previous condition is false.
+
+السؤال: What is a switch statement?
+الجواب: A switch statement is used to execute different code blocks based on different values.
+
+السؤال: What is a loop?
+الجواب: A loop is used to repeat a block of code multiple times.
+
+السؤال: What is a for loop?
+الجواب: A for loop repeats code while following an initialization, condition, and update.
+
+السؤال: What is a while loop?
+الجواب: A while loop repeats code as long as a specified condition is true.
+
+السؤال: What is a do...while loop?
+الجواب: A do...while loop executes the code at least once before checking the condition.
+
+السؤال: What does break do?
+الجواب: break stops a loop or exits a switch statement.
+
+السؤال: What does continue do?
+الجواب: continue skips the current iteration and moves to the next iteration of a loop.
+
+السؤال: What is the DOM?
+الجواب: The DOM is a representation of an HTML document that JavaScript can use to access and modify elements.
+
+السؤال: How do I select an element by ID?
+الجواب: You use document.getElementById() to select an element using its ID.
+
+السؤال: How do I select elements by class?
+الجواب: You can use document.getElementsByClassName() or document.querySelector().
+
+السؤال: What is querySelector()?
+الجواب: querySelector() selects the first element that matches a CSS selector.
+
+السؤال: What is querySelectorAll()?
+الجواب: querySelectorAll() selects all elements that match a CSS selector.
+
+السؤال: How do I change the text of an element?
+الجواب: You can use properties such as textContent or innerHTML to change the content of an element.
+
+السؤال: What is innerHTML?
+الجواب: innerHTML is used to get or change the HTML content inside an element.
+
+السؤال: What is textContent?
+الجواب: textContent is used to get or change the text content of an element.
+
+السؤال: How do I change CSS using JavaScript?
+الجواب: You can change CSS using the element's style property.
+
+السؤال: What is classList?
+الجواب: classList allows you to add, remove, toggle, or check CSS classes on an element.
+
+السؤال: What is an Event?
+الجواب: An Event is an action that happens in the browser, such as a click, key press, or mouse movement.
+
+السؤال: What is addEventListener()?
+الجواب: addEventListener() is used to run a function when a specific event occurs.
+
+السؤال: What is a click event?
+الجواب: A click event occurs when the user clicks on an element.
+
+السؤال: What is a keyboard event?
+الجواب: A keyboard event occurs when the user presses or releases a keyboard key.
+
+السؤال: What is a mouse event?
+الجواب: A mouse event occurs when the user performs an action with the mouse, such as moving or clicking.
+
+السؤال: What is setTimeout()?
+الجواب: setTimeout() runs a function once after a specified amount of time.
+
+السؤال: What is setInterval()?
+الجواب: setInterval() repeatedly runs a function after a specified time interval.
+
+السؤال: What is JSON?
+الجواب: JSON is a text format used to store and exchange data between applications.
+
+السؤال: What is fetch()?
+الجواب: fetch() is used to request data from a server or API.
+
+السؤال: What is an API?
+الجواب: An API allows different applications or systems to communicate and exchange data.
+
+السؤال: What is a Promise?
+الجواب: A Promise represents a value that may be available now, later, or never.
+
+السؤال: What are async and await?
+الجواب: async and await make it easier to work with asynchronous operations such as API requests.
+
+السؤال: ما هي JavaScript؟
+الجواب: JavaScript هي لغة برمجة تُستخدم لجعل مواقع الويب تفاعلية وديناميكية.
+
+السؤال: أين يمكن استخدام JavaScript؟
+الجواب: يمكن استخدام JavaScript في مواقع الويب وتطبيقات الويب والخوادم وتطبيقات الهاتف والألعاب.
+
+السؤال: كيف أكتب كود JavaScript داخل HTML؟
+الجواب: يمكنك كتابة JavaScript داخل وسم <script> في ملف HTML.
+
+السؤال: كيف أربط ملف JavaScript خارجي؟
+الجواب: تستخدم وسم <script> مع الخاصية src لربط ملف JavaScript خارجي.
+
+السؤال: ما هو المتغير في JavaScript؟
+الجواب: المتغير هو مكان يُستخدم لتخزين البيانات التي يمكن استخدامها وتغييرها في البرنامج.
+
+السؤال: ما الفرق بين let و var؟
+الجواب: let لها نطاق كتلة، بينما var لها نطاق دالة وتُعتبر طريقة قديمة لتعريف المتغيرات.
+
+السؤال: ما هي const في JavaScript؟
+الجواب: const تُستخدم لتعريف متغير لا يمكن إعادة تعيين قيمته.
+
+السؤال: كيف أُعرّف متغيرًا؟
+الجواب: يمكنك تعريف المتغير باستخدام كلمات مثل let أو const أو var.
+
+السؤال: ما هي أنواع البيانات في JavaScript؟
+الجواب: أنواع البيانات تحدد نوع القيمة المخزنة في المتغير، مثل النصوص والأرقام والقيم المنطقية والكائنات والقيم غير المعرفة.
+
+السؤال: ما هو String؟
+الجواب: String هو نوع بيانات يُستخدم لتخزين النصوص والحروف.
+
+السؤال: ما هو Number؟
+الجواب: Number هو نوع بيانات يُستخدم لتخزين القيم الرقمية.
+
+السؤال: ما هو Boolean؟
+الجواب: Boolean هو نوع بيانات يمكن أن تكون قيمته true أو false فقط.
+
+السؤال: ما هو Undefined؟
+الجواب: Undefined تعني أن المتغير تم تعريفه ولكنه لم يحصل على قيمة.
+
+السؤال: ما هو Null؟
+الجواب: Null تمثل قيمة فارغة أو عدم وجود قيمة بشكل مقصود.
+
+السؤال: ما هي Array؟
+الجواب: Array تُستخدم لتخزين عدة قيم داخل متغير واحد.
+
+السؤال: كيف أنشئ Array؟
+الجواب: يمكنك إنشاء Array باستخدام الأقواس المربعة [] ووضع القيم بداخلها وفصلها بفواصل.
+
+السؤال: ما هو Object في JavaScript؟
+الجواب: Object يُستخدم لتخزين البيانات في شكل أزواج من المفتاح والقيمة.
+
+السؤال: ما هي الدالة Function؟
+الجواب: الدالة هي مجموعة من الأكواد يتم تصميمها لتنفيذ مهمة معينة.
+
+السؤال: كيف أنشئ دالة؟
+الجواب: يمكنك إنشاء دالة باستخدام كلمة function ثم اسم الدالة والأقواس.
+
+السؤال: ما هو Parameter؟
+الجواب: Parameter هو متغير يستقبل قيمة عند استدعاء الدالة.
+
+السؤال: ما هو Argument؟
+الجواب: Argument هي القيمة الفعلية التي يتم إرسالها إلى الدالة عند استدعائها.
+
+السؤال: ماذا تفعل return؟
+الجواب: return تُعيد قيمة من الدالة إلى المكان الذي تم فيه استدعاء الدالة.
+
+السؤال: ما هي Arrow Function؟
+الجواب: Arrow Function هي طريقة مختصرة لكتابة الدوال باستخدام الرمز =>.
+
+السؤال: ما هو Operator؟
+الجواب: Operator هو رمز يُستخدم لتنفيذ عمليات على القيم والمتغيرات.
+
+السؤال: ما هي العمليات الحسابية؟
+الجواب: العمليات الحسابية تُستخدم لتنفيذ عمليات مثل الجمع والطرح والضرب والقسمة.
+
+السؤال: ما هي Comparison Operators؟
+الجواب: هي معاملات تُستخدم لمقارنة قيمتين وتُرجع نتيجة منطقية.
+
+السؤال: ما الفرق بين == و ===؟
+الجواب: == تقارن القيم مع إمكانية تحويل نوع البيانات، بينما === تقارن القيمة ونوع البيانات معًا.
+
+السؤال: ما هي Logical Operators؟
+الجواب: هي معاملات مثل && و || و ! تُستخدم لدمج الشروط أو عكسها.
+
+السؤال: ما هي جملة if؟
+الجواب: جملة if تنفذ مجموعة من الأكواد عندما يكون الشرط صحيحًا.
+
+السؤال: ما هي else؟
+الجواب: else تنفذ مجموعة من الأكواد عندما يكون شرط if غير صحيح.
+
+السؤال: ما هي else if؟
+الجواب: else if تُستخدم لفحص شرط آخر إذا كان الشرط السابق غير صحيح.
+
+السؤال: ما هي جملة switch؟
+الجواب: switch تُستخدم لتنفيذ أكواد مختلفة بناءً على قيم مختلفة.
+
+السؤال: ما هي Loop؟
+الجواب: Loop هي طريقة تُستخدم لتكرار مجموعة من الأكواد عدة مرات.
+
+السؤال: ما هي for loop؟
+الجواب: for loop تُستخدم لتكرار الأكواد بناءً على بداية وشرط وتحديث.
+
+السؤال: ما هي while loop؟
+الجواب: while loop تكرر تنفيذ الأكواد طالما أن الشرط المحدد صحيح.
+
+السؤال: ما هي do...while loop؟
+الجواب: do...while loop تنفذ الكود مرة واحدة على الأقل قبل فحص الشرط.
+
+السؤال: ماذا تفعل break؟
+الجواب: break توقف الحلقة أو تخرج من جملة switch.
+
+السؤال: ماذا تفعل continue؟
+الجواب: continue تتخطى التكرار الحالي وتنتقل إلى التكرار التالي في الحلقة.
+
+السؤال: ما هو DOM؟
+الجواب: DOM هو تمثيل لصفحة HTML يمكن لـ JavaScript استخدامه للوصول إلى العناصر وتعديلها.
+
+السؤال: كيف أختار عنصرًا باستخدام ID؟
+الجواب: تستخدم document.getElementById() لاختيار عنصر باستخدام الـ ID الخاص به.
+
+السؤال: كيف أختار العناصر باستخدام Class؟
+الجواب: يمكنك استخدام document.getElementsByClassName() أو document.querySelector().
+
+السؤال: ما هي querySelector()؟
+الجواب: querySelector() تختار أول عنصر يطابق محدد CSS معين.
+
+السؤال: ما هي querySelectorAll()؟
+الجواب: querySelectorAll() تختار جميع العناصر التي تطابق محدد CSS معين.
+
+السؤال: كيف أغير النص داخل عنصر؟
+الجواب: يمكنك استخدام textContent أو innerHTML لتغيير محتوى العنصر.
+
+السؤال: ما هي innerHTML؟
+الجواب: innerHTML تُستخدم للحصول على أو تغيير كود HTML الموجود داخل العنصر.
+
+السؤال: ما هي textContent؟
+الجواب: textContent تُستخدم للحصول على أو تغيير النص الموجود داخل العنصر.
+
+السؤال: كيف أغير CSS باستخدام JavaScript؟
+الجواب: يمكنك تغيير CSS باستخدام الخاصية style الخاصة بالعنصر.
+
+السؤال: ما هي classList؟
+الجواب: classList تسمح لك بإضافة أو حذف أو تبديل أو فحص CSS Classes الخاصة بالعنصر.
+
+السؤال: ما هو Event؟
+الجواب: Event هو حدث يحدث في المتصفح، مثل الضغط أو كتابة زر أو تحريك الماوس.
+
+السؤال: ما هي addEventListener()؟
+الجواب: addEventListener() تُستخدم لتشغيل دالة عند حدوث حدث معين.
+
+السؤال: ما هو Click Event؟
+الجواب: Click Event يحدث عندما يضغط المستخدم على عنصر.
+
+السؤال: ما هو Keyboard Event؟
+الجواب: Keyboard Event يحدث عندما يضغط المستخدم على أحد أزرار لوحة المفاتيح أو يتركه.
+
+السؤال: ما هو Mouse Event؟
+الجواب: Mouse Event يحدث عندما يقوم المستخدم بعمل باستخدام الماوس، مثل التحريك أو الضغط.
+
+السؤال: ما هي setTimeout()؟
+الجواب: setTimeout() تشغل دالة مرة واحدة بعد مرور وقت محدد.
+
+السؤال: ما هي setInterval()؟
+الجواب: setInterval() تشغل دالة بشكل متكرر بعد فترة زمنية محددة.
+
+السؤال: ما هو JSON؟
+الجواب: JSON هو تنسيق نصي يُستخدم لتخزين البيانات وتبادلها بين التطبيقات.
+
+السؤال: ما هي fetch()؟
+الجواب: fetch() تُستخدم لطلب البيانات من خادم أو API.
+
+السؤال: ما هي API؟
+الجواب: API تسمح للتطبيقات والأنظمة المختلفة بالتواصل وتبادل البيانات.
+
+السؤال: ما هي Promise؟
+الجواب: Promise تمثل قيمة قد تكون متاحة الآن أو لاحقًا أو قد لا تكون متاحة.
+
+السؤال: ما هي async و await؟
+الجواب: async و await تُستخدمان لتسهيل التعامل مع العمليات غير المتزامنة مثل طلبات API.
+
+السؤال: ما هي Python؟
+الجواب: Python هي لغة برمجة سهلة وقوية تُستخدم في تطوير الويب والذكاء الاصطناعي وتحليل البيانات والأتمتة وتطوير التطبيقات.
+
+السؤال: لماذا تُعتبر Python سهلة التعلم؟
+الجواب: لأن قواعد كتابتها بسيطة وقريبة من اللغة الإنجليزية وتحتاج إلى عدد قليل من الأكواد لتنفيذ المهام.
+
+السؤال: أين تُستخدم Python؟
+الجواب: تُستخدم Python في تطوير الويب والذكاء الاصطناعي وتحليل البيانات وتعلم الآلة والأمن السيبراني وتطوير الألعاب والأتمتة.
+
+السؤال: كيف أكتب أول برنامج في Python؟
+الجواب: يمكنك كتابة الدالة print() لعرض نص أو قيمة على الشاشة.
+
+السؤال: ما هي print()؟
+الجواب: print() هي دالة تُستخدم لعرض النصوص والقيم والنتائج على الشاشة.
+
+السؤال: ما هو المتغير في Python؟
+الجواب: المتغير هو اسم يُستخدم لتخزين قيمة أو بيانات يمكن استخدامها داخل البرنامج.
+
+السؤال: كيف أُعرّف متغيرًا في Python؟
+الجواب: يمكنك تعريف المتغير بكتابة اسمه ثم علامة = ثم القيمة التي تريد تخزينها.
+
+السؤال: هل تحتاج Python إلى تحديد نوع المتغير؟
+الجواب: لا، Python تحدد نوع البيانات تلقائيًا عند تخزين القيمة في المتغير.
+
+السؤال: ما هي أنواع البيانات في Python؟
+الجواب: من أهم أنواع البيانات النصوص والأرقام والقيم المنطقية والقوائم والمجموعات والقواميس.
+
+السؤال: ما هو String في Python؟
+الجواب: String هو نوع بيانات يُستخدم لتخزين النصوص والحروف.
+
+السؤال: ما هو Integer؟
+الجواب: Integer هو نوع بيانات يُستخدم لتخزين الأعداد الصحيحة بدون كسور عشرية.
+
+السؤال: ما هو Float؟
+الجواب: Float هو نوع بيانات يُستخدم لتخزين الأعداد التي تحتوي على كسور عشرية.
+
+السؤال: ما هو Boolean؟
+الجواب: Boolean هو نوع بيانات يحتوي على قيمتين فقط وهما True و False.
+
+السؤال: ما هي None؟
+الجواب: None تُستخدم لتمثيل عدم وجود قيمة أو قيمة فارغة.
+
+السؤال: كيف أعرف نوع البيانات؟
+الجواب: يمكنك استخدام الدالة type() لمعرفة نوع البيانات.
+
+السؤال: ما هي التعليقات في Python؟
+الجواب: التعليقات هي نصوص لا يتم تنفيذها وتُستخدم لشرح الكود.
+
+السؤال: كيف أكتب تعليقًا في Python؟
+الجواب: تكتب التعليق باستخدام الرمز # قبل النص.
+
+السؤال: ما هي العمليات الحسابية في Python؟
+الجواب: هي عمليات مثل الجمع والطرح والضرب والقسمة وباقي القسمة والأس.
+
+السؤال: ما هو معامل الجمع؟
+الجواب: معامل الجمع هو + ويُستخدم لجمع قيمتين.
+
+السؤال: ما هو معامل القسمة؟
+الجواب: معامل القسمة هو / ويُستخدم لقسمة قيمة على قيمة أخرى.
+
+السؤال: ما هو معامل باقي القسمة؟
+الجواب: معامل باقي القسمة هو % ويُستخدم للحصول على باقي عملية القسمة.
+
+السؤال: ما هو معامل الأس؟
+الجواب: معامل الأس هو ** ويُستخدم لرفع رقم إلى قوة معينة.
+
+السؤال: ما هي جملة if؟
+الجواب: جملة if تُستخدم لتنفيذ كود معين عندما يكون شرط محدد صحيحًا.
+
+السؤال: ما هي جملة else؟
+الجواب: جملة else تُستخدم لتنفيذ كود عندما يكون شرط if غير صحيح.
+
+السؤال: ما هي جملة elif؟
+الجواب: elif تُستخدم لفحص شرط جديد إذا كان الشرط السابق غير صحيح.
+
+السؤال: ما هي المقارنات في Python؟
+الجواب: المقارنات تُستخدم لمقارنة القيم وإرجاع True أو False.
+
+السؤال: ما هي المعاملات المنطقية؟
+الجواب: المعاملات المنطقية مثل and و or و not تُستخدم للتعامل مع أكثر من شرط.
+
+السؤال: ما هي الحلقة for؟
+الجواب: الحلقة for تُستخدم لتكرار تنفيذ مجموعة من الأكواد على عناصر معينة.
+
+السؤال: ما هي الحلقة while؟
+الجواب: الحلقة while تكرر تنفيذ الكود طالما أن الشرط المحدد صحيح.
+
+السؤال: ماذا تفعل break؟
+الجواب: break تُستخدم لإيقاف الحلقة والخروج منها.
+
+السؤال: ماذا تفعل continue؟
+الجواب: continue تتخطى التكرار الحالي وتنتقل إلى التكرار التالي.
+
+السؤال: ما هي القائمة List؟
+الجواب: List هي مجموعة من القيم يمكن تخزينها داخل متغير واحد ويمكن تعديلها.
+
+السؤال: كيف أنشئ List؟
+الجواب: يمكنك إنشاء List باستخدام الأقواس المربعة [] ووضع العناصر بداخلها.
+
+السؤال: ما هو Index؟
+الجواب: Index هو رقم يحدد موقع العنصر داخل القائمة ويبدأ عادةً من 0.
+
+السؤال: كيف أصل إلى عنصر داخل List؟
+الجواب: يمكنك الوصول إلى العنصر باستخدام اسم القائمة ورقم الـ Index بين الأقواس المربعة.
+
+السؤال: ما هي append()؟
+الجواب: append() تُستخدم لإضافة عنصر جديد إلى نهاية القائمة.
+
+السؤال: ما هي remove()؟
+الجواب: remove() تُستخدم لحذف عنصر محدد من القائمة.
+
+السؤال: ما هي pop()؟
+الجواب: pop() تُستخدم لحذف عنصر من القائمة ويمكنها إرجاع العنصر المحذوف.
+
+السؤال: ما هي Tuple؟
+الجواب: Tuple هي مجموعة من القيم تشبه List ولكن لا يمكن تعديل عناصرها بعد إنشائها.
+
+السؤال: ما هو Set؟
+الجواب: Set هي مجموعة من العناصر غير المرتبة ولا تسمح بتكرار العناصر.
+
+السؤال: ما هو Dictionary؟
+الجواب: Dictionary هو نوع بيانات يخزن البيانات في شكل مفتاح وقيمة.
+
+السؤال: ما هو Key في Dictionary؟
+الجواب: Key هو المفتاح الذي يُستخدم للوصول إلى قيمة معينة داخل القاموس.
+
+السؤال: ما هي Value؟
+الجواب: Value هي البيانات المرتبطة بمفتاح معين داخل القاموس.
+
+السؤال: ما هي الدالة Function؟
+الجواب: Function هي مجموعة من الأكواد يتم تعريفها لتنفيذ مهمة معينة ويمكن إعادة استخدامها.
+
+السؤال: كيف أنشئ Function؟
+الجواب: يمكنك إنشاء دالة باستخدام كلمة def ثم اسم الدالة والأقواس.
+
+السؤال: ما هو Parameter؟
+الجواب: Parameter هو متغير يتم تعريفه داخل أقواس الدالة لاستقبال قيمة.
+
+السؤال: ما هو Argument؟
+الجواب: Argument هي القيمة التي يتم إرسالها إلى الدالة عند استدعائها.
+
+السؤال: ماذا تفعل return؟
+الجواب: return تُعيد قيمة من الدالة إلى المكان الذي تم فيه استدعاء الدالة.
+
+السؤال: ما هو Module؟
+الجواب: Module هو ملف Python يحتوي على أكواد ودوال يمكن استخدامها في ملفات أخرى.
+
+السؤال: ما هي import؟
+الجواب: import تُستخدم لاستيراد واستخدام الأكواد الموجودة في Module أو مكتبة.
+
+السؤال: ما هي المكتبة Library؟
+الجواب: Library هي مجموعة من الأكواد والأدوات الجاهزة التي تساعد في تنفيذ مهام مختلفة.
+
+السؤال: ما هو pip؟
+الجواب: pip هو مدير حزم يُستخدم لتثبيت مكتبات Python وإدارتها.
+
+السؤال: ما هو الخطأ Error؟
+الجواب: Error هو مشكلة تمنع البرنامج من العمل بشكل صحيح أو تمنع تنفيذ جزء من الكود.
+
+السؤال: ما هو Syntax Error؟
+الجواب: Syntax Error يحدث عندما تكون كتابة الكود مخالفة لقواعد لغة Python.
+
+السؤال: ما هي try و except؟
+الجواب: try و except تُستخدمان للتعامل مع الأخطاء ومنع توقف البرنامج بشكل مفاجئ.
+
+السؤال: ما هي الملفات في Python؟
+الجواب: يمكن استخدام Python لإنشاء الملفات وقراءتها وكتابتها وتعديل محتواها.
+
+السؤال: ما هي open()؟
+الجواب: open() تُستخدم لفتح ملف للتعامل مع محتواه.
+
+السؤال: ما هو الذكاء الاصطناعي في Python؟
+الجواب: Python تُستخدم بشكل واسع في الذكاء الاصطناعي وتعلم الآلة بسبب توفر العديد من المكتبات القوية.
+السؤال: What is Python?
+الجواب: Python is a simple and powerful programming language used in web development, artificial intelligence, data analysis, automation, and application development.
+
+السؤال: Why is Python considered easy to learn?
+الجواب: Python is considered easy to learn because its syntax is simple, clear, and close to the English language.
+
+السؤال: Where is Python used?
+الجواب: Python is used in web development, artificial intelligence, data analysis, machine learning, cybersecurity, game development, and automation.
+
+السؤال: How do I write my first program in Python?
+الجواب: You can write your first program using the print() function to display text or a value on the screen.
+
+السؤال: What is print()?
+الجواب: print() is a function used to display text, values, and results on the screen.
+
+السؤال: What is a variable in Python?
+الجواب: A variable is a name used to store a value or data that can be used in a program.
+
+السؤال: How do I declare a variable in Python?
+الجواب: You declare a variable by writing its name, followed by the = sign and the value you want to store.
+
+السؤال: Does Python require defining the variable type?
+الجواب: No, Python automatically determines the data type when a value is assigned to a variable.
+
+السؤال: What are data types in Python?
+الجواب: Data types define the kind of data stored in a variable, such as strings, numbers, booleans, lists, tuples, sets, and dictionaries.
+
+السؤال: What is a String in Python?
+الجواب: A String is a data type used to store text and characters.
+
+السؤال: What is an Integer?
+الجواب: An Integer is a data type used to store whole numbers without decimal points.
+
+السؤال: What is a Float?
+الجواب: A Float is a data type used to store numbers that contain decimal points.
+
+السؤال: What is a Boolean?
+الجواب: A Boolean is a data type that has only two values: True and False.
+
+السؤال: What is None?
+الجواب: None represents the absence of a value or an empty value.
+
+السؤال: How do I find the data type?
+الجواب: You can use the type() function to find the data type of a value.
+
+السؤال: What are comments in Python?
+الجواب: Comments are text that is not executed and is used to explain the code.
+
+السؤال: How do I write a comment in Python?
+الجواب: You write a comment by using the # symbol before the text.
+
+السؤال: What are arithmetic operations in Python?
+الجواب: Arithmetic operations include addition, subtraction, multiplication, division, modulus, and exponentiation.
+
+السؤال: What is the addition operator?
+الجواب: The addition operator is + and it is used to add two values.
+
+السؤال: What is the division operator?
+الجواب: The division operator is / and it is used to divide one value by another.
+
+السؤال: What is the modulus operator?
+الجواب: The modulus operator is % and it returns the remainder of a division operation.
+
+السؤال: What is the exponentiation operator?
+الجواب: The exponentiation operator is ** and it is used to raise a number to a power.
+
+السؤال: What is an if statement?
+الجواب: An if statement is used to execute code when a specified condition is true.
+
+السؤال: What is an else statement?
+الجواب: An else statement is used to execute code when the if condition is false.
+
+السؤال: What is an elif statement?
+الجواب: An elif statement is used to check another condition if the previous condition is false.
+
+السؤال: What are comparisons in Python?
+الجواب: Comparisons are used to compare values and return True or False.
+
+السؤال: What are logical operators?
+الجواب: Logical operators such as and, or, and not are used to work with multiple conditions.
+
+السؤال: What is a for loop?
+الجواب: A for loop is used to repeat a block of code for each item in a sequence.
+
+السؤال: What is a while loop?
+الجواب: A while loop repeats a block of code as long as a specified condition is true.
+
+السؤال: What does break do?
+الجواب: break stops the loop and exits it.
+
+السؤال: What does continue do?
+الجواب: continue skips the current iteration and moves to the next iteration.
+
+السؤال: What is a List?
+الجواب: A List is a collection of values stored in one variable that can be modified.
+
+السؤال: How do I create a List?
+الجواب: You can create a List using square brackets [] and placing the elements inside them.
+
+السؤال: What is an Index?
+الجواب: An Index is a number that identifies the position of an element in a list and usually starts from 0.
+
+السؤال: How do I access an element in a List?
+الجواب: You can access an element by using the list name followed by the element's index inside square brackets.
+
+السؤال: What is append()?
+الجواب: append() is used to add a new element to the end of a list.
+
+السؤال: What is remove()?
+الجواب: remove() is used to delete a specific element from a list.
+
+السؤال: What is pop()?
+الجواب: pop() is used to remove an element from a list and can return the removed element.
+
+السؤال: What is a Tuple?
+الجواب: A Tuple is a collection of values similar to a List, but its elements cannot be changed after creation.
+
+السؤال: What is a Set?
+الجواب: A Set is an unordered collection of elements that does not allow duplicate values.
+
+السؤال: What is a Dictionary?
+الجواب: A Dictionary is a data type that stores data in the form of key-value pairs.
+
+السؤال: What is a Key in a Dictionary?
+الجواب: A Key is used to access a specific value inside a Dictionary.
+
+السؤال: What is a Value?
+الجواب: A Value is the data associated with a specific key in a Dictionary.
+
+السؤال: What is a Function?
+الجواب: A Function is a block of code designed to perform a specific task and can be reused.
+
+السؤال: How do I create a Function?
+الجواب: You can create a function using the def keyword followed by the function name and parentheses.
+
+السؤال: What is a Parameter?
+الجواب: A Parameter is a variable defined inside the parentheses of a function to receive a value.
+
+السؤال: What is an Argument?
+الجواب: An Argument is the actual value passed to a function when it is called.
+
+السؤال: What does return do?
+الجواب: return sends a value back from a function to the place where the function was called.
+
+السؤال: What is a Module?
+الجواب: A Module is a Python file that contains code and functions that can be used in other files.
+
+السؤال: What is import?
+الجواب: import is used to bring code from a module or library into a Python program.
+
+السؤال: What is a Library?
+الجواب: A Library is a collection of ready-made code and tools that help perform different tasks.
+
+السؤال: What is pip?
+الجواب: pip is a package manager used to install and manage Python libraries.
+
+السؤال: What is an Error?
+الجواب: An Error is a problem that prevents a program from working correctly or executing part of the code.
+
+السؤال: What is a Syntax Error?
+الجواب: A Syntax Error occurs when the code does not follow the rules of Python syntax.
+
+السؤال: What are try and except?
+الجواب: try and except are used to handle errors and prevent the program from stopping unexpectedly.
+
+السؤال: What are files in Python?
+الجواب: Python can be used to create, read, write, and modify files.
+
+السؤال: What is open()?
+الجواب: open() is used to open a file so that you can work with its contents.
+
+السؤال: What is Artificial Intelligence in Python?
+الجواب: Python is widely used in Artificial Intelligence and Machine Learning because it has many powerful libraries.
+
+السؤال: What is technology?
+الجواب: Technology is the use of scientific knowledge, tools, and systems to solve problems and make life easier.
+
+السؤال: What is a computer?
+الجواب: A computer is an electronic device that processes data and performs tasks according to instructions.
+
+السؤال: What is hardware?
+الجواب: Hardware refers to the physical parts of a computer or electronic device.
+
+السؤال: What is software?
+الجواب: Software is a collection of programs and instructions that tell a device what to do.
+
+السؤال: What is an operating system?
+الجواب: An operating system is software that manages the hardware and software resources of a device.
+
+السؤال: What is Windows?
+الجواب: Windows is an operating system developed by Microsoft for computers and other devices.
+
+السؤال: What is Linux?
+الجواب: Linux is an open-source operating system used on computers, servers, and many other devices.
+
+السؤال: What is macOS?
+الجواب: macOS is an operating system developed by Apple for Mac computers.
+
+السؤال: What is Android?
+الجواب: Android is a mobile operating system developed by Google and used on many smartphones and tablets.
+
+السؤال: What is iOS?
+الجواب: iOS is a mobile operating system developed by Apple for iPhone devices.
+
+السؤال: What is a smartphone?
+الجواب: A smartphone is a mobile device that combines phone features with computer-like functions.
+
+السؤال: What is a tablet?
+الجواب: A tablet is a portable touchscreen device that is larger than a smartphone and can run applications.
+
+السؤال: What is a laptop?
+الجواب: A laptop is a portable computer with a built-in screen, keyboard, and battery.
+
+السؤال: What is a desktop computer?
+الجواب: A desktop computer is a computer designed to stay in one place and usually consists of separate components.
+
+السؤال: What is a processor?
+الجواب: A processor is the component that executes instructions and performs calculations in a computer.
+
+السؤال: What is the CPU?
+الجواب: The CPU is the Central Processing Unit and it is responsible for executing program instructions.
+
+السؤال: What is RAM?
+الجواب: RAM is temporary memory used by a device to store data and programs that are currently being used.
+
+السؤال: What is storage?
+الجواب: Storage is used to permanently save files, programs, and data.
+
+السؤال: What is an SSD?
+الجواب: An SSD is a fast storage device that uses flash memory and has no moving mechanical parts.
+
+السؤال: What is an HDD?
+الجواب: An HDD is a storage device that uses magnetic disks to store data.
+
+السؤال: What is a GPU?
+الجواب: A GPU is a processor designed to handle graphics and visual calculations.
+
+السؤال: What is a motherboard?
+الجواب: A motherboard is the main circuit board that connects the different components of a computer.
+
+السؤال: What is a computer network?
+الجواب: A computer network is a group of connected devices that can communicate and share resources.
+
+السؤال: What is the Internet?
+الجواب: The Internet is a global network that connects millions of computers and devices around the world.
+
+السؤال: What is the World Wide Web?
+الجواب: The World Wide Web is a system of websites and web pages accessed through the Internet.
+
+السؤال: What is a website?
+الجواب: A website is a collection of web pages available on the Internet.
+
+السؤال: What is a web browser?
+الجواب: A web browser is software used to access and view websites on the Internet.
+
+السؤال: What is a search engine?
+الجواب: A search engine is a service used to search for information on the Internet.
+
+السؤال: What is a URL?
+الجواب: A URL is the address used to access a specific resource on the Internet.
+
+السؤال: What is an IP address?
+الجواب: An IP address is a unique address used to identify a device on a network.
+
+السؤال: What is Wi-Fi?
+الجواب: Wi-Fi is a wireless technology that allows devices to connect to a network and the Internet.
+
+السؤال: What is Bluetooth?
+الجواب: Bluetooth is a wireless technology used to connect nearby devices and exchange data.
+
+السؤال: What is mobile data?
+الجواب: Mobile data allows smartphones and other devices to access the Internet using a cellular network.
+
+السؤال: What is a server?
+الجواب: A server is a computer or system that provides services, data, or resources to other devices.
+
+السؤال: What is a client?
+الجواب: A client is a device or program that requests services or resources from a server.
+
+السؤال: What is cloud computing?
+الجواب: Cloud computing allows users to store data and use computing services through the Internet.
+
+السؤال: What is cloud storage?
+الجواب: Cloud storage allows users to save and access their files online using remote servers.
+
+السؤال: What is an application?
+الجواب: An application is a software program designed to perform specific tasks for users.
+
+السؤال: What is an app?
+الجواب: An app is a software application designed to run on a computer, smartphone, tablet, or other device.
+
+السؤال: What is a database?
+الجواب: A database is an organized collection of data that can be stored, managed, and accessed.
+
+السؤال: What is data?
+الجواب: Data is information that can be stored, processed, and analyzed by computers.
+
+السؤال: What is information?
+الجواب: Information is processed and organized data that has meaning and value.
+
+السؤال: What is artificial intelligence?
+الجواب: Artificial Intelligence is technology that enables machines to perform tasks that usually require human intelligence.
+
+السؤال: What is machine learning?
+الجواب: Machine learning is a branch of Artificial Intelligence that allows systems to learn from data.
+
+السؤال: What is a chatbot?
+الجواب: A chatbot is a computer program designed to communicate with users using text or voice.
+
+السؤال: What is robotics?
+الجواب: Robotics is the field of technology concerned with designing, building, and programming robots.
+
+السؤال: What is a robot?
+الجواب: A robot is a machine that can perform tasks automatically or according to programmed instructions.
+
+السؤال: What is automation?
+الجواب: Automation is the use of technology to perform tasks with little or no human intervention.
+
+السؤال: What is virtual reality?
+الجواب: Virtual Reality is technology that creates an interactive computer-generated environment.
+
+السؤال: What is augmented reality?
+الجواب: Augmented Reality adds digital information or objects to the real-world environment.
+
+السؤال: What is cybersecurity?
+الجواب: Cybersecurity is the practice of protecting computers, networks, systems, and data from digital threats.
+
+السؤال: What is a computer virus?
+الجواب: A computer virus is a malicious program that can copy itself and damage or affect computer systems.
+
+السؤال: What is malware?
+الجواب: Malware is software designed to damage, disrupt, or gain unauthorized access to computer systems.
+
+السؤال: What is antivirus software?
+الجواب: Antivirus software is designed to detect, prevent, and remove malicious software.
+
+السؤال: What is a firewall?
+الجواب: A firewall is a security system that controls network traffic and helps block unauthorized access.
+
+السؤال: What is encryption?
+الجواب: Encryption converts data into a coded format to protect it from unauthorized access.
+
+السؤال: What is a password?
+الجواب: A password is a secret combination of characters used to protect an account or system.
+
+السؤال: What is two-factor authentication?
+الجواب: Two-factor authentication adds an extra security step by requiring two different forms of verification.
+
+السؤال: What is phishing?
+الجواب: Phishing is a cyberattack that attempts to trick people into revealing sensitive information.
+
+السؤال: What is hacking?
+الجواب: Hacking is the process of accessing or manipulating computer systems using technical skills.
+
+السؤال: What is programming?
+الجواب: Programming is the process of writing instructions that tell a computer how to perform tasks.
+
+السؤال: What is a programming language?
+الجواب: A programming language is a formal language used to write instructions for computers.
+
+السؤال: What is an algorithm?
+الجواب: An algorithm is a step-by-step set of instructions used to solve a problem or complete a task.
+
+السؤال: What is coding?
+الجواب: Coding is the process of writing instructions using a programming language.
+
+السؤال: What is debugging?
+الجواب: Debugging is the process of finding and fixing errors in a program.
+
+السؤال: What is a file?
+الجواب: A file is a collection of data stored on a computer or digital device.
+
+السؤال: What is a folder?
+الجواب: A folder is used to organize and store files on a computer or digital device.
+
+السؤال: What is a file extension?
+الجواب: A file extension identifies the type of a file and usually appears at the end of its name.
+
+السؤال: What is a PDF file?
+الجواب: A PDF is a document format designed to preserve the layout and appearance of a document.
+
+السؤال: What is a USB?
+الجواب: USB is a standard technology used to connect devices and transfer data or power.
+
+السؤال: What is HDMI?
+الجواب: HDMI is a technology used to transmit high-quality video and audio between devices.
+
+السؤال: What is a touchscreen?
+الجواب: A touchscreen is a display that allows users to interact with a device by touching the screen.
+
+السؤال: What is a digital camera?
+الجواب: A digital camera is a device that captures and stores photographs and videos digitally.
+
+السؤال: What is a microphone?
+الجواب: A microphone is a device that converts sound into an electrical or digital signal.
+
+السؤال: What is a speaker?
+الجواب: A speaker is a device that converts electrical signals into sound.
+
+السؤال: What is a printer?
+الجواب: A printer is a device used to produce physical copies of digital documents and images.
+
+السؤال: What is a scanner?
+الجواب: A scanner is a device that converts physical documents or images into digital files.
+
+السؤال: What is GPS?
+الجواب: GPS is a satellite-based system used to determine the location of a device or person.
+
+السؤال: What is 5G?
+الجواب: 5G is a fifth-generation mobile network technology designed to provide faster speeds and lower latency.
+
+السؤال: What is 4G?
+الجواب: 4G is a mobile network technology that provides high-speed Internet access on mobile devices.
+
+السؤال: What is the Internet of Things?
+الجواب: The Internet of Things is a network of physical devices connected to the Internet that can collect and exchange data.
+
+السؤال: What is a smart home?
+الجواب: A smart home uses connected devices and technology to automate and control different home functions.
+
+السؤال: What is an electric car?
+الجواب: An electric car is a vehicle powered mainly by electric motors and batteries.
+
+السؤال: What is renewable energy technology?
+الجواب: Renewable energy technology uses natural sources such as sunlight, wind, and water to produce energy.
+
+السؤال: What is solar energy?
+الجواب: Solar energy is energy produced by converting sunlight into electricity or heat.
+
+السؤال: What is a digital payment?
+الجواب: A digital payment is a financial transaction completed electronically without using physical cash.
+
+السؤال: What is online banking?
+الجواب: Online banking allows users to manage their bank accounts and perform transactions through the Internet.
+
+السؤال: What is e-commerce?
+الجواب: E-commerce is the buying and selling of products and services over the Internet.
+
+السؤال: What is social media?
+الجواب: Social media platforms allow people to communicate, share content, and interact online.
+
+السؤال: What is video streaming?
+الجواب: Video streaming allows users to watch video content over the Internet without downloading the entire file first.
+
+السؤال: What is online learning?
+الجواب: Online learning is education delivered through the Internet using digital platforms and resources.
+
+السؤال: What is a video conference?
+الجواب: A video conference is an online meeting that allows people to communicate using video and audio.
+
+السؤال: What is digital transformation?
+الجواب: Digital transformation is the use of digital technologies to improve businesses, services, and processes.
+
+السؤال: What is big data?
+الجواب: Big data refers to extremely large and complex amounts of data that require advanced technologies to process.
+
+السؤال: What is blockchain?
+الجواب: Blockchain is a distributed digital ledger used to record transactions securely and transparently.
+
+السؤال: What is cryptocurrency?
+الجواب: Cryptocurrency is a digital currency that uses cryptography and usually operates on blockchain technology.
+
+السؤال: What is a QR code?
+الجواب: A QR code is a two-dimensional code that can store information and be scanned using a camera.
+
+السؤال: What is a digital footprint?
+الجواب: A digital footprint is the record of a person's activities and information left online.
+
+السؤال: What is open-source software?
+الجواب: Open-source software is software whose source code is available for users to view, modify, and share.
+
+السؤال: What is an update?
+الجواب: An update is a new version of software that may add features, improve performance, or fix problems.
+
+السؤال: What is a backup?
+الجواب: A backup is a copy of important data created to protect it from loss or damage.
+
+السؤال: What is technology used for?
+الجواب: Technology is used to improve communication, education, healthcare, transportation, business, entertainment, and many other areas of life.
+
+السؤال: ما هي التكنولوجيا؟
+الجواب: التكنولوجيا هي استخدام المعرفة العلمية والأدوات والأنظمة لحل المشكلات وجعل الحياة أسهل.
+
+السؤال: ما هو الكمبيوتر؟
+الجواب: الكمبيوتر هو جهاز إلكتروني يقوم بمعالجة البيانات وتنفيذ المهام وفقًا للتعليمات.
+
+السؤال: ما هي مكونات الكمبيوتر؟
+الجواب: مكونات الكمبيوتر هي الأجزاء المادية التي يتكون منها الجهاز مثل المعالج والذاكرة والشاشة.
+
+السؤال: ما هو السوفت وير؟
+الجواب: السوفت وير هو مجموعة من البرامج والتعليمات التي تخبر الجهاز بما يجب أن يفعله.
+
+السؤال: ما هو نظام التشغيل؟
+الجواب: نظام التشغيل هو برنامج يدير مكونات الجهاز والبرامج والموارد المختلفة.
+
+السؤال: ما هو نظام ويندوز؟
+الجواب: ويندوز هو نظام تشغيل تم تطويره بواسطة شركة مايكروسوفت لأجهزة الكمبيوتر والأجهزة الأخرى.
+
+السؤال: ما هو نظام لينكس؟
+الجواب: لينكس هو نظام تشغيل مفتوح المصدر يُستخدم في أجهزة الكمبيوتر والخوادم والعديد من الأجهزة الأخرى.
+
+السؤال: ما هو نظام ماك أو إس؟
+الجواب: ماك أو إس هو نظام تشغيل تم تطويره بواسطة شركة أبل لأجهزة كمبيوتر ماك.
+
+السؤال: ما هو نظام أندرويد؟
+الجواب: أندرويد هو نظام تشغيل للهواتف المحمولة تم تطويره بواسطة جوجل ويُستخدم في العديد من الهواتف والأجهزة اللوحية.
+
+السؤال: ما هو نظام آي أو إس؟
+الجواب: آي أو إس هو نظام تشغيل تم تطويره بواسطة شركة أبل لأجهزة آيفون.
+
+السؤال: ما هو الهاتف الذكي؟
+الجواب: الهاتف الذكي هو جهاز محمول يجمع بين وظائف الهاتف ووظائف الكمبيوتر.
+
+السؤال: ما هو الجهاز اللوحي؟
+الجواب: الجهاز اللوحي هو جهاز محمول يعمل باللمس ويكون أكبر من الهاتف الذكي ويمكنه تشغيل التطبيقات.
+
+السؤال: ما هو اللابتوب؟
+الجواب: اللابتوب هو جهاز كمبيوتر محمول يحتوي على شاشة ولوحة مفاتيح وبطارية مدمجة.
+
+السؤال: ما هو الكمبيوتر المكتبي؟
+الجواب: الكمبيوتر المكتبي هو جهاز كمبيوتر مصمم للبقاء في مكان ثابت ويتكون عادةً من عدة مكونات منفصلة.
+
+السؤال: ما هو المعالج؟
+الجواب: المعالج هو المكون الذي ينفذ التعليمات ويقوم بالعمليات الحسابية داخل الكمبيوتر.
+
+السؤال: ما هي وحدة المعالجة المركزية؟
+الجواب: وحدة المعالجة المركزية هي الجزء المسؤول عن تنفيذ تعليمات البرامج ومعالجة البيانات.
+
+السؤال: ما هي ذاكرة الوصول العشوائي؟
+الجواب: ذاكرة الوصول العشوائي هي ذاكرة مؤقتة تُستخدم لتخزين البيانات والبرامج التي يتم استخدامها حاليًا.
+
+السؤال: ما هو التخزين؟
+الجواب: التخزين يُستخدم لحفظ الملفات والبرامج والبيانات بشكل دائم.
+
+السؤال: ما هو القرص الصلب من نوع SSD؟
+الجواب: SSD هو جهاز تخزين سريع يستخدم ذاكرة فلاش ولا يحتوي على أجزاء ميكانيكية متحركة.
+
+السؤال: ما هو القرص الصلب من نوع HDD؟
+الجواب: HDD هو جهاز تخزين يستخدم أقراصًا مغناطيسية لتخزين البيانات.
+
+السؤال: ما هي بطاقة الرسوميات؟
+الجواب: بطاقة الرسوميات هي مكون مسؤول عن معالجة الرسومات والعمليات البصرية.
+
+السؤال: ما هي اللوحة الأم؟
+الجواب: اللوحة الأم هي لوحة الدوائر الرئيسية التي تربط مكونات الكمبيوتر المختلفة ببعضها.
+
+السؤال: ما هي شبكة الكمبيوتر؟
+الجواب: شبكة الكمبيوتر هي مجموعة من الأجهزة المتصلة التي يمكنها التواصل ومشاركة الموارد.
+
+السؤال: ما هو الإنترنت؟
+الجواب: الإنترنت هو شبكة عالمية تربط ملايين أجهزة الكمبيوتر والأجهزة حول العالم.
+
+السؤال: ما هي شبكة الويب العالمية؟
+الجواب: شبكة الويب العالمية هي نظام من المواقع وصفحات الويب التي يتم الوصول إليها من خلال الإنترنت.
+
+السؤال: ما هو الموقع الإلكتروني؟
+الجواب: الموقع الإلكتروني هو مجموعة من صفحات الويب المتاحة على الإنترنت.
+
+السؤال: ما هو متصفح الويب؟
+الجواب: متصفح الويب هو برنامج يُستخدم للوصول إلى مواقع الإنترنت وعرضها.
+
+السؤال: ما هو محرك البحث؟
+الجواب: محرك البحث هو خدمة تُستخدم للبحث عن المعلومات على الإنترنت.
+
+السؤال: ما هو عنوان URL؟
+الجواب: عنوان URL هو العنوان المستخدم للوصول إلى مورد معين على الإنترنت.
+
+السؤال: ما هو عنوان IP؟
+الجواب: عنوان IP هو عنوان فريد يُستخدم لتحديد جهاز على شبكة معينة.
+
+السؤال: ما هي تقنية Wi-Fi؟
+الجواب: Wi-Fi هي تقنية لاسلكية تسمح للأجهزة بالاتصال بالشبكة والإنترنت.
+
+السؤال: ما هي تقنية Bluetooth؟
+الجواب: Bluetooth هي تقنية لاسلكية تُستخدم لربط الأجهزة القريبة وتبادل البيانات بينها.
+
+السؤال: ما هي بيانات الهاتف؟
+الجواب: بيانات الهاتف تسمح للأجهزة المحمولة بالوصول إلى الإنترنت من خلال شبكة الاتصالات.
+
+السؤال: ما هو الخادم؟
+الجواب: الخادم هو جهاز أو نظام يوفر الخدمات أو البيانات أو الموارد للأجهزة الأخرى.
+
+السؤال: ما هو العميل؟
+الجواب: العميل هو جهاز أو برنامج يطلب الخدمات أو الموارد من الخادم.
+
+السؤال: ما هي الحوسبة السحابية؟
+الجواب: الحوسبة السحابية تسمح للمستخدمين بتخزين البيانات واستخدام خدمات الحوسبة عبر الإنترنت.
+
+السؤال: ما هو التخزين السحابي؟
+الجواب: التخزين السحابي يسمح للمستخدمين بحفظ ملفاتهم والوصول إليها عبر الإنترنت باستخدام خوادم بعيدة.
+
+السؤال: ما هو التطبيق؟
+الجواب: التطبيق هو برنامج تم تصميمه لتنفيذ مهام محددة للمستخدم.
+
+السؤال: ما هي قاعدة البيانات؟
+الجواب: قاعدة البيانات هي مجموعة منظمة من البيانات يمكن تخزينها وإدارتها والوصول إليها.
+
+السؤال: ما هي البيانات؟
+الجواب: البيانات هي معلومات يمكن تخزينها ومعالجتها وتحليلها بواسطة أجهزة الكمبيوتر.
+
+السؤال: ما هي المعلومات؟
+الجواب: المعلومات هي بيانات تمت معالجتها وتنظيمها وأصبح لها معنى وقيمة.
+
+السؤال: ما هو الذكاء الاصطناعي؟
+الجواب: الذكاء الاصطناعي هو تقنية تسمح للآلات بتنفيذ مهام تحتاج عادةً إلى ذكاء بشري.
+
+السؤال: ما هو تعلم الآلة؟
+الجواب: تعلم الآلة هو فرع من الذكاء الاصطناعي يسمح للأنظمة بالتعلم من البيانات.
+
+السؤال: ما هو روبوت المحادثة؟
+الجواب: روبوت المحادثة هو برنامج مصمم للتواصل مع المستخدمين باستخدام النص أو الصوت.
+
+السؤال: ما هي الروبوتات؟
+الجواب: الروبوتات هي مجال تكنولوجي يهتم بتصميم وبناء وبرمجة الروبوتات.
+
+السؤال: ما هو الروبوت؟
+الجواب: الروبوت هو آلة يمكنها تنفيذ المهام تلقائيًا أو وفقًا لتعليمات مبرمجة.
+
+السؤال: ما هي الأتمتة؟
+الجواب: الأتمتة هي استخدام التكنولوجيا لتنفيذ المهام مع تدخل بشري قليل أو بدون تدخل.
+
+السؤال: ما هو الواقع الافتراضي؟
+الجواب: الواقع الافتراضي هو تقنية تنشئ بيئة تفاعلية يتم إنشاؤها بواسطة الكمبيوتر.
+
+السؤال: ما هو الواقع المعزز؟
+الجواب: الواقع المعزز هو تقنية تضيف معلومات أو عناصر رقمية إلى البيئة الحقيقية.
+
+السؤال: ما هو الأمن السيبراني؟
+الجواب: الأمن السيبراني هو حماية أجهزة الكمبيوتر والشبكات والأنظمة والبيانات من التهديدات الرقمية.
+
+السؤال: ما هو فيروس الكمبيوتر؟
+الجواب: فيروس الكمبيوتر هو برنامج ضار يمكنه نسخ نفسه والتأثير على أنظمة الكمبيوتر أو إتلافها.
+
+السؤال: ما هي البرمجيات الخبيثة؟
+الجواب: البرمجيات الخبيثة هي برامج مصممة لإتلاف الأنظمة أو تعطيلها أو الوصول إليها بشكل غير مصرح به.
+
+السؤال: ما هو برنامج مكافحة الفيروسات؟
+الجواب: برنامج مكافحة الفيروسات مصمم لاكتشاف البرامج الضارة ومنعها وإزالتها.
+
+السؤال: ما هو جدار الحماية؟
+الجواب: جدار الحماية هو نظام أمان يتحكم في حركة مرور الشبكة ويساعد على منع الوصول غير المصرح به.
+
+السؤال: ما هو التشفير؟
+الجواب: التشفير يحول البيانات إلى شكل مشفر لحمايتها من الوصول غير المصرح به.
+
+السؤال: ما هي كلمة المرور؟
+الجواب: كلمة المرور هي مجموعة سرية من الحروف أو الأرقام تُستخدم لحماية الحساب أو النظام.
+
+السؤال: ما هو التحقق بخطوتين؟
+الجواب: التحقق بخطوتين يضيف خطوة أمان إضافية من خلال طلب طريقتين مختلفتين للتحقق من الهوية.
+
+السؤال: ما هو التصيد الإلكتروني؟
+الجواب: التصيد الإلكتروني هو هجوم يحاول خداع الأشخاص للحصول على معلومات حساسة منهم.
+
+السؤال: ما هو الاختراق؟
+الجواب: الاختراق هو الوصول إلى أنظمة الكمبيوتر أو التعامل معها باستخدام مهارات تقنية.
+
+السؤال: ما هي البرمجة؟
+الجواب: البرمجة هي عملية كتابة تعليمات تخبر الكمبيوتر بكيفية تنفيذ المهام.
+
+السؤال: ما هي لغة البرمجة؟
+الجواب: لغة البرمجة هي لغة رسمية تُستخدم لكتابة التعليمات الخاصة بالكمبيوتر.
+
+السؤال: ما هي الخوارزمية؟
+الجواب: الخوارزمية هي مجموعة من الخطوات المرتبة التي تُستخدم لحل مشكلة أو تنفيذ مهمة.
+
+السؤال: ما هو الكود؟
+الجواب: الكود هو مجموعة من التعليمات المكتوبة باستخدام لغة برمجة.
+
+السؤال: ما هو تصحيح الأخطاء؟
+الجواب: تصحيح الأخطاء هو عملية البحث عن الأخطاء الموجودة في البرنامج وإصلاحها.
+
+السؤال: ما هو الملف؟
+الجواب: الملف هو مجموعة من البيانات يتم تخزينها على الكمبيوتر أو الجهاز الرقمي.
+
+السؤال: ما هو المجلد؟
+الجواب: المجلد يُستخدم لتنظيم وتخزين الملفات على الكمبيوتر أو الجهاز الرقمي.
+
+السؤال: ما هو امتداد الملف؟
+الجواب: امتداد الملف يحدد نوع الملف ويظهر عادةً في نهاية اسم الملف.
+
+السؤال: ما هو ملف PDF؟
+الجواب: PDF هو تنسيق مستندات يحافظ على شكل وتصميم المستند.
+
+السؤال: ما هو USB؟
+الجواب: USB هي تقنية تُستخدم لتوصيل الأجهزة ونقل البيانات أو الطاقة.
+
+السؤال: ما هو HDMI؟
+الجواب: HDMI هي تقنية تُستخدم لنقل الفيديو والصوت عالي الجودة بين الأجهزة.
+
+السؤال: ما هي الشاشة التي تعمل باللمس؟
+الجواب: الشاشة التي تعمل باللمس هي شاشة تسمح للمستخدم بالتفاعل مع الجهاز عن طريق لمس الشاشة.
+
+السؤال: ما هي الكاميرا الرقمية؟
+الجواب: الكاميرا الرقمية هي جهاز يلتقط الصور ومقاطع الفيديو ويحفظها بشكل رقمي.
+
+السؤال: ما هو الميكروفون؟
+الجواب: الميكروفون هو جهاز يحول الصوت إلى إشارة كهربائية أو رقمية.
+
+السؤال: ما هو مكبر الصوت؟
+الجواب: مكبر الصوت هو جهاز يحول الإشارات الكهربائية إلى صوت.
+
+السؤال: ما هي الطابعة؟
+الجواب: الطابعة هي جهاز يُستخدم لإنتاج نسخ ورقية من المستندات والصور الرقمية.
+
+السؤال: ما هو الماسح الضوئي؟
+الجواب: الماسح الضوئي هو جهاز يحول المستندات أو الصور الورقية إلى ملفات رقمية.
+
+السؤال: ما هو نظام GPS؟
+الجواب: GPS هو نظام يعتمد على الأقمار الصناعية لتحديد موقع الجهاز أو الشخص.
+
+السؤال: ما هي تقنية 5G؟
+الجواب: 5G هي تقنية الجيل الخامس لشبكات الهاتف المحمول وتوفر سرعات أعلى وزمن استجابة أقل.
+
+السؤال: ما هي تقنية 4G؟
+الجواب: 4G هي تقنية لشبكات الهاتف المحمول توفر اتصالًا سريعًا بالإنترنت.
+
+السؤال: ما هو إنترنت الأشياء؟
+الجواب: إنترنت الأشياء هو شبكة من الأجهزة المادية المتصلة بالإنترنت والتي يمكنها جمع البيانات وتبادلها.
+
+السؤال: ما هو المنزل الذكي؟
+الجواب: المنزل الذكي يستخدم الأجهزة المتصلة والتكنولوجيا للتحكم في وظائف المنزل وأتمتتها.
+
+السؤال: ما هي السيارة الكهربائية؟
+الجواب: السيارة الكهربائية هي سيارة تعمل بشكل أساسي باستخدام المحركات الكهربائية والبطاريات.
+
+السؤال: ما هي الطاقة المتجددة؟
+الجواب: الطاقة المتجددة هي الطاقة التي يتم الحصول عليها من مصادر طبيعية مثل الشمس والرياح والماء.
+
+السؤال: ما هي الطاقة الشمسية؟
+الجواب: الطاقة الشمسية هي الطاقة الناتجة عن تحويل ضوء الشمس إلى كهرباء أو حرارة.
+
+السؤال: ما هي المدفوعات الرقمية؟
+الجواب: المدفوعات الرقمية هي معاملات مالية تتم إلكترونيًا دون استخدام النقود الورقية.
+
+السؤال: ما هي الخدمات المصرفية عبر الإنترنت؟
+الجواب: الخدمات المصرفية عبر الإنترنت تسمح للمستخدمين بإدارة حساباتهم البنكية وتنفيذ المعاملات عبر الإنترنت.
+
+السؤال: ما هي التجارة الإلكترونية؟
+الجواب: التجارة الإلكترونية هي شراء وبيع المنتجات والخدمات عبر الإنترنت.
+
+السؤال: ما هي وسائل التواصل الاجتماعي؟
+الجواب: وسائل التواصل الاجتماعي هي منصات تسمح للأشخاص بالتواصل ومشاركة المحتوى والتفاعل عبر الإنترنت.
+
+السؤال: ما هو بث الفيديو؟
+الجواب: بث الفيديو يسمح للمستخدمين بمشاهدة محتوى الفيديو عبر الإنترنت دون الحاجة إلى تحميل الملف كاملًا أولًا.
+
+السؤال: ما هو التعلم عبر الإنترنت؟
+الجواب: التعلم عبر الإنترنت هو التعليم الذي يتم من خلال الإنترنت باستخدام المنصات والموارد الرقمية.
+
+السؤال: ما هو مؤتمر الفيديو؟
+الجواب: مؤتمر الفيديو هو اجتماع عبر الإنترنت يسمح للأشخاص بالتواصل باستخدام الفيديو والصوت.
+
+السؤال: ما هو التحول الرقمي؟
+الجواب: التحول الرقمي هو استخدام التقنيات الرقمية لتحسين الأعمال والخدمات والعمليات.
+
+السؤال: ما هي البيانات الضخمة؟
+الجواب: البيانات الضخمة هي كميات كبيرة ومعقدة جدًا من البيانات تحتاج إلى تقنيات متقدمة لمعالجتها.
+
+السؤال: ما هي تقنية البلوك تشين؟
+الجواب: البلوك تشين هو سجل رقمي موزع يُستخدم لتسجيل المعاملات بطريقة آمنة وشفافة.
+
+السؤال: ما هي العملات الرقمية؟
+الجواب: العملات الرقمية هي عملات إلكترونية تستخدم التشفير وتعمل غالبًا باستخدام تقنية البلوك تشين.
+
+السؤال: ما هو رمز QR؟
+الجواب: رمز QR هو رمز ثنائي الأبعاد يمكنه تخزين المعلومات ومسحه باستخدام كاميرا.
+
+السؤال: ما هي البصمة الرقمية؟
+الجواب: البصمة الرقمية هي سجل الأنشطة والمعلومات التي يتركها الشخص على الإنترنت.
+
+السؤال: ما هو البرنامج مفتوح المصدر؟
+الجواب: البرنامج مفتوح المصدر هو برنامج يكون الكود المصدري الخاص به متاحًا للمستخدمين للاطلاع عليه وتعديله ومشاركته.
+
+السؤال: ما هو التحديث؟
+الجواب: التحديث هو إصدار جديد من البرنامج قد يضيف ميزات ويحسن الأداء ويصلح المشكلات.
+
+السؤال: ما هي النسخة الاحتياطية؟
+الجواب: النسخة الاحتياطية هي نسخة من البيانات المهمة يتم إنشاؤها لحمايتها من الفقدان أو التلف.
+
+السؤال: فيمَ تُستخدم التكنولوجيا؟
+الجواب: تُستخدم التكنولوجيا لتحسين التواصل والتعليم والرعاية الصحية والنقل والأعمال والترفيه والعديد من مجالات الحياة الأخرى.
+
+السؤال: ما هي اللغة الإنجليزية؟
+الجواب: اللغة الإنجليزية هي لغة عالمية تُستخدم للتواصل في التعليم والعمل والسفر والتكنولوجيا وغيرها من المجالات.
+
+السؤال: ما هي الجملة في اللغة الإنجليزية؟
+الجواب: الجملة هي مجموعة من الكلمات التي تعبر عن معنى كامل.
+
+السؤال: ما هو الفاعل؟
+الجواب: الفاعل هو الشخص أو الشيء الذي يقوم بالفعل في الجملة.
+
+السؤال: ما هو الفعل؟
+الجواب: الفعل هو كلمة تدل على حدث أو فعل أو حالة.
+
+السؤال: ما هو المفعول به؟
+الجواب: المفعول به هو الشخص أو الشيء الذي يقع عليه الفعل.
+
+السؤال: ما هو الاسم؟
+الجواب: الاسم هو كلمة تُستخدم للدلالة على شخص أو مكان أو شيء أو فكرة.
+
+السؤال: ما هو الضمير؟
+الجواب: الضمير هو كلمة تُستخدم بدلًا من الاسم.
+
+السؤال: ما هي الصفة؟
+الجواب: الصفة هي كلمة تصف اسمًا أو توضح صفته.
+
+السؤال: ما هو الظرف؟
+الجواب: الظرف هو كلمة تصف فعلًا أو صفة أو ظرفًا آخر.
+
+السؤال: ما هو حرف الجر؟
+الجواب: حرف الجر هو كلمة توضح العلاقة بين الكلمات في الجملة.
+
+السؤال: ما هي أداة التعريف؟
+الجواب: أداة التعريف هي The وتُستخدم قبل الاسم المحدد أو المعروف.
+
+السؤال: ما هي أدوات التنكير؟
+الجواب: أدوات التنكير هي A و An وتُستخدمان قبل الاسم المفرد غير المحدد.
+
+السؤال: متى نستخدم A؟
+الجواب: نستخدم A قبل الاسم المفرد الذي يبدأ بصوت ساكن.
+
+السؤال: متى نستخدم An؟
+الجواب: نستخدم An قبل الاسم المفرد الذي يبدأ بصوت متحرك.
+
+السؤال: متى نستخدم The؟
+الجواب: نستخدم The عندما يكون الاسم محددًا أو معروفًا للمتحدث والمستمع.
+
+السؤال: ما هو زمن المضارع البسيط؟
+الجواب: يُستخدم المضارع البسيط للتعبير عن العادات والحقائق والأفعال المتكررة.
+
+السؤال: كيف نكون جملة في المضارع البسيط؟
+الجواب: نستخدم الفاعل ثم الفعل في صورته الأساسية، مع إضافة s أو es مع He أو She أو It.
+
+السؤال: متى نضيف S للفعل؟
+الجواب: نضيف S للفعل في المضارع البسيط مع He أو She أو It في الجملة المثبتة.
+
+السؤال: متى نضيف ES للفعل؟
+الجواب: نضيف ES إلى بعض الأفعال التي تنتهي بأحرف مثل s و sh و ch و x و o.
+
+السؤال: متى نستخدم Do؟
+الجواب: نستخدم Do مع I و You و We و They في الأسئلة والنفي في المضارع البسيط.
+
+السؤال: متى نستخدم Does؟
+الجواب: نستخدم Does مع He و She و It في الأسئلة والنفي في المضارع البسيط.
+
+السؤال: ما هو زمن المضارع المستمر؟
+الجواب: يُستخدم المضارع المستمر للتعبير عن شيء يحدث الآن أو خلال فترة زمنية حالية.
+
+السؤال: كيف نكون المضارع المستمر؟
+الجواب: نستخدم am أو is أو are ثم الفعل مع إضافة ing.
+
+السؤال: متى نستخدم Am؟
+الجواب: نستخدم Am مع الضمير I.
+
+السؤال: متى نستخدم Is؟
+الجواب: نستخدم Is مع He و She و It والأسماء المفردة.
+
+السؤال: متى نستخدم Are؟
+الجواب: نستخدم Are مع You و We و They والأسماء الجمع.
+
+السؤال: ما هو زمن الماضي البسيط؟
+الجواب: يُستخدم الماضي البسيط للتعبير عن أحداث انتهت في الماضي.
+
+السؤال: كيف نكون الماضي البسيط؟
+الجواب: نستخدم التصريف الثاني للفعل أو نضيف ed إلى الأفعال المنتظمة.
+
+السؤال: ما هي الأفعال المنتظمة؟
+الجواب: الأفعال المنتظمة هي الأفعال التي يتكون ماضيها غالبًا بإضافة ed.
+
+السؤال: ما هي الأفعال غير المنتظمة؟
+الجواب: الأفعال غير المنتظمة هي أفعال يتغير شكلها في الماضي بطريقة غير منتظمة.
+
+السؤال: ما هو الفعل المساعد Did؟
+الجواب: Did يُستخدم في الأسئلة والنفي في زمن الماضي البسيط.
+
+السؤال: ما هو زمن الماضي المستمر؟
+الجواب: يُستخدم الماضي المستمر للتعبير عن حدث كان مستمرًا في وقت معين في الماضي.
+
+السؤال: كيف نكون الماضي المستمر؟
+الجواب: نستخدم Was أو Were مع الفعل مضافًا إليه ing.
+
+السؤال: متى نستخدم Was؟
+الجواب: نستخدم Was مع I و He و She و It والمفرد.
+
+السؤال: متى نستخدم Were؟
+الجواب: نستخدم Were مع You و We و They والجمع.
+
+السؤال: ما هو زمن المستقبل البسيط؟
+الجواب: يُستخدم المستقبل البسيط للتعبير عن أحداث ستحدث في المستقبل.
+
+السؤال: كيف نكون المستقبل باستخدام Will؟
+الجواب: نستخدم Will ثم الفعل في صورته الأساسية.
+
+السؤال: ما الفرق بين Will و Going to؟
+الجواب: Will تُستخدم غالبًا للقرارات السريعة والتوقعات، بينما Going to تُستخدم للخطط والنوايا أو التوقعات المبنية على دليل.
+
+السؤال: ما هو المضارع التام؟
+الجواب: يُستخدم المضارع التام للتعبير عن أفعال حدثت في الماضي ولها علاقة بالحاضر.
+
+السؤال: كيف نكون المضارع التام؟
+الجواب: نستخدم Have أو Has مع التصريف الثالث للفعل.
+
+السؤال: متى نستخدم Have؟
+الجواب: نستخدم Have مع I و You و We و They.
+
+السؤال: متى نستخدم Has؟
+الجواب: نستخدم Has مع He و She و It.
+
+السؤال: ما هو التصريف الثالث للفعل؟
+الجواب: هو الشكل الثالث للفعل ويُستخدم مع الأزمنة التامة والمبني للمجهول.
+
+السؤال: ما هو الماضي التام؟
+الجواب: يُستخدم الماضي التام للتعبير عن حدث حدث قبل حدث آخر في الماضي.
+
+السؤال: كيف نكون الماضي التام؟
+الجواب: نستخدم Had مع التصريف الثالث للفعل.
+
+السؤال: ما هي الأفعال الناقصة؟
+الجواب: الأفعال الناقصة هي أفعال مساعدة مثل Can و Could و May و Might و Must و Should.
+
+السؤال: ما معنى Can؟
+الجواب: Can تُستخدم للتعبير عن القدرة أو الإمكانية.
+
+السؤال: ما معنى Could؟
+الجواب: Could تُستخدم للتعبير عن القدرة في الماضي أو لطلب شيء بطريقة مهذبة.
+
+السؤال: ما معنى May؟
+الجواب: May تُستخدم للتعبير عن الاحتمال أو طلب الإذن بطريقة رسمية.
+
+السؤال: ما معنى Might؟
+الجواب: Might تُستخدم للتعبير عن احتمال ضعيف.
+
+السؤال: ما معنى Must؟
+الجواب: Must تُستخدم للتعبير عن الضرورة أو الإلزام.
+
+السؤال: ما معنى Should؟
+الجواب: Should تُستخدم لتقديم النصيحة أو التوصية.
+
+السؤال: ما هي الجملة المثبتة؟
+الجواب: الجملة المثبتة هي جملة تحتوي على معنى إيجابي ولا تحتوي على نفي.
+
+السؤال: ما هي الجملة المنفية؟
+الجواب: الجملة المنفية هي جملة تحتوي على نفي باستخدام أدوات مثل Not.
+
+السؤال: كيف ننفي الجملة في المضارع البسيط؟
+الجواب: نستخدم Do not أو Does not ثم الفعل في صورته الأساسية.
+
+السؤال: كيف ننفي الجملة في الماضي البسيط؟
+الجواب: نستخدم Did not ثم الفعل في صورته الأساسية.
+
+السؤال: ما هي الجملة الاستفهامية؟
+الجواب: الجملة الاستفهامية هي جملة تُستخدم لطرح سؤال.
+
+السؤال: ما هي أدوات الاستفهام؟
+الجواب: أدوات الاستفهام تشمل What و Where و When و Why و Who و Which و How.
+
+السؤال: ما معنى What؟
+الجواب: What تُستخدم للسؤال عن شيء أو معلومات.
+
+السؤال: ما معنى Where؟
+الجواب: Where تُستخدم للسؤال عن المكان.
+
+السؤال: ما معنى When؟
+الجواب: When تُستخدم للسؤال عن الوقت.
+
+السؤال: ما معنى Why؟
+الجواب: Why تُستخدم للسؤال عن السبب.
+
+السؤال: ما معنى Who؟
+الجواب: Who تُستخدم للسؤال عن شخص.
+
+السؤال: ما معنى Which؟
+الجواب: Which تُستخدم للاختيار بين مجموعة من الخيارات.
+
+السؤال: ما معنى How؟
+الجواب: How تُستخدم للسؤال عن الطريقة أو الكيفية.
+
+السؤال: ما هي أسماء الإشارة؟
+الجواب: أسماء الإشارة هي This و That و These و Those.
+
+السؤال: متى نستخدم This؟
+الجواب: نستخدم This للإشارة إلى شيء مفرد قريب.
+
+السؤال: متى نستخدم That؟
+الجواب: نستخدم That للإشارة إلى شيء مفرد بعيد.
+
+السؤال: متى نستخدم These؟
+الجواب: نستخدم These للإشارة إلى أشياء جمع قريبة.
+
+السؤال: متى نستخدم Those؟
+الجواب: نستخدم Those للإشارة إلى أشياء جمع بعيدة.
+
+السؤال: ما هي ضمائر الفاعل؟
+الجواب: ضمائر الفاعل هي I و You و He و She و It و We و They.
+
+السؤال: ما هي ضمائر المفعول؟
+الجواب: ضمائر المفعول هي Me و You و Him و Her و It و Us و Them.
+
+السؤال: ما هي صفات الملكية؟
+الجواب: صفات الملكية هي My و Your و His و Her و Its و Our و Their.
+
+السؤال: ما هي ضمائر الملكية؟
+الجواب: ضمائر الملكية هي Mine و Yours و His و Hers و Ours و Theirs.
+
+السؤال: ما هو فعل To Be؟
+الجواب: فعل To Be يشمل Am و Is و Are في الحاضر و Was و Were في الماضي.
+
+السؤال: ما هو فعل To Have؟
+الجواب: فعل To Have يشمل Have و Has في الحاضر و Had في الماضي.
+
+السؤال: ما هو فعل To Do؟
+الجواب: فعل To Do يشمل Do و Does في الحاضر و Did في الماضي.
+
+السؤال: ما هي صيغة المقارنة؟
+الجواب: صيغة المقارنة تُستخدم لمقارنة شخصين أو شيئين.
+
+السؤال: ما هي صيغة التفضيل؟
+الجواب: صيغة التفضيل تُستخدم للمقارنة بين ثلاثة أشخاص أو أشياء أو أكثر.
+
+السؤال: كيف نكون صيغة المقارنة؟
+الجواب: نضيف غالبًا er للصفات القصيرة أو نستخدم More مع الصفات الطويلة.
+
+السؤال: كيف نكون صيغة التفضيل؟
+الجواب: نضيف غالبًا est للصفات القصيرة أو نستخدم Most مع الصفات الطويلة.
+
+السؤال: ما هي حروف العطف؟
+الجواب: حروف العطف هي كلمات تربط بين الكلمات أو الجمل مثل And و But و Or و So.
+
+السؤال: ما معنى And؟
+الجواب: And تُستخدم لإضافة معلومات أو ربط شيئين أو أكثر.
+
+السؤال: ما معنى But؟
+الجواب: But تُستخدم للتعبير عن التناقض.
+
+السؤال: ما معنى Or؟
+الجواب: Or تُستخدم للاختيار بين شيئين أو أكثر.
+
+السؤال: ما معنى Because؟
+الجواب: Because تُستخدم لذكر السبب.
+
+السؤال: ما هي حروف الجر؟
+الجواب: حروف الجر هي كلمات توضح العلاقة بين الكلمات مثل In و On و At و From و To.
+
+السؤال: متى نستخدم In؟
+الجواب: نستخدم In مع الأماكن الكبيرة والفترات الزمنية والأشهر والسنوات.
+
+السؤال: متى نستخدم On؟
+الجواب: نستخدم On مع الأيام والتواريخ والأسطح.
+
+السؤال: متى نستخدم At؟
+الجواب: نستخدم At مع الأوقات المحددة والأماكن المحددة.
+
+السؤال: ما هو المبني للمجهول؟
+الجواب: المبني للمجهول يركز على الفعل أو الشيء الذي وقع عليه الفعل بدلًا من الفاعل.
+
+السؤال: ما هو الكلام المباشر؟
+الجواب: الكلام المباشر هو نقل كلام الشخص كما قاله بالضبط.
+
+السؤال: ما هو الكلام غير المباشر؟
+الجواب: الكلام غير المباشر هو نقل معنى كلام الشخص دون تكرار كلامه حرفيًا.
+
+السؤال: ما هي الجملة الشرطية؟
+الجواب: الجملة الشرطية تُستخدم للتعبير عن شرط ونتيجة.
+
+السؤال: ما هو الشرط الأول؟
+الجواب: الشرط الأول يُستخدم للتعبير عن احتمال حقيقي أو ممكن في المستقبل.
+
+السؤال: ما هو الشرط الثاني؟
+الجواب: الشرط الثاني يُستخدم للتعبير عن موقف غير حقيقي أو احتمال ضعيف في الحاضر أو المستقبل.
+
+السؤال: ما هو الشرط الثالث؟
+الجواب: الشرط الثالث يُستخدم للتحدث عن موقف لم يحدث في الماضي ونتيجته المحتملة.
+
+السؤال: ما هي الكلمات المعدودة؟
+الجواب: الكلمات المعدودة هي الأسماء التي يمكن عدها مثل Book و Apple و Car.
+
+السؤال: ما هي الكلمات غير المعدودة؟
+الجواب: الكلمات غير المعدودة هي الأسماء التي لا تُعد بشكل منفصل مثل Water و Sugar و Money.
+
+السؤال: ما الفرق بين Much و Many؟
+الجواب: Much تُستخدم مع الأسماء غير المعدودة، بينما Many تُستخدم مع الأسماء المعدودة.
+
+السؤال: ما الفرق بين Some و Any؟
+الجواب: Some تُستخدم غالبًا في الجمل المثبتة، بينما Any تُستخدم غالبًا في الأسئلة والجمل المنفية.
+
+السؤال: ما الفرق بين Few و Little؟
+الجواب: Few تُستخدم مع الأسماء المعدودة، بينما Little تُستخدم مع الأسماء غير المعدودة.
+
+السؤال: ما هو المصدر؟
+الجواب: المصدر هو الشكل الأساسي للفعل وغالبًا يأتي مع To مثل To Go و To Eat.
+
+السؤال: ما هو Gerund؟
+الجواب: Gerund هو الفعل الذي ينتهي بـ ing ويُستخدم أحيانًا كاسم.
+
+السؤال: ما هو اسم الفاعل؟
+الجواب: اسم الفاعل هو كلمة مشتقة من الفعل وتُستخدم لوصف شخص أو شيء يقوم بالفعل.
+
+السؤال: ما هو اسم المفعول؟
+الجواب: اسم المفعول هو كلمة مشتقة من الفعل وتُستخدم لوصف شخص أو شيء وقع عليه الفعل.
+
+السؤال: ما أهمية ترتيب الكلمات في اللغة الإنجليزية؟
+الجواب: ترتيب الكلمات مهم لأن تغيير ترتيب الكلمات قد يغير معنى الجملة أو يجعلها غير صحيحة.
+
+السؤال: ما هو ترتيب الجملة الأساسي في اللغة الإنجليزية؟
+الجواب: الترتيب الأساسي هو الفاعل ثم الفعل ثم المفعول به.
+
+السؤال: ما هي علامات الترقيم؟
+الجواب: علامات الترقيم هي رموز تُستخدم لتنظيم الجمل وتوضيح معناها مثل النقطة وعلامة الاستفهام والفاصلة.
+
+السؤال: ما الفرق بين الحروف الكبيرة والصغيرة؟
+الجواب: الحروف الكبيرة تُستخدم في بداية الجمل وأسماء الأشخاص والأماكن وبعض الأسماء الخاصة، بينما تُستخدم الحروف الصغيرة في معظم الكلمات الأخرى.
+
+السؤال: What is the English language?
+الجواب: The English language is a global language used for communication in education, work, travel, technology, and many other fields.
+
+السؤال: What is a sentence in English?
+الجواب: A sentence is a group of words that expresses a complete meaning.
+
+السؤال: What is a subject?
+الجواب: A subject is the person or thing that performs the action in a sentence.
+
+السؤال: What is a verb?
+الجواب: A verb is a word that expresses an action, event, or state.
+
+السؤال: What is an object?
+الجواب: An object is the person or thing that receives the action of the verb.
+
+السؤال: What is a noun?
+الجواب: A noun is a word used to name a person, place, thing, or idea.
+
+السؤال: What is a pronoun?
+الجواب: A pronoun is a word used instead of a noun.
+
+السؤال: What is an adjective?
+الجواب: An adjective is a word that describes or gives more information about a noun.
+
+السؤال: What is an adverb?
+الجواب: An adverb is a word that describes a verb, adjective, or another adverb.
+
+السؤال: What is a preposition?
+الجواب: A preposition is a word that shows the relationship between words in a sentence.
+
+السؤال: What is the definite article?
+الجواب: The definite article is "The" and it is used before a specific or known noun.
+
+السؤال: What are the indefinite articles?
+الجواب: The indefinite articles are "A" and "An" and they are used before singular, non-specific nouns.
+
+السؤال: When do we use "A"?
+الجواب: We use "A" before a singular noun that begins with a consonant sound.
+
+السؤال: When do we use "An"?
+الجواب: We use "An" before a singular noun that begins with a vowel sound.
+
+السؤال: When do we use "The"?
+الجواب: We use "The" when the noun is specific or known to the speaker and listener.
+
+السؤال: What is the Present Simple tense?
+الجواب: The Present Simple tense is used to talk about habits, facts, and repeated actions.
+
+السؤال: How do we form the Present Simple?
+الجواب: We use the subject followed by the base form of the verb, adding "s" or "es" with He, She, or It.
+
+السؤال: When do we add "S" to a verb?
+الجواب: We add "S" to the verb in the Present Simple with He, She, or It in affirmative sentences.
+
+السؤال: When do we add "ES" to a verb?
+الجواب: We add "ES" to some verbs ending in letters such as s, sh, ch, x, and o.
+
+السؤال: When do we use "Do"?
+الجواب: We use "Do" with I, You, We, and They in questions and negative sentences in the Present Simple.
+
+السؤال: When do we use "Does"?
+الجواب: We use "Does" with He, She, and It in questions and negative sentences in the Present Simple.
+
+السؤال: What is the Present Continuous tense?
+الجواب: The Present Continuous tense is used to talk about actions happening now or around the present time.
+
+السؤال: How do we form the Present Continuous?
+الجواب: We use Am, Is, or Are followed by the verb ending in "ing".
+
+السؤال: When do we use "Am"?
+الجواب: We use "Am" with the pronoun I.
+
+السؤال: When do we use "Is"?
+الجواب: We use "Is" with He, She, It, and singular nouns.
+
+السؤال: When do we use "Are"?
+الجواب: We use "Are" with You, We, They, and plural nouns.
+
+السؤال: What is the Past Simple tense?
+الجواب: The Past Simple tense is used to talk about completed actions in the past.
+
+السؤال: How do we form the Past Simple?
+الجواب: We use the second form of the verb or add "ed" to regular verbs.
+
+السؤال: What are regular verbs?
+الجواب: Regular verbs are verbs that usually form their past tense by adding "ed".
+
+السؤال: What are irregular verbs?
+الجواب: Irregular verbs are verbs that change their form in the past in an irregular way.
+
+السؤال: What is the auxiliary verb "Did"?
+الجواب: "Did" is used in questions and negative sentences in the Past Simple tense.
+
+السؤال: What is the Past Continuous tense?
+الجواب: The Past Continuous tense is used to talk about an action that was happening at a specific time in the past.
+
+السؤال: How do we form the Past Continuous?
+الجواب: We use Was or Were followed by a verb ending in "ing".
+
+السؤال: When do we use "Was"?
+الجواب: We use "Was" with I, He, She, It, and singular nouns.
+
+السؤال: When do we use "Were"?
+الجواب: We use "Were" with You, We, They, and plural nouns.
+
+السؤال: What is the Future Simple tense?
+الجواب: The Future Simple tense is used to talk about actions that will happen in the future.
+
+السؤال: How do we form the Future Simple with "Will"?
+الجواب: We use "Will" followed by the base form of the verb.
+
+السؤال: What is the difference between "Will" and "Going to"?
+الجواب: "Will" is often used for quick decisions and predictions, while "Going to" is used for plans, intentions, or predictions based on evidence.
+
+السؤال: What is the Present Perfect tense?
+الجواب: The Present Perfect tense is used to talk about past actions that have a connection to the present.
+
+السؤال: How do we form the Present Perfect?
+الجواب: We use Have or Has followed by the past participle of the verb.
+
+السؤال: When do we use "Have"?
+الجواب: We use "Have" with I, You, We, and They.
+
+السؤال: When do we use "Has"?
+الجواب: We use "Has" with He, She, and It.
+
+السؤال: What is the past participle?
+الجواب: The past participle is the third form of a verb and is used with perfect tenses and the passive voice.
+
+السؤال: What is the Past Perfect tense?
+الجواب: The Past Perfect tense is used to talk about an action that happened before another action in the past.
+
+السؤال: How do we form the Past Perfect?
+الجواب: We use "Had" followed by the past participle of the verb.
+
+السؤال: What are modal verbs?
+الجواب: Modal verbs are auxiliary verbs such as Can, Could, May, Might, Must, and Should.
+
+السؤال: What does "Can" mean?
+الجواب: "Can" is used to express ability or possibility.
+
+السؤال: What does "Could" mean?
+الجواب: "Could" is used to express past ability or to make a polite request.
+
+السؤال: What does "May" mean?
+الجواب: "May" is used to express possibility or to ask for permission formally.
+
+السؤال: What does "Might" mean?
+الجواب: "Might" is used to express a weak possibility.
+
+السؤال: What does "Must" mean?
+الجواب: "Must" is used to express necessity or obligation.
+
+السؤال: What does "Should" mean?
+الجواب: "Should" is used to give advice or make a recommendation.
+
+السؤال: What is an affirmative sentence?
+الجواب: An affirmative sentence expresses a positive meaning and does not contain negation.
+
+السؤال: What is a negative sentence?
+الجواب: A negative sentence expresses negation using words such as "Not".
+
+السؤال: What is an interrogative sentence?
+الجواب: An interrogative sentence is used to ask a question.
+
+السؤال: What are question words?
+الجواب: Question words include What, Where, When, Why, Who, Which, and How.
+
+السؤال: What does "What" mean?
+الجواب: "What" is used to ask about a thing or information.
+
+السؤال: What does "Where" mean?
+الجواب: "Where" is used to ask about a place.
+
+السؤال: What does "When" mean?
+الجواب: "When" is used to ask about time.
+
+السؤال: What does "Why" mean?
+الجواب: "Why" is used to ask about a reason.
+
+السؤال: What does "Who" mean?
+الجواب: "Who" is used to ask about a person.
+
+السؤال: What does "Which" mean?
+الجواب: "Which" is used to choose between two or more options.
+
+السؤال: What does "How" mean?
+الجواب: "How" is used to ask about the way or method of doing something.
+
+السؤال: What are demonstrative pronouns?
+الجواب: Demonstrative pronouns include This, That, These, and Those.
+
+السؤال: When do we use "This"?
+الجواب: We use "This" to point to one nearby thing.
+
+السؤال: When do we use "That"?
+الجواب: We use "That" to point to one distant thing.
+
+السؤال: When do we use "These"?
+الجواب: We use "These" to point to multiple nearby things.
+
+السؤال: When do we use "Those"?
+الجواب: We use "Those" to point to multiple distant things.
+
+السؤال: What are subject pronouns?
+الجواب: Subject pronouns are I, You, He, She, It, We, and They.
+
+السؤال: What are object pronouns?
+الجواب: Object pronouns are Me, You, Him, Her, It, Us, and Them.
+
+السؤال: What are possessive adjectives?
+الجواب: Possessive adjectives are My, Your, His, Her, Its, Our, and Their.
+
+السؤال: What are possessive pronouns?
+الجواب: Possessive pronouns are Mine, Yours, His, Hers, Ours, and Theirs.
+
+السؤال: What is the verb "To Be"?
+الجواب: The verb "To Be" includes Am, Is, and Are in the present and Was and Were in the past.
+
+السؤال: What is the verb "To Have"?
+الجواب: The verb "To Have" includes Have and Has in the present and Had in the past.
+
+السؤال: What is the verb "To Do"?
+الجواب: The verb "To Do" includes Do and Does in the present and Did in the past.
+
+السؤال: What is the comparative form?
+الجواب: The comparative form is used to compare two people or things.
+
+السؤال: What is the superlative form?
+الجواب: The superlative form is used to compare three or more people or things.
+
+السؤال: How do we form the comparative?
+الجواب: We usually add "er" to short adjectives or use "More" with long adjectives.
+
+السؤال: How do we form the superlative?
+الجواب: We usually add "est" to short adjectives or use "Most" with long adjectives.
+
+السؤال: What are conjunctions?
+الجواب: Conjunctions are words used to connect words or sentences, such as And, But, Or, and So.
+
+السؤال: What does "And" mean?
+الجواب: "And" is used to add information or connect two or more things.
+
+السؤال: What does "But" mean?
+الجواب: "But" is used to express contrast.
+
+السؤال: What does "Or" mean?
+الجواب: "Or" is used to choose between two or more options.
+
+السؤال: What does "Because" mean?
+الجواب: "Because" is used to give a reason.
+
+السؤال: What are prepositions?
+الجواب: Prepositions are words that show relationships between words, such as In, On, At, From, and To.
+
+السؤال: When do we use "In"?
+الجواب: We use "In" with large places, periods of time, months, and years.
+
+السؤال: When do we use "On"?
+الجواب: We use "On" with days, dates, and surfaces.
+
+السؤال: When do we use "At"?
+الجواب: We use "At" with specific times and specific places.
+
+السؤال: What is the passive voice?
+الجواب: The passive voice focuses on the action or the thing receiving the action instead of the person performing it.
+
+السؤال: What is direct speech?
+الجواب: Direct speech reports exactly what a person said.
+
+السؤال: What is reported speech?
+الجواب: Reported speech reports the meaning of what a person said without repeating the exact words.
+
+السؤال: What is a conditional sentence?
+الجواب: A conditional sentence is used to express a condition and its result.
+
+السؤال: What is the First Conditional?
+الجواب: The First Conditional is used to talk about a real or possible situation in the future.
+
+السؤال: What is the Second Conditional?
+الجواب: The Second Conditional is used to talk about an unreal or unlikely situation in the present or future.
+
+السؤال: What is the Third Conditional?
+الجواب: The Third Conditional is used to talk about an unreal situation in the past and its possible result.
+
+السؤال: What are countable nouns?
+الجواب: Countable nouns are nouns that can be counted, such as books, apples, and cars.
+
+السؤال: What are uncountable nouns?
+الجواب: Uncountable nouns are nouns that cannot usually be counted individually, such as water, sugar, and money.
+
+السؤال: What is the difference between "Much" and "Many"?
+الجواب: "Much" is used with uncountable nouns, while "Many" is used with countable nouns.
+
+السؤال: What is the difference between "Some" and "Any"?
+الجواب: "Some" is usually used in affirmative sentences, while "Any" is commonly used in questions and negative sentences.
+
+السؤال: What is the difference between "Few" and "Little"?
+الجواب: "Few" is used with countable nouns, while "Little" is used with uncountable nouns.
+
+السؤال: What is an infinitive?
+الجواب: An infinitive is the basic form of a verb, often used with "To", such as To Go and To Eat.
+
+السؤال: What is a Gerund?
+الجواب: A Gerund is a verb ending in "ing" that can function as a noun.
+
+السؤال: What is a present participle?
+الجواب: A present participle is a form of a verb ending in "ing" that can be used to describe an action or form continuous tenses.
+
+السؤال: What is a past participle?
+الجواب: A past participle is a verb form used in perfect tenses and the passive voice.
+
+السؤال: Why is word order important in English?
+الجواب: Word order is important because changing the order of words can change the meaning or make the sentence incorrect.
+
+السؤال: What is the basic word order in English?
+الجواب: The basic word order is Subject + Verb + Object.
+
+السؤال: What are punctuation marks?
+الجواب: Punctuation marks are symbols used to organize sentences and clarify their meaning, such as periods, commas, and question marks.
+
+السؤال: What is the difference between uppercase and lowercase letters?
+الجواب: Uppercase letters are used at the beginning of sentences and in proper nouns, while lowercase letters are used in most other words.
+
+السؤال: ما هو الكلام في اللغة العربية؟
+الجواب: الكلام هو اللفظ المركب المفيد بالوضع.
+
+السؤال: ما هي أقسام الكلام؟
+الجواب: أقسام الكلام هي الاسم والفعل والحرف.
+
+السؤال: ما هو الاسم؟
+الجواب: الاسم هو كلمة تدل على معنى في نفسها دون اقتران بزمن.
+
+السؤال: ما هو الفعل؟
+الجواب: الفعل هو كلمة تدل على حدث مقترن بزمن.
+
+السؤال: ما هو الحرف؟
+الجواب: الحرف هو كلمة لا يظهر معناها كاملًا إلا مع غيرها.
+
+السؤال: ما هو الفعل الماضي؟
+الجواب: الفعل الماضي هو ما دل على حدث وقع وانتهى في الزمن الماضي.
+
+السؤال: ما هو الفعل المضارع؟
+الجواب: الفعل المضارع هو ما دل على حدث يحدث في الزمن الحاضر أو المستقبل.
+
+السؤال: ما هو فعل الأمر؟
+الجواب: فعل الأمر هو ما دل على طلب حدوث الفعل في المستقبل.
+
+السؤال: ما هي علامات الاسم؟
+الجواب: من علامات الاسم الجر والتنوين ودخول أل التعريف ودخول حروف الجر.
+
+السؤال: ما هي علامات الفعل؟
+الجواب: من علامات الفعل قبول تاء الفاعل وتاء التأنيث الساكنة وياء المخاطبة.
+
+السؤال: ما هي الجملة الاسمية؟
+الجواب: الجملة الاسمية هي الجملة التي تبدأ باسم وتتكون غالبًا من مبتدأ وخبر.
+
+السؤال: ما هي الجملة الفعلية؟
+الجواب: الجملة الفعلية هي الجملة التي تبدأ بفعل وتتكون غالبًا من فعل وفاعل.
+
+السؤال: ما هو المبتدأ؟
+الجواب: المبتدأ هو اسم مرفوع يأتي غالبًا في بداية الجملة الاسمية.
+
+السؤال: ما هو الخبر؟
+الجواب: الخبر هو الجزء الذي يتمم معنى الجملة الاسمية ويخبر عن المبتدأ.
+
+السؤال: ما هو الخبر المفرد؟
+الجواب: الخبر المفرد هو ما ليس جملة ولا شبه جملة.
+
+السؤال: ما هو الخبر الجملة؟
+الجواب: الخبر الجملة هو خبر يأتي في صورة جملة اسمية أو فعلية.
+
+السؤال: ما هو الخبر شبه الجملة؟
+الجواب: الخبر شبه الجملة يكون جارًا ومجرورًا أو ظرفًا.
+
+السؤال: ما هو الفاعل؟
+الجواب: الفاعل هو اسم مرفوع يدل على من قام بالفعل.
+
+السؤال: ما هو نائب الفاعل؟
+الجواب: نائب الفاعل هو اسم مرفوع يحل محل الفاعل بعد بناء الفعل للمجهول.
+
+السؤال: ما هو المفعول به؟
+الجواب: المفعول به هو اسم منصوب يدل على من وقع عليه فعل الفاعل.
+
+السؤال: ما هو المفعول المطلق؟
+الجواب: المفعول المطلق هو مصدر منصوب يأتي لتأكيد الفعل أو بيان نوعه أو عدده.
+
+السؤال: ما هو المفعول فيه؟
+الجواب: المفعول فيه هو ظرف الزمان أو المكان الذي يبين وقت أو مكان حدوث الفعل.
+
+السؤال: ما هو المفعول لأجله؟
+الجواب: المفعول لأجله هو مصدر منصوب يبين سبب حدوث الفعل.
+
+السؤال: ما هو المفعول معه؟
+الجواب: المفعول معه هو اسم منصوب يأتي بعد واو بمعنى مع.
+
+السؤال: ما هو الحال؟
+الجواب: الحال هو اسم منصوب يبين هيئة صاحبه وقت حدوث الفعل.
+
+السؤال: ما هو التمييز؟
+الجواب: التمييز هو اسم نكرة منصوب يوضح معنى مبهمًا قبله.
+
+السؤال: ما هو الاستثناء؟
+الجواب: الاستثناء هو إخراج ما بعد أداة الاستثناء من حكم ما قبلها.
+
+السؤال: ما هي أدوات الاستثناء؟
+الجواب: من أشهر أدوات الاستثناء إلا وغير وسوى وعدا وخلا وحاشا.
+
+السؤال: ما هو النعت؟
+الجواب: النعت هو تابع يوضح صفة في اسم قبله أو يبينها.
+
+السؤال: ما هو العطف؟
+الجواب: العطف هو تابع يتوسط بينه وبين متبوعه حرف من حروف العطف.
+
+السؤال: ما هي حروف العطف؟
+الجواب: من حروف العطف الواو والفاء وثم وأو وبل ولكن وحتى.
+
+السؤال: ما هو التوكيد؟
+الجواب: التوكيد هو تابع يستخدم لتأكيد معنى متبوعه.
+
+السؤال: ما أنواع التوكيد؟
+الجواب: أنواع التوكيد هي التوكيد اللفظي والتوكيد المعنوي.
+
+السؤال: ما هو البدل؟
+الجواب: البدل هو تابع مقصود بالحكم يمهد له اسم قبله.
+
+السؤال: ما هي أنواع البدل؟
+الجواب: من أنواع البدل بدل الكل من الكل وبدل البعض من الكل وبدل الاشتمال وبدل الغلط.
+
+السؤال: ما هو المجرور؟
+الجواب: المجرور هو الاسم الذي تظهر عليه علامة الجر أو ينوب عنها.
+
+السؤال: ما هي حروف الجر؟
+الجواب: من حروف الجر من وإلى وعن وعلى وفي والباء والكاف واللام.
+
+السؤال: ما هو المضاف إليه؟
+الجواب: المضاف إليه هو اسم مجرور يأتي بعد اسم قبله يسمى المضاف.
+
+السؤال: ما هو الإعراب؟
+الجواب: الإعراب هو تغير أواخر الكلمات بسبب تغير العوامل الداخلة عليها.
+
+السؤال: ما هو البناء؟
+الجواب: البناء هو لزوم آخر الكلمة حالة واحدة مهما تغير موقعها في الجملة.
+
+السؤال: ما هي علامات الإعراب الأصلية؟
+الجواب: علامات الإعراب الأصلية هي الضمة والفتحة والكسرة والسكون.
+
+السؤال: ما هي علامة الرفع الأصلية؟
+الجواب: علامة الرفع الأصلية هي الضمة.
+
+السؤال: ما هي علامة النصب الأصلية؟
+الجواب: علامة النصب الأصلية هي الفتحة.
+
+السؤال: ما هي علامة الجر الأصلية؟
+الجواب: علامة الجر الأصلية هي الكسرة.
+
+السؤال: ما هي علامة الجزم الأصلية؟
+الجواب: علامة الجزم الأصلية هي السكون.
+
+السؤال: ما هي علامات الإعراب الفرعية؟
+الجواب: من علامات الإعراب الفرعية الألف والواو والياء وحذف النون وحذف حرف العلة.
+
+السؤال: ما هي الأسماء الخمسة؟
+الجواب: الأسماء الخمسة هي أب وأخ وحم وفو وذو.
+
+السؤال: كيف تُرفع الأسماء الخمسة؟
+الجواب: تُرفع الأسماء الخمسة بالواو.
+
+السؤال: كيف تُنصب الأسماء الخمسة؟
+الجواب: تُنصب الأسماء الخمسة بالألف.
+
+السؤال: كيف تُجر الأسماء الخمسة؟
+الجواب: تُجر الأسماء الخمسة بالياء.
+
+السؤال: ما هو المثنى؟
+الجواب: المثنى هو ما دل على اثنين أو اثنتين بزيادة ألف ونون أو ياء ونون.
+
+السؤال: كيف يُرفع المثنى؟
+الجواب: يُرفع المثنى بالألف.
+
+السؤال: كيف يُنصب المثنى؟
+الجواب: يُنصب المثنى بالياء.
+
+السؤال: كيف يُجر المثنى؟
+الجواب: يُجر المثنى بالياء.
+
+السؤال: ما هو جمع المذكر السالم؟
+الجواب: جمع المذكر السالم هو ما دل على أكثر من اثنين بزيادة واو ونون أو ياء ونون.
+
+السؤال: كيف يُرفع جمع المذكر السالم؟
+الجواب: يُرفع جمع المذكر السالم بالواو.
+
+السؤال: كيف يُنصب جمع المذكر السالم؟
+الجواب: يُنصب جمع المذكر السالم بالياء.
+
+السؤال: كيف يُجر جمع المذكر السالم؟
+الجواب: يُجر جمع المذكر السالم بالياء.
+
+السؤال: ما هو جمع المؤنث السالم؟
+الجواب: جمع المؤنث السالم هو ما دل على أكثر من اثنتين بزيادة ألف وتاء على مفرده.
+
+السؤال: كيف يُرفع جمع المؤنث السالم؟
+الجواب: يُرفع جمع المؤنث السالم بالضمة.
+
+السؤال: كيف يُنصب جمع المؤنث السالم؟
+الجواب: يُنصب جمع المؤنث السالم بالكسرة نيابة عن الفتحة.
+
+السؤال: كيف يُجر جمع المؤنث السالم؟
+الجواب: يُجر جمع المؤنث السالم بالكسرة.
+
+السؤال: ما هو جمع التكسير؟
+الجواب: جمع التكسير هو ما دل على أكثر من اثنين أو اثنتين مع تغير صورة مفرده.
+
+السؤال: ما هي الأفعال الخمسة؟
+الجواب: الأفعال الخمسة هي كل فعل مضارع اتصلت به ألف الاثنين أو واو الجماعة أو ياء المخاطبة.
+
+السؤال: كيف تُرفع الأفعال الخمسة؟
+الجواب: تُرفع الأفعال الخمسة بثبوت النون.
+
+السؤال: كيف تُنصب الأفعال الخمسة؟
+الجواب: تُنصب الأفعال الخمسة بحذف النون.
+
+السؤال: كيف تُجزم الأفعال الخمسة؟
+الجواب: تُجزم الأفعال الخمسة بحذف النون.
+
+السؤال: ما هي الأفعال الناسخة؟
+الجواب: الأفعال الناسخة هي أفعال تدخل على الجملة الاسمية فترفع المبتدأ ويسمى اسمها وتنصب الخبر ويسمى خبرها.
+
+السؤال: ما هي كان وأخواتها؟
+الجواب: كان وأخواتها أفعال ناسخة مثل كان وأصبح وأضحى وأمسى وظل وبات وصار وليس.
+
+السؤال: ما عمل كان وأخواتها؟
+الجواب: تدخل كان وأخواتها على الجملة الاسمية فترفع المبتدأ وتنصب الخبر.
+
+السؤال: ما هي إن وأخواتها؟
+الجواب: إن وأخواتها حروف ناسخة مثل إن وأن وكأن ولكن وليت ولعل.
+
+السؤال: ما عمل إن وأخواتها؟
+الجواب: تدخل إن وأخواتها على الجملة الاسمية فتنصب المبتدأ وترفع الخبر.
+
+السؤال: ما هي أفعال المقاربة؟
+الجواب: أفعال المقاربة هي أفعال تدل على قرب وقوع الخبر مثل كاد وأوشك وكرب.
+
+السؤال: ما هي أفعال الرجاء؟
+الجواب: أفعال الرجاء هي أفعال تدل على رجاء حدوث الخبر مثل عسى وحرى واخلولق.
+
+السؤال: ما هي أفعال الشروع؟
+الجواب: أفعال الشروع هي أفعال تدل على البدء في العمل مثل بدأ وشرع وأخذ وطفق.
+
+السؤال: ما هو أسلوب النفي؟
+الجواب: أسلوب النفي هو أسلوب يستخدم لنفي حدوث الفعل أو ثبوت الصفة.
+
+السؤال: ما هي أدوات النفي؟
+الجواب: من أدوات النفي لا وما ولم ولن وليس.
+
+السؤال: ما هو أسلوب الاستفهام؟
+الجواب: أسلوب الاستفهام هو أسلوب يستخدم لطلب معرفة شيء مجهول.
+
+السؤال: ما هي أدوات الاستفهام؟
+الجواب: من أدوات الاستفهام هل والهمزة ومن وما ومتى وأين وكيف وكم وأي.
+
+السؤال: ما هو أسلوب الأمر؟
+الجواب: أسلوب الأمر هو أسلوب يستخدم لطلب القيام بفعل معين.
+
+السؤال: ما هو أسلوب النهي؟
+الجواب: أسلوب النهي هو طلب الكف عن فعل معين باستخدام لا الناهية.
+
+السؤال: ما هو أسلوب التعجب؟
+الجواب: أسلوب التعجب هو أسلوب يستخدم للتعبير عن الدهشة أو الإعجاب بشيء.
+
+السؤال: ما صيغتا التعجب القياسيتان؟
+الجواب: صيغتا التعجب القياسيتان هما ما أفعله وأفعل به.
+
+السؤال: ما هو أسلوب المدح؟
+الجواب: أسلوب المدح هو أسلوب يستخدم للتعبير عن الإعجاب بصفة أو شخص.
+
+السؤال: ما هي أفعال المدح؟
+الجواب: من أفعال المدح نعم وحبذا.
+
+السؤال: ما هو أسلوب الذم؟
+الجواب: أسلوب الذم هو أسلوب يستخدم للتعبير عن كراهية صفة أو ذم شخص.
+
+السؤال: ما هي أفعال الذم؟
+الجواب: من أفعال الذم بئس ولا حبذا.
+
+السؤال: ما هو أسلوب الشرط؟
+الجواب: أسلوب الشرط هو أسلوب يتكون من أداة شرط وفعل الشرط وجواب الشرط.
+
+السؤال: ما هي أدوات الشرط الجازمة؟
+الجواب: من أدوات الشرط الجازمة إن ومن وما ومهما ومتى وأينما وأي.
+
+السؤال: ما هي أدوات الشرط غير الجازمة؟
+الجواب: من أدوات الشرط غير الجازمة إذا ولو ولولا وكلما.
+
+السؤال: ما هو أسلوب القسم؟
+الجواب: أسلوب القسم هو أسلوب يستخدم للتأكيد على الكلام.
+
+السؤال: ما هي حروف القسم؟
+الجواب: من حروف القسم الواو والباء والتاء.
+
+السؤال: ما هو أسلوب الاختصاص؟
+الجواب: أسلوب الاختصاص هو أسلوب يذكر فيه اسم ظاهر بعد ضمير لتوضيح المقصود بالضمير.
+
+السؤال: ما هو أسلوب الإغراء؟
+الجواب: أسلوب الإغراء هو حث المخاطب على القيام بعمل محمود.
+
+السؤال: ما هو أسلوب التحذير؟
+الجواب: أسلوب التحذير هو تنبيه المخاطب إلى أمر مكروه أو خطر لتجنبه.
+
+السؤال: ما هو المنادى؟
+الجواب: المنادى هو اسم يأتي بعد أداة من أدوات النداء.
+
+السؤال: ما هي أدوات النداء؟
+الجواب: من أدوات النداء يا وأيا وهيا وأي والهمزة.
+
+السؤال: ما هو النداء؟
+الجواب: النداء هو طلب إقبال المخاطب باستخدام إحدى أدوات النداء.
+
+السؤال: ما هو العدد؟
+الجواب: العدد هو لفظ يدل على كمية الأشياء أو ترتيبها.
+
+السؤال: ما هو التمييز في العدد؟
+الجواب: تمييز العدد هو الاسم الذي يوضح المقصود من العدد.
+
+السؤال: ما هو اسم الفاعل؟
+الجواب: اسم الفاعل اسم مشتق يدل على من قام بالفعل.
+
+السؤال: كيف يُصاغ اسم الفاعل من الفعل الثلاثي؟
+الجواب: يُصاغ اسم الفاعل من الفعل الثلاثي على وزن فاعل.
+
+السؤال: ما هو اسم المفعول؟
+الجواب: اسم المفعول اسم مشتق يدل على من وقع عليه الفعل.
+
+السؤال: كيف يُصاغ اسم المفعول من الفعل الثلاثي؟
+الجواب: يُصاغ اسم المفعول من الفعل الثلاثي على وزن مفعول.
+
+السؤال: ما هو المصدر؟
+الجواب: المصدر اسم يدل على الحدث مجردًا من الزمن.
+
+السؤال: ما هو اسم الزمان؟
+الجواب: اسم الزمان اسم مشتق يدل على زمان وقوع الفعل.
+
+السؤال: ما هو اسم المكان؟
+الجواب: اسم المكان اسم مشتق يدل على مكان وقوع الفعل.
+
+السؤال: ما هي المشتقات؟
+الجواب: المشتقات هي أسماء مأخوذة من غيرها للدلالة على معانٍ مختلفة مثل اسم الفاعل واسم المفعول والصفة المشبهة.
+
+السؤال: ما هي الهمزة؟
+الجواب: الهمزة حرف من حروف الهجاء وله صور وقواعد مختلفة في الكتابة.
+
+السؤال: ما هي همزة الوصل؟
+الجواب: همزة الوصل هي همزة تُنطق في بداية الكلام ولا تُنطق عند وصلها بما قبلها.
+
+السؤال: ما هي همزة القطع؟
+الجواب: همزة القطع هي همزة تُنطق في بداية الكلام ووسطه وتُكتب دائمًا.
+
+السؤال: ما هي التاء المربوطة؟
+الجواب: التاء المربوطة هي تاء تأتي غالبًا في آخر الأسماء المؤنثة وتُنطق هاء عند الوقف.
+
+السؤال: ما هي التاء المفتوحة؟
+الجواب: التاء المفتوحة هي تاء تُكتب تاءً وتُنطق تاءً في الوصل والوقف.
+
+السؤال: ما هو الألف اللينة؟
+الجواب: الألف اللينة هي ألف ساكنة يأتي ما قبلها مفتوحًا وتكتب في آخر الكلمة على صورة ا أو ى.
+
+السؤال: ما هي علامات الترقيم؟
+الجواب: علامات الترقيم هي رموز تستخدم لتنظيم الكلام وتوضيح المعنى مثل الفاصلة والنقطة وعلامة الاستفهام.
+
+السؤال: What is speech in the Arabic language?
+الجواب: Speech is an utterance composed of meaningful words according to the rules of the language.
+
+السؤال: What are the parts of speech?
+الجواب: The parts of speech are nouns, verbs, and particles.
+
+السؤال: What is a noun?
+الجواب: A noun is a word that indicates a meaning without being connected to a specific time.
+
+السؤال: What is a verb?
+الجواب: A verb is a word that indicates an action connected to a specific time.
+
+السؤال: What is a particle?
+الجواب: A particle is a word whose complete meaning appears only when it is used with other words.
+
+السؤال: What is the past tense?
+الجواب: The past tense is a verb that indicates an action that happened and ended in the past.
+
+السؤال: What is the present tense?
+الجواب: The present tense is a verb that indicates an action happening in the present or future.
+
+السؤال: What is the imperative verb?
+الجواب: The imperative verb is a verb used to request that an action be performed in the future.
+
+السؤال: What are the signs of a noun?
+الجواب: The signs of a noun include accepting a preposition, tanween, the definite article, and prepositions.
+
+السؤال: What are the signs of a verb?
+الجواب: The signs of a verb include accepting the subject pronoun suffix, the feminine marker, and the feminine second-person yaa.
+
+السؤال: What is a nominal sentence?
+الجواب: A nominal sentence is a sentence that begins with a noun and usually consists of a subject and a predicate.
+
+السؤال: What is a verbal sentence?
+الجواب: A verbal sentence is a sentence that begins with a verb and usually consists of a verb and a subject.
+
+السؤال: What is the subject in a nominal sentence?
+الجواب: The subject is a nominative noun that usually comes at the beginning of a nominal sentence.
+
+السؤال: What is the predicate?
+الجواب: The predicate is the part that completes the meaning of the nominal sentence and provides information about the subject.
+
+السؤال: What is a single-word predicate?
+الجواب: A single-word predicate is a predicate that is neither a sentence nor a phrase.
+
+السؤال: What is a sentence predicate?
+الجواب: A sentence predicate is a predicate that comes in the form of a nominal or verbal sentence.
+
+السؤال: What is a phrase predicate?
+الجواب: A phrase predicate is a prepositional phrase or an adverbial phrase.
+
+السؤال: What is the subject of a verb?
+الجواب: The subject is a nominative noun that indicates the person or thing that performs the action.
+
+السؤال: What is the passive subject?
+الجواب: The passive subject is a nominative noun that replaces the original subject after the verb is changed into the passive voice.
+
+السؤال: What is the direct object?
+الجواب: The direct object is an accusative noun that indicates the person or thing affected by the action.
+
+السؤال: What is the absolute object?
+الجواب: The absolute object is an accusative verbal noun used to emphasize the verb, describe its type, or indicate its number.
+
+السؤال: What is the adverb of time or place?
+الجواب: It is a word that indicates the time or place in which an action occurs.
+
+السؤال: What is the object of purpose?
+الجواب: The object of purpose is an accusative verbal noun that indicates the reason for an action.
+
+السؤال: What is the accompanying object?
+الجواب: The accompanying object is an accusative noun that comes after a waw meaning "with".
+
+السؤال: What is the circumstantial accusative?
+الجواب: The circumstantial accusative is an accusative noun that describes the state or condition of its owner when the action occurs.
+
+السؤال: What is the specification?
+الجواب: The specification is an indefinite accusative noun that clarifies an ambiguous meaning before it.
+
+السؤال: What is exception?
+الجواب: Exception is removing what comes after an exception word from the ruling of what comes before it.
+
+السؤال: What are the exception tools?
+الجواب: Common exception tools include illa, ghayr, siwa, ada, khala, and hasha.
+
+السؤال: What is an adjective?
+الجواب: An adjective is a dependent word that describes or clarifies a noun before it.
+
+السؤال: What is conjunction?
+الجواب: Conjunction is a dependent word connected to what comes before it by a conjunction particle.
+
+السؤال: What are the conjunction particles?
+الجواب: Common conjunction particles include wa, fa, thumma, aw, bal, lakin, and hatta.
+
+السؤال: What is emphasis?
+الجواب: Emphasis is a dependent word used to strengthen the meaning of the word before it.
+
+السؤال: What are the types of emphasis?
+الجواب: The types of emphasis are verbal emphasis and semantic emphasis.
+
+السؤال: What is apposition?
+الجواب: Apposition is a dependent word that is intended by the ruling and is preceded by another word.
+
+السؤال: What are the types of apposition?
+الجواب: The types of apposition include complete substitution, partial substitution, substitution of inclusion, and substitution of correction.
+
+السؤال: What is a genitive noun?
+الجواب: A genitive noun is a noun that has a genitive case marker.
+
+السؤال: What are prepositions?
+الجواب: Common prepositions include min, ila, an, ala, fi, bi, ka, and li.
+
+السؤال: What is the genitive noun in an iḍāfa construction?
+الجواب: It is a genitive noun that comes after another noun called the first term of the iḍāfa.
+
+السؤال: What is grammatical inflection?
+الجواب: Grammatical inflection is the change in the endings of words because of the grammatical factors affecting them.
+
+السؤال: What is grammatical indeclinability?
+الجواب: Grammatical indeclinability is keeping the ending of a word unchanged regardless of its position in the sentence.
+
+السؤال: What are the original grammatical case markers?
+الجواب: The original case markers are damma, fatha, kasra, and sukoon.
+
+السؤال: What is the original sign of the nominative case?
+الجواب: The original sign of the nominative case is the damma.
+
+السؤال: What is the original sign of the accusative case?
+الجواب: The original sign of the accusative case is the fatha.
+
+السؤال: What is the original sign of the genitive case?
+الجواب: The original sign of the genitive case is the kasra.
+
+السؤال: What is the original sign of the jussive case?
+الجواب: The original sign of the jussive case is the sukoon.
+
+السؤال: What are the secondary grammatical case markers?
+الجواب: The secondary case markers include alif, waw, yaa, dropping the nun, and dropping the weak letter.
+
+السؤال: What are the Five Nouns?
+الجواب: The Five Nouns are ab, akh, ham, fu, and dhu.
+
+السؤال: How are the Five Nouns made nominative?
+الجواب: The Five Nouns are made nominative with the waw.
+
+السؤال: How are the Five Nouns made accusative?
+الجواب: The Five Nouns are made accusative with the alif.
+
+السؤال: How are the Five Nouns made genitive?
+الجواب: The Five Nouns are made genitive with the yaa.
+
+السؤال: What is the dual form?
+الجواب: The dual form indicates two people or things by adding alif and nun or yaa and nun.
+
+السؤال: How is the dual form made nominative?
+الجواب: The dual form is made nominative with the alif.
+
+السؤال: How is the dual form made accusative?
+الجواب: The dual form is made accusative with the yaa.
+
+السؤال: How is the dual form made genitive?
+الجواب: The dual form is made genitive with the yaa.
+
+السؤال: What is the sound masculine plural?
+الجواب: The sound masculine plural indicates more than two males by adding waw and nun or yaa and nun.
+
+السؤال: How is the sound masculine plural made nominative?
+الجواب: The sound masculine plural is made nominative with the waw.
+
+السؤال: How is the sound masculine plural made accusative?
+الجواب: The sound masculine plural is made accusative with the yaa.
+
+السؤال: How is the sound masculine plural made genitive?
+الجواب: The sound masculine plural is made genitive with the yaa.
+
+السؤال: What is the sound feminine plural?
+الجواب: The sound feminine plural indicates more than two females by adding alif and taa to the singular form.
+
+السؤال: How is the sound feminine plural made nominative?
+الجواب: The sound feminine plural is made nominative with the damma.
+
+السؤال: How is the sound feminine plural made accusative?
+الجواب: The sound feminine plural is made accusative with the kasra instead of the fatha.
+
+السؤال: How is the sound feminine plural made genitive?
+الجواب: The sound feminine plural is made genitive with the kasra.
+
+السؤال: What is the broken plural?
+الجواب: The broken plural indicates more than two people or things with a change in the form of the singular noun.
+
+السؤال: What are the Five Verbs?
+الجواب: The Five Verbs are present-tense verbs connected to alif of the dual, waw of the plural, or yaa of the feminine second person.
+
+السؤال: How are the Five Verbs made nominative?
+الجواب: The Five Verbs are made nominative by keeping the nun.
+
+السؤال: How are the Five Verbs made accusative?
+الجواب: The Five Verbs are made accusative by dropping the nun.
+
+السؤال: How are the Five Verbs made jussive?
+الجواب: The Five Verbs are made jussive by dropping the nun.
+
+السؤال: What are the ناسخ verbs?
+الجواب: Nasikh verbs are verbs that enter a nominal sentence, make the subject nominative, and make the predicate accusative.
+
+السؤال: What are Kana and its sisters?
+الجواب: Kana and its sisters are nasikh verbs such as kana, asbaha, adha, amsa, zalla, bata, sara, and laysa.
+
+السؤال: What is the grammatical function of Kana and its sisters?
+الجواب: Kana and its sisters make the subject nominative and the predicate accusative.
+
+السؤال: What are Inna and its sisters?
+الجواب: Inna and its sisters are nasikh particles such as inna, anna, kaanna, lakinna, layta, and laalla.
+
+السؤال: What is the grammatical function of Inna and its sisters?
+الجواب: Inna and its sisters make the subject accusative and the predicate nominative.
+
+السؤال: What are the verbs of approximation?
+الجواب: The verbs of approximation indicate that an action is about to happen, such as kada, awshaka, and karaba.
+
+السؤال: What are the verbs of hope?
+الجواب: The verbs of hope indicate the expectation that something will happen, such as asa and hara.
+
+السؤال: What are the verbs of commencement?
+الجواب: The verbs of commencement indicate the beginning of an action, such as badaa, sharaa, akhadha, and tafiqa.
+
+السؤال: What is the style of negation?
+الجواب: The style of negation is used to deny the occurrence of an action or the existence of a quality.
+
+السؤال: What are the tools of negation?
+الجواب: Common tools of negation include la, ma, lam, lan, and laysa.
+
+السؤال: What is the interrogative style?
+الجواب: The interrogative style is used to ask about unknown information.
+
+السؤال: What are the interrogative tools?
+الجواب: Common interrogative tools include hal, the hamza, man, ma, mata, ayna, kayfa, kam, and ayyu.
+
+السؤال: What is the imperative style?
+الجواب: The imperative style is used to request that someone perform a specific action.
+
+السؤال: What is the prohibitive style?
+الجواب: The prohibitive style is used to ask someone to stop doing a specific action using the prohibitive la.
+
+السؤال: What is the exclamatory style?
+الجواب: The exclamatory style is used to express surprise or admiration.
+
+السؤال: What are the two standard forms of exclamation?
+الجواب: The two standard forms of exclamation are ma afalahu and afil bihi.
+
+السؤال: What is the style of praise?
+الجواب: The style of praise is used to express admiration for a quality or person.
+
+السؤال: What are the verbs of praise?
+الجواب: The verbs of praise include ni'ma and habbذا.
+
+السؤال: What is the style of blame?
+الجواب: The style of blame is used to express disapproval of a quality or person.
+
+السؤال: What are the verbs of blame?
+الجواب: The verbs of blame include bi'sa and la habbذا.
+
+السؤال: What is the conditional style?
+الجواب: The conditional style consists of a conditional tool, a condition verb, and a result of the condition.
+
+السؤال: What are the jussive conditional tools?
+الجواب: Jussive conditional tools include in, man, ma, مهما, mata, aynama, and ayyu.
+
+السؤال: What are the non-jussive conditional tools?
+الجواب: Non-jussive conditional tools include idha, law, lawla, and kullama.
+
+السؤال: What is the oath style?
+الجواب: The oath style is used to emphasize a statement.
+
+السؤال: What are the oath particles?
+الجواب: The oath particles include waw, baa, and taa.
+
+السؤال: What is the specification style?
+الجواب: The specification style includes an explicit noun after a pronoun to clarify what the pronoun refers to.
+
+السؤال: What is the encouragement style?
+الجواب: The encouragement style urges someone to perform a praiseworthy action.
+
+السؤال: What is the warning style?
+الجواب: The warning style alerts someone to something undesirable or dangerous to avoid.
+
+السؤال: What is the vocative noun?
+الجواب: The vocative noun is a noun that comes after one of the vocative particles.
+
+السؤال: What are the vocative particles?
+الجواب: Common vocative particles include ya, aya, haya, ay, and the hamza.
+
+السؤال: What is the vocative style?
+الجواب: The vocative style is used to call someone by using one of the vocative particles.
+
+السؤال: What is a number in Arabic grammar?
+الجواب: A number is a word that indicates the quantity or order of things.
+
+السؤال: What is the number specification?
+الجواب: The number specification is a noun that clarifies the meaning of a number.
+
+السؤال: What is an active participle?
+الجواب: An active participle is a derived noun that indicates the person or thing performing an action.
+
+السؤال: How is an active participle formed from a triliteral verb?
+الجواب: An active participle is formed from a triliteral verb on the pattern faail.
+
+السؤال: What is a passive participle?
+الجواب: A passive participle is a derived noun that indicates the person or thing affected by an action.
+
+السؤال: How is a passive participle formed from a triliteral verb?
+الجواب: A passive participle is formed from a triliteral verb on the pattern mafool.
+
+السؤال: What is a verbal noun?
+الجواب: A verbal noun is a noun that indicates an action without being connected to a specific time.
+
+السؤال: What is a noun of time?
+الجواب: A noun of time is a derived noun that indicates the time when an action occurs.
+
+السؤال: What is a noun of place?
+الجواب: A noun of place is a derived noun that indicates the place where an action occurs.
+
+السؤال: What are derived nouns?
+الجواب: Derived nouns are nouns taken from other words to indicate different meanings, such as active participles, passive participles, and adjectives.
+
+السؤال: What is the hamza?
+الجواب: The hamza is one of the Arabic alphabet letters and has different rules for writing.
+
+السؤال: What is Hamzat al-Wasl?
+الجواب: Hamzat al-Wasl is pronounced at the beginning of speech but is not pronounced when connected to the preceding word.
+
+السؤال: What is Hamzat al-Qat?
+الجواب: Hamzat al-Qat is pronounced at the beginning and in the middle of speech and is always written.
+
+السؤال: What is the tied taa?
+الجواب: The tied taa usually comes at the end of feminine nouns and is pronounced like haa when stopping.
+
+السؤال: What is the open taa?
+الجواب: The open taa is written and pronounced as taa in both connected and stopped speech.
+
+السؤال: What is the weak alif?
+الجواب: The weak alif is a silent alif preceded by a fatha and is written at the end of a word as alif or yaa.
+
+السؤال: What are punctuation marks?
+الجواب: Punctuation marks are symbols used to organize speech and clarify meaning, such as commas, periods, and question marks.

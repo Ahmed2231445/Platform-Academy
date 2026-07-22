@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STUDY HOUSE | Ahmed Afify</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/show-hint.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/fold/foldgutter.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#faf7ef;
+  --panel:#ffffff;
+  --panel-2:#f3ecda;
+  --border:#e6dcbf;
+  --text:#2b2620;
+  --text-dim:#786f5c;
+  --gold:#b8903c;
+  --gold-2:#dcb15e;
+  --gold-soft:#f1e0b6;
+  --accent-red:#c0392b;
+  --shadow:0 10px 30px rgba(60,45,10,.08);
+  --radius:14px;
+  --mono:'JetBrains Mono',monospace;
+  --sans:'Cairo',sans-serif;
+}
+[data-theme="brown"]{
+  --bg:#221a13;
+  --panel:#2b2118;
+  --panel-2:#33271b;
+  --border:#4a3a26;
+  --text:#f3e7cf;
+  --text-dim:#b9a583;
+  --gold:#d9ab4c;
+  --gold-2:#f0c66e;
+  --gold-soft:#4a3a26;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--sans);
+  background:var(--bg);
+  color:var(--text);
+  overflow:hidden;
+  transition:background .5s ease,color .5s ease;
+}
+
+/* ---------------- SPLASH ---------------- */
+#splash{
+  position:fixed;inset:0;z-index:9999;
+  background:radial-gradient(circle at 50% 40%,#3a2c14,#0f0c07 75%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  transition:opacity 1s ease;
+}
+#splash.hide{opacity:0;pointer-events:none}
+.splash-title{
+  font-size:clamp(2.2rem,7vw,5rem);
+  font-weight:800;
+  letter-spacing:.12em;
+  background:linear-gradient(120deg,#f7dfa0,#d9a54a 45%,#f7dfa0);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  opacity:0;transform:translateY(18px) scale(.94);
+  animation:riseIn 1.1s cubic-bezier(.2,.8,.2,1) forwards;
+}
+.splash-sub{
+  margin-top:14px;font-family:var(--mono);font-size:.85rem;letter-spacing:.3em;
+  color:#cbb27c;opacity:0;text-transform:uppercase;
+  animation:riseIn 1.1s cubic-bezier(.2,.8,.2,1) .5s forwards, fadeOutSub .6s ease 2.4s forwards;
+}
+@keyframes riseIn{to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes fadeOutSub{to{opacity:0}}
+
+/* ---------------- HEADER ---------------- */
+#app{height:100vh;display:flex;flex-direction:column;opacity:0;transition:opacity .8s ease}
+#app.show{opacity:1}
+header{
+  height:56px;flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:0 18px;background:var(--panel);border-bottom:1px solid var(--border);
+  box-shadow:var(--shadow);z-index:5;
+}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{
+  font-family:var(--mono);font-weight:800;letter-spacing:.08em;font-size:1.05rem;
+  background:linear-gradient(120deg,var(--gold-2),var(--gold));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.logo-dot{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px var(--gold)}
+.theme-btn{
+  border:1px solid var(--border);background:var(--panel-2);color:var(--text);
+  width:38px;height:38px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  transition:transform .25s ease, background .3s;
+}
+.theme-btn:hover{transform:rotate(20deg) scale(1.06)}
+.theme-btn svg{width:18px;height:18px}
+
+/* ---------------- LAYOUT ---------------- */
+#main{flex:1;display:flex;min-height:0}
+.panel{background:var(--panel);display:flex;flex-direction:column;min-height:0}
+#sidebar{width:230px;border-left:1px solid var(--border);transition:width .25s ease, min-width .25s ease;min-width:230px}
+#sidebar.collapsed{width:0;min-width:0;overflow:hidden;border-left:none}
+#ai{width:270px;border-right:1px solid var(--border);transition:width .25s ease,min-width .25s ease;min-width:270px}
+#ai.collapsed{width:0;min-width:0;overflow:hidden;border-right:none}
+#center{flex:1;display:flex;flex-direction:column;min-width:0;background:var(--panel-2)}
+
+.panel-head{
+  display:flex;align-items:center;justify-content:space-between;padding:10px 12px;
+  border-bottom:1px solid var(--border);font-size:.8rem;font-weight:800;color:var(--text-dim);
+  letter-spacing:.03em;flex:0 0 auto;
+}
+.iconbtn{
+  border:none;background:transparent;color:var(--text-dim);cursor:pointer;
+  width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;
+}
+.iconbtn:hover{background:var(--gold-soft);color:var(--gold)}
+.iconbtn svg{width:15px;height:15px}
+
+/* ---------------- FILE TREE ---------------- */
+#tree-actions{display:flex;gap:6px;padding:8px 10px;border-bottom:1px solid var(--border)}
+#tree-actions button{
+  flex:1;font-family:var(--sans);font-size:.72rem;font-weight:700;padding:6px 4px;border-radius:8px;
+  border:1px dashed var(--border);background:transparent;color:var(--text-dim);cursor:pointer;
+}
+#tree-actions button:hover{border-color:var(--gold);color:var(--gold)}
+#tree{flex:1;overflow:auto;padding:8px 6px}
+.node{user-select:none}
+.node-row{
+  display:flex;align-items:center;gap:6px;padding:5px 8px;border-radius:8px;cursor:pointer;font-size:.82rem;
+}
+.node-row:hover{background:var(--panel-2)}
+.node-row.active{background:var(--gold-soft);color:var(--gold);font-weight:700}
+.node-row.selected-folder{outline:1px dashed var(--gold)}
+.node-children{margin-right:16px;border-right:1px dashed var(--border);padding-right:6px}
+.chev{width:10px;transition:transform .15s ease;color:var(--text-dim)}
+.chev.open{transform:rotate(90deg)}
+.tag-icon{
+  font-family:var(--mono);font-size:.55rem;font-weight:800;padding:2px 4px;border-radius:5px;color:#fff;
+  min-width:26px;text-align:center;letter-spacing:.02em;
+}
+.folder-icon{color:var(--gold);font-size:.9rem}
+#download-btn{
+  margin:10px;padding:10px;border:none;border-radius:10px;cursor:pointer;font-weight:800;font-family:var(--sans);
+  background:linear-gradient(120deg,var(--gold),var(--gold-2));color:#241a0c;display:flex;align-items:center;justify-content:center;gap:8px;
+}
+#download-btn:hover{filter:brightness(1.08)}
+
+/* ---------------- CENTER / EDITOR ---------------- */
+#tabs{display:flex;overflow-x:auto;background:var(--panel);border-bottom:1px solid var(--border);flex:0 0 auto}
+.tab{
+  display:flex;align-items:center;gap:8px;padding:9px 12px;border-left:1px solid var(--border);
+  font-size:.8rem;cursor:pointer;white-space:nowrap;color:var(--text-dim);
+}
+.tab.active{background:var(--panel-2);color:var(--text);font-weight:700;border-bottom:2px solid var(--gold)}
+.tab .close{opacity:.5;font-size:.9rem}
+.tab .close:hover{opacity:1;color:var(--accent-red)}
+
+#toolbar{display:flex;align-items:center;gap:8px;padding:8px 12px;background:var(--panel);border-bottom:1px solid var(--border);flex:0 0 auto;flex-wrap:wrap}
+.btn{
+  border:1px solid var(--border);background:var(--panel-2);color:var(--text);padding:7px 12px;border-radius:9px;
+  font-family:var(--sans);font-weight:700;font-size:.78rem;cursor:pointer;display:flex;align-items:center;gap:6px;
+}
+.btn:hover{border-color:var(--gold);color:var(--gold)}
+.btn.primary{background:linear-gradient(120deg,var(--gold),var(--gold-2));color:#241a0c;border:none}
+.spacer{flex:1}
+
+#editor-wrap{flex:1;display:flex;flex-direction:column;min-height:0}
+#editor-host{flex:1;min-height:0;direction:ltr;text-align:left}
+.CodeMirror{height:100%;font-family:var(--mono);font-size:14px;line-height:1.55}
+.cm-error-line{background:rgba(192,57,43,.12)}
+.cm-error-text{text-decoration:wavy underline var(--accent-red);text-decoration-thickness:2px}
+.error-gutter{color:var(--accent-red);font-weight:900}
+
+#console{
+  flex:0 0 auto;height:180px;background:#181410;color:#e8e0cc;border-top:1px solid var(--border);
+  display:none;flex-direction:column;
+}
+#console.open{display:flex}
+#console-head{display:flex;justify-content:space-between;align-items:center;padding:6px 12px;font-family:var(--mono);font-size:.72rem;color:#c9a862;border-bottom:1px solid #33291b}
+#console-body{flex:1;overflow:auto;padding:8px 12px;font-family:var(--mono);font-size:.78rem;direction:ltr;text-align:left;white-space:pre-wrap}
+.log-line{margin-bottom:3px}
+.log-error{color:#ff8b7a}
+.log-ok{color:#8ad38a}
+
+/* templates drawer */
+#templates{
+  display:none;padding:12px;gap:10px;background:var(--panel);border-bottom:1px solid var(--border);flex-wrap:wrap;
+}
+#templates.open{display:flex}
+.tpl-card{
+  border:1px solid var(--border);border-radius:10px;padding:10px 14px;cursor:pointer;background:var(--panel-2);
+  font-weight:800;font-size:.78rem;display:flex;align-items:center;gap:8px;
+}
+.tpl-card:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ---------------- AI PANEL ---------------- */
+#ai-body{flex:1;overflow:auto;padding:12px;display:flex;flex-direction:column;gap:10px}
+#ai-input-row{display:flex;gap:6px}
+#ai-input{
+  flex:1;padding:8px 10px;border-radius:9px;border:1px solid var(--border);background:var(--panel-2);color:var(--text);
+  font-family:var(--sans);font-size:.8rem;
+}
+#ai-result{
+  background:var(--panel-2);border:1px solid var(--border);border-radius:10px;padding:10px;font-size:.82rem;line-height:1.7;min-height:60px;
+}
+#ai-result b{color:var(--gold)}
+.ai-hint-title{font-size:.72rem;color:var(--text-dim);font-weight:800}
+.ai-quick{display:flex;flex-wrap:wrap;gap:6px}
+.chip{
+  background:var(--panel-2);border:1px solid var(--border);border-radius:20px;padding:4px 10px;font-size:.72rem;cursor:pointer;
+}
+.chip:hover{border-color:var(--gold);color:var(--gold)}
+.mini-preview{
+  margin-top:auto;border:1px dashed var(--border);border-radius:10px;padding:10px;background:#181410;color:#e8e0cc;
+  font-family:var(--mono);font-size:.68rem;direction:ltr;text-align:left;line-height:1.6;overflow:auto;
+}
+.mini-preview .gold{color:#e3b25f}
+.mini-preview .grey{color:#8a8a8a}
+
+::-webkit-scrollbar{width:9px;height:9px}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:6px}
+.CodeMirror-hints{font-family:var(--mono);z-index:10000}
+
+@media (max-width:900px){
+  #sidebar,#ai{position:absolute;top:56px;bottom:0;z-index:20;box-shadow:var(--shadow)}
+  #sidebar{right:0}#ai{left:0}
+}
+</style>
+</head>
+<body>
+
+<div id="splash">
+  <div class="splash-title">STUDY HOUSE</div>
+  <div class="splash-sub">designed by Ahmed Afify</div>
+</div>
+
+<div id="app">
+  <header>
+    <div class="logo">
+      <span class="logo-dot"></span>
+      <span class="logo-mark">STUDY HOUSE</span>
+    </div>
+    <button class="theme-btn" id="themeBtn" title="تبديل الوضع">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></svg>
+    </button>
+  </header>
+
+  <div id="main">
+    <!-- LEFT: SIDEBAR (file tree) -->
+    <aside class="panel" id="sidebar">
+      <div class="panel-head">
+        <span>🗂 الملفات</span>
+        <button class="iconbtn" id="collapseSidebar" title="إخفاء الشجرة">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l-6 6 6 6M21 6l-6 6 6 6"/></svg>
+        </button>
+      </div>
+      <div id="tree-actions">
+        <button id="newFileBtn">+ ملف</button>
+        <button id="newFolderBtn">+ مجلد</button>
+      </div>
+      <div id="tree"></div>
+      <button id="download-btn">⬇ تحميل المشروع (ZIP)</button>
+    </aside>
+
+    <!-- CENTER: EDITOR -->
+    <section id="center">
+      <div id="tabs"></div>
+      <div id="templates">
+        <div class="tpl-card" data-tpl="html">🌐 HTML</div>
+        <div class="tpl-card" data-tpl="css">🎨 CSS</div>
+        <div class="tpl-card" data-tpl="js">⚙️ JavaScript</div>
+        <div class="tpl-card" data-tpl="py">🐍 Python</div>
+      </div>
+      <div id="toolbar">
+        <button class="btn" id="toggleTemplates">📄 قوالب البدء</button>
+        <button class="btn" id="toggleConsole">🖥 الكونسول</button>
+        <div class="spacer"></div>
+        <button class="btn" id="toggleSidebarTop" title="إظهار/إخفاء الشجرة">🗂</button>
+        <button class="btn primary" id="runBtn">▶ تشغيل / معاينة</button>
+      </div>
+      <div id="editor-wrap">
+        <div id="editor-host"></div>
+        <div id="console">
+          <div id="console-head"><span>الكونسول</span><button class="iconbtn" id="clearConsole">مسح</button></div>
+          <div id="console-body"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RIGHT: AI -->
+    <aside class="panel" id="ai">
+      <div class="panel-head">
+        <span>✨ مساعد الأكواد</span>
+        <button class="iconbtn" id="collapseAi" title="إخفاء المساعد">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l6 6-6 6M3 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+      <div id="ai-body">
+        <div class="ai-hint-title">اكتب اسم وسم HTML أو خاصية CSS أو كلمة JS/Python لشرحها</div>
+        <div id="ai-input-row">
+          <input id="ai-input" placeholder="مثال: div ، flex ، async">
+          <button class="btn primary" id="ai-ask">اشرح</button>
+        </div>
+        <div class="ai-quick" id="ai-quick"></div>
+        <div id="ai-result">اكتب أي عنصر بالأعلى وسأشرحه لك ببساطة 🙂</div>
+        <div class="mini-preview" id="mini-preview"></div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- CodeMirror core -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/edit/closebrackets.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/edit/closetag.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/edit/matchbrackets.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/show-hint.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/xml-hint.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/html-hint.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/css-hint.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/javascript-hint.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/fold/foldcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/fold/foldgutter.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/fold/brace-fold.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/selection/active-line.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+<script>
+(function(){
+"use strict";
+
+/* =========================================================
+   0) SPLASH INTRO
+   ========================================================= */
+window.addEventListener('load', function(){
+  setTimeout(function(){
+    document.getElementById('splash').classList.add('hide');
+    document.getElementById('app').classList.add('show');
+  }, 2600);
+});
+
+/* =========================================================
+   1) THEME
+   ========================================================= */
+var theme = 'gold-white';
+var themeBtn = document.getElementById('themeBtn');
+themeBtn.addEventListener('click', function(){
+  theme = (theme === 'gold-white') ? 'brown' : 'gold-white';
+  if(theme === 'brown'){ document.documentElement.setAttribute('data-theme','brown'); }
+  else{ document.documentElement.removeAttribute('data-theme'); }
+});
+
+/* =========================================================
+   2) FILE SYSTEM MODEL
+   ========================================================= */
+var uid = 0;
+function nextId(){ uid++; return 'n'+uid; }
+
+var BRAND_HTML =
+"<!--\n  STUDY HOUSE\n  Designed by Ahmed Afify\n-->\n"+
+"<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n<meta charset=\"UTF-8\">\n<title>STUDY HOUSE</title>\n<link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <h1>STUDY HOUSE</h1>\n  <p>ابدأ الكتابة هنا...</p>\n  <script src=\"script.js\"><\/script>\n</body>\n</html>\n";
+
+var BRAND_CSS =
+"/*\n  STUDY HOUSE\n  Designed by Ahmed Afify\n*/\n"+
+"body{\n  margin:0;\n  font-family:sans-serif;\n  text-align:center;\n  padding-top:60px;\n  background:#faf7ef;\n  color:#2b2620;\n}\nh1{ color:#b8903c; }\n";
+
+var BRAND_JS =
+"/*\n  STUDY HOUSE\n  Designed by Ahmed Afify\n*/\n"+
+"console.log('مرحباً بك في STUDY HOUSE');\n";
+
+var BRAND_PY =
+'"""\nSTUDY HOUSE\nDesigned by Ahmed Afify\n"""\nprint("STUDY HOUSE - Ahmed Afify")\n';
+
+function makeFile(name, content){
+  return {id:nextId(), type:'file', name:name, content:content, doc:null};
+}
+function makeFolder(name, children){
+  return {id:nextId(), type:'folder', name:name, open:true, children:children||[]};
+}
+
+var root = makeFolder('المشروع', [
+  makeFile('index.html', BRAND_HTML),
+  makeFile('style.css', BRAND_CSS),
+  makeFile('script.js', BRAND_JS)
+]);
+
+var selectedFolder = root; // target for "new file/folder"
+var openTabs = [];  // array of file ids
+var activeFileId = null;
+
+/* language / icon helpers */
+function extOf(name){
+  var m = name.match(/\.([a-zA-Z0-9]+)$/);
+  return m ? m[1].toLowerCase() : '';
+}
+var LANG_MAP = {
+  html:{mode:'htmlmixed', label:'HTML', color:'#e34c26'},
+  htm:{mode:'htmlmixed', label:'HTML', color:'#e34c26'},
+  css:{mode:'css', label:'CSS', color:'#2965f1'},
+  js:{mode:'javascript', label:'JS', color:'#d6b02c'},
+  json:{mode:{name:'javascript', json:true}, label:'JSON', color:'#8a8a8a'},
+  py:{mode:'python', label:'PY', color:'#2e7d32'},
+  txt:{mode:'text', label:'TXT', color:'#786f5c'}
+};
+function langInfo(name){
+  return LANG_MAP[extOf(name)] || {mode:'text', label:extOf(name).toUpperCase()||'TXT', color:'#786f5c'};
+}
+
+function findById(node, id){
+  if(node.id === id) return node;
+  if(node.type === 'folder'){
+    for(var i=0;i<node.children.length;i++){
+      var r = findById(node.children[i], id);
+      if(r) return r;
+    }
+  }
+  return null;
+}
+function findParent(node, id, parent){
+  if(node.id === id) return parent;
+  if(node.type === 'folder'){
+    for(var i=0;i<node.children.length;i++){
+      var r = findParent(node.children[i], id, node);
+      if(r) return r;
+    }
+  }
+  return null;
+}
+function allFiles(node, out){
+  out = out || [];
+  if(node.type === 'file') out.push(node);
+  else node.children.forEach(function(c){ allFiles(c, out); });
+  return out;
+}
+
+/* =========================================================
+   3) CODEMIRROR
+   ========================================================= */
+var cm = CodeMirror(document.getElementById('editor-host'), {
+  value: '',
+  lineNumbers: true,
+  styleActiveLine: true,
+  matchBrackets: true,
+  autoCloseBrackets: true,
+  autoCloseTags: true,
+  indentUnit: 2,
+  tabSize: 2,
+  foldGutter: true,
+  gutters: ["CodeMirror-linenumbers","CodeMirror-foldgutter","error-gutter"],
+  extraKeys: {
+    "Ctrl-Space": "autocomplete",
+    "'<'": function(cm){ cm.execCommand('insertSoftTab'); return CodeMirror.Pass; }
+  }
+});
+
+cm.on('inputRead', function(instance, change){
+  var mode = instance.getOption('mode');
+  var isTagLang = (mode === 'htmlmixed' || (mode && mode.name === 'htmlmixed'));
+  if(change.text[0] && /[\w<]/.test(change.text[0])){
+    if(!instance.state.completionActive){
+      try{
+        CodeMirror.commands.autocomplete(instance, null, {completeSingle:false});
+      }catch(e){}
+    }
+  }
+});
+
+/* JS lint: mark error lines in red */
+var lintTimer = null;
+var errorLineMarkers = [];
+function clearLint(){
+  errorLineMarkers.forEach(function(m){ m.clear && m.clear(); });
+  cm.eachLine(function(line){ cm.removeLineClass(line, 'background', 'cm-error-line'); });
+  cm.clearGutter('error-gutter');
+  errorLineMarkers = [];
+}
+function lintJS(){
+  clearLint();
+  var code = cm.getValue();
+  try{
+    new Function(code);
+  }catch(err){
+    var lineNo = 0;
+    var match = (err.stack || '').match(/<anonymous>:(\d+):/);
+    if(match){ lineNo = parseInt(match[1],10) - 2; }
+    if(lineNo < 0 || isNaN(lineNo)) lineNo = 0;
+    cm.addLineClass(lineNo, 'background', 'cm-error-line');
+    var marker = document.createElement('div');
+    marker.className = 'error-gutter';
+    marker.title = err.message;
+    marker.innerHTML = '⛔';
+    cm.setGutterMarker(lineNo, 'error-gutter', marker);
+  }
+}
+cm.on('changes', function(){
+  clearTimeout(lintTimer);
+  lintTimer = setTimeout(function(){
+    var f = findById(root, activeFileId);
+    if(f && langInfo(f.name).label === 'JS'){ lintJS(); }
+    else { clearLint(); }
+  }, 500);
+});
+
+/* =========================================================
+   4) TREE RENDERING
+   ========================================================= */
+var treeEl = document.getElementById('tree');
+
+function renderTree(){
+  treeEl.innerHTML = '';
+  treeEl.appendChild(renderNode(root, true));
+}
+function renderNode(node, isRoot){
+  var wrap = document.createElement('div');
+  wrap.className = 'node';
+  var row = document.createElement('div');
+  row.className = 'node-row';
+  if(node.id === activeFileId) row.classList.add('active');
+  if(node.id === selectedFolder.id) row.classList.add('selected-folder');
+
+  if(node.type === 'folder'){
+    var chev = document.createElement('span');
+    chev.className = 'chev' + (node.open ? ' open' : '');
+    chev.textContent = '▸';
+    row.appendChild(chev);
+    var icon = document.createElement('span');
+    icon.className = 'folder-icon';
+    icon.textContent = node.open ? '📂' : '📁';
+    row.appendChild(icon);
+    var name = document.createElement('span');
+    name.textContent = node.name;
+    row.appendChild(name);
+    row.addEventListener('click', function(e){
+      e.stopPropagation();
+      node.open = !node.open;
+      selectedFolder = node;
+      renderTree();
+    });
+    wrap.appendChild(row);
+    if(node.open){
+      var childrenWrap = document.createElement('div');
+      childrenWrap.className = 'node-children';
+      node.children.forEach(function(c){ childrenWrap.appendChild(renderNode(c,false)); });
+      wrap.appendChild(childrenWrap);
+    }
+  } else {
+    var li = langInfo(node.name);
+    var tag = document.createElement('span');
+    tag.className = 'tag-icon';
+    tag.style.background = li.color;
+    tag.textContent = li.label;
+    row.appendChild(tag);
+    var fname = document.createElement('span');
+    fname.textContent = node.name;
+    row.appendChild(fname);
+    row.addEventListener('click', function(e){
+      e.stopPropagation();
+      openFile(node.id);
+    });
+    row.addEventListener('dblclick', function(e){
+      e.stopPropagation();
+      var nn = prompt('إعادة تسمية الملف:', node.name);
+      if(nn){ node.name = nn; renderTree(); renderTabs(); }
+    });
+    wrap.appendChild(row);
+  }
+  return wrap;
+}
+treeEl.addEventListener('click', function(){ /* clicking empty space keeps root selected */ });
+
+document.getElementById('newFileBtn').addEventListener('click', function(){
+  var name = prompt('اسم الملف (مثال: page.html):');
+  if(!name) return;
+  var target = (selectedFolder.type === 'folder') ? selectedFolder : root;
+  var f = makeFile(name, '');
+  target.children.push(f);
+  target.open = true;
+  renderTree();
+  openFile(f.id);
+});
+document.getElementById('newFolderBtn').addEventListener('click', function(){
+  var name = prompt('اسم المجلد:');
+  if(!name) return;
+  var target = (selectedFolder.type === 'folder') ? selectedFolder : root;
+  var f = makeFolder(name, []);
+  target.children.push(f);
+  target.open = true;
+  renderTree();
+});
+
+/* =========================================================
+   5) TABS + OPEN FILE
+   ========================================================= */
+var tabsEl = document.getElementById('tabs');
+function renderTabs(){
+  tabsEl.innerHTML = '';
+  openTabs.forEach(function(id){
+    var f = findById(root, id);
+    if(!f) return;
+    var li = langInfo(f.name);
+    var tab = document.createElement('div');
+    tab.className = 'tab' + (id === activeFileId ? ' active' : '');
+    var tag = document.createElement('span');
+    tag.className = 'tag-icon';
+    tag.style.background = li.color;
+    tag.textContent = li.label;
+    tab.appendChild(tag);
+    var span = document.createElement('span');
+    span.textContent = f.name;
+    tab.appendChild(span);
+    var close = document.createElement('span');
+    close.className = 'close';
+    close.textContent = ' ×';
+    close.addEventListener('click', function(e){
+      e.stopPropagation();
+      closeTab(id);
+    });
+    tab.appendChild(close);
+    tab.addEventListener('click', function(){ openFile(id); });
+    tabsEl.appendChild(tab);
+  });
+}
+function closeTab(id){
+  var idx = openTabs.indexOf(id);
+  if(idx>-1) openTabs.splice(idx,1);
+  if(activeFileId === id){
+    activeFileId = openTabs.length ? openTabs[openTabs.length-1] : null;
+    if(activeFileId) openFile(activeFileId, true);
+    else { cm.swapDoc(CodeMirror.Doc('', 'text')); }
+  }
+  renderTabs();
+  renderTree();
+}
+function openFile(id, skipPushHistory){
+  var f = findById(root, id);
+  if(!f || f.type !== 'file') return;
+  if(activeFileId){
+    var prev = findById(root, activeFileId);
+    if(prev) prev.content = cm.getValue();
+  }
+  if(openTabs.indexOf(id) === -1) openTabs.push(id);
+  activeFileId = id;
+  if(!f.doc){
+    var li = langInfo(f.name);
+    f.doc = CodeMirror.Doc(f.content || '', li.mode);
+  }
+  cm.swapDoc(f.doc);
+  var info = langInfo(f.name);
+  cm.setOption('mode', info.mode);
+  clearLint();
+  if(info.label === 'JS') lintJS();
+  renderTabs();
+  renderTree();
+}
+openFile(root.children[0].id);
+
+/* =========================================================
+   6) SIDEBAR / AI PANEL / TEMPLATES TOGGLES
+   ========================================================= */
+document.getElementById('collapseSidebar').addEventListener('click', function(){
+  document.getElementById('sidebar').classList.add('collapsed');
+});
+document.getElementById('toggleSidebarTop').addEventListener('click', function(){
+  document.getElementById('sidebar').classList.toggle('collapsed');
+});
+document.getElementById('collapseAi').addEventListener('click', function(){
+  document.getElementById('ai').classList.toggle('collapsed');
+});
+document.getElementById('toggleTemplates').addEventListener('click', function(){
+  document.getElementById('templates').classList.toggle('open');
+});
+document.getElementById('toggleConsole').addEventListener('click', function(){
+  document.getElementById('console').classList.toggle('open');
+});
+
+/* =========================================================
+   7) TEMPLATES
+   ========================================================= */
+var TEMPLATES = {
+  html: {ext:'.html', content: BRAND_HTML},
+  css:  {ext:'.css',  content: BRAND_CSS},
+  js:   {ext:'.js',   content: BRAND_JS},
+  py:   {ext:'.py',   content: BRAND_PY}
+};
+document.querySelectorAll('.tpl-card').forEach(function(card){
+  card.addEventListener('click', function(){
+    var key = card.getAttribute('data-tpl');
+    var tpl = TEMPLATES[key];
+    var name = prompt('اسم الملف الجديد:', 'new-file'+tpl.ext);
+    if(!name) return;
+    if(name.indexOf('.') === -1) name += tpl.ext;
+    var target = (selectedFolder.type === 'folder') ? selectedFolder : root;
+    var f = makeFile(name, tpl.content);
+    target.children.push(f);
+    target.open = true;
+    renderTree();
+    openFile(f.id);
+    document.getElementById('templates').classList.remove('open');
+  });
+});
+
+/* =========================================================
+   8) CONSOLE + RUN / PREVIEW
+   ========================================================= */
+var consoleBody = document.getElementById('console-body');
+function logLine(text, cls){
+  var d = document.createElement('div');
+  d.className = 'log-line' + (cls ? ' '+cls : '');
+  d.textContent = text;
+  consoleBody.appendChild(d);
+  consoleBody.scrollTop = consoleBody.scrollHeight;
+}
+document.getElementById('clearConsole').addEventListener('click', function(){ consoleBody.innerHTML=''; });
+
+var previewWindow = null;
+function findFileByName(node, name, out){
+  out = out || [];
+  if(node.type === 'file' && node.name === name) out.push(node);
+  else if(node.type === 'folder') node.children.forEach(function(c){ findFileByName(c, name, out); });
+  return out;
+}
+function buildCombinedHTML(htmlFile){
+  var html = htmlFile.content;
+  var files = allFiles(root);
+  html = html.replace(/<link[^>]+href=["']([^"']+)["'][^>]*>/g, function(match, href){
+    var name = href.split('/').pop();
+    var found = files.filter(function(f){ return f.name === name; })[0];
+    if(found) return '<style>\n'+found.content+'\n</style>';
+    return match;
+  });
+  html = html.replace(/<script[^>]+src=["']([^"']+)["'][^>]*><\/script>/g, function(match, src){
+    var name = src.split('/').pop();
+    var found = files.filter(function(f){ return f.name === name; })[0];
+    if(found) return '<script>\n'+found.content+'\n<\/script>';
+    return match;
+  });
+  return html;
+}
+function runPreview(htmlFile){
+  var doc = buildCombinedHTML(htmlFile);
+  if(!previewWindow || previewWindow.closed){
+    previewWindow = window.open('', 'study_house_preview');
+  }
+  try{
+    previewWindow.document.open();
+    previewWindow.document.write(doc);
+    previewWindow.document.close();
+    previewWindow.focus();
+  }catch(e){
+    logLine('تعذر فتح نافذة المعاينة، تأكد من السماح بالنوافذ المنبثقة.', 'log-error');
+  }
+}
+function runJS(file){
+  document.getElementById('console').classList.add('open');
+  consoleBody.innerHTML = '';
+  var logs = [];
+  var fakeConsole = {
+    log: function(){ logs.push(Array.prototype.slice.call(arguments).join(' ')); },
+    error: function(){ logs.push('ERR: '+Array.prototype.slice.call(arguments).join(' ')); },
+    warn: function(){ logs.push('WARN: '+Array.prototype.slice.call(arguments).join(' ')); }
+  };
+  try{
+    var fn = new Function('console', file.content);
+    fn(fakeConsole);
+    logs.forEach(function(l){ logLine(l, l.indexOf('ERR:')===0 ? 'log-error' : 'log-ok'); });
+    if(!logs.length) logLine('(لا يوجد ناتج console.log)', 'log-ok');
+  }catch(err){
+    logLine('خطأ: '+err.message, 'log-error');
+    lintJS();
+  }
+}
+var pyodideReady = null;
+function runPython(file){
+  document.getElementById('console').classList.add('open');
+  consoleBody.innerHTML = '';
+  logLine('جاري تجهيز محرك بايثون (أول مرة فقط)...', 'log-ok');
+  if(!pyodideReady){
+    pyodideReady = new Promise(function(resolve, reject){
+      var s = document.createElement('script');
+      s.src = 'https://cdn.jsdelivr.net/pyodide/v0.26.1/full/pyodide.js';
+      s.onload = function(){
+        loadPyodide().then(resolve).catch(reject);
+      };
+      s.onerror = reject;
+      document.head.appendChild(s);
+    });
+  }
+  pyodideReady.then(function(pyodide){
+    consoleBody.innerHTML = '';
+    var out = [];
+    pyodide.setStdout({batched: function(msg){ out.push(msg); }});
+    pyodide.setStderr({batched: function(msg){ out.push('ERR: '+msg); }});
+    try{
+      pyodide.runPython(file.content);
+      out.forEach(function(l){ logLine(l, l.indexOf('ERR:')===0 ? 'log-error':'log-ok'); });
+      if(!out.length) logLine('(لا يوجد ناتج)', 'log-ok');
+    }catch(err){
+      logLine('خطأ بايثون: '+err.message, 'log-error');
+    }
+  }).catch(function(){
+    logLine('تعذر تحميل محرك بايثون، تأكد من الاتصال بالإنترنت.', 'log-error');
+  });
+}
+document.getElementById('runBtn').addEventListener('click', function(){
+  var f = findById(root, activeFileId);
+  if(!f) return;
+  f.content = cm.getValue();
+  var label = langInfo(f.name).label;
+  if(label === 'HTML'){
+    runPreview(f);
+  } else if(label === 'JS'){
+    var htmlCandidates = findFileByName(root, 'index.html');
+    runJS(f);
+  } else if(label === 'PY'){
+    runPython(f);
+  } else if(label === 'CSS'){
+    var idx = findFileByName(root, 'index.html')[0];
+    if(idx) runPreview(idx);
+    else logLine('أنشئ ملف index.html لمعاينة التنسيق.', 'log-error');
+  } else {
+    logLine('اختر ملف HTML أو JS أو Python لتشغيله.', 'log-error');
+    document.getElementById('console').classList.add('open');
+  }
+});
+
+/* =========================================================
+   9) DOWNLOAD PROJECT (ZIP)
+   ========================================================= */
+document.getElementById('download-btn').addEventListener('click', function(){
+  var active = findById(root, activeFileId);
+  if(active) active.content = cm.getValue();
+  var zip = new JSZip();
+  function addNode(node, zipFolder){
+    if(node.type === 'file'){
+      zipFolder.file(node.name, node.content || '');
+    } else {
+      var folder = (node === root) ? zipFolder : zipFolder.folder(node.name);
+      node.children.forEach(function(c){ addNode(c, folder); });
+    }
+  }
+  addNode(root, zip);
+  zip.generateAsync({type:'blob'}).then(function(blob){
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'STUDY_HOUSE_project.zip';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+  });
+});
+
+/* =========================================================
+   10) AI PANEL — rule based explainer
+   ========================================================= */
+var DICTIONARY = {
+  // HTML
+  'div':'عنصر HTML عام لتقسيم الصفحة إلى أجزاء (حاوية بدون شكل خاص).',
+  'span':'عنصر HTML داخل السطر، يُستخدم لتنسيق جزء صغير من النص.',
+  'a':'وسم الرابط، يستخدم لإنشاء رابط عبر خاصية href.',
+  'img':'وسم لعرض صورة، يستخدم خاصية src للمسار و alt للنص البديل.',
+  'h1':'عنوان رئيسي بأعلى مستوى في الصفحة.',
+  'p':'فقرة نصية عادية.',
+  'ul':'قائمة غير مرتبة (نقاط).',
+  'li':'عنصر داخل قائمة (ul أو ol).',
+  'form':'نموذج لإدخال بيانات المستخدم وإرسالها.',
+  'input':'حقل إدخال بيانات داخل نموذج.',
+  'button':'زر قابل للنقر لتنفيذ إجراء.',
+  'table':'جدول لعرض بيانات في صفوف وأعمدة.',
+  'script':'وسم لإدراج كود JavaScript داخل الصفحة.',
+  'link':'وسم لربط ملف خارجي مثل CSS بالصفحة.',
+  // CSS
+  'display':'خاصية CSS تحدد كيف يُعرض العنصر: block, inline, flex, grid...',
+  'flex':'وضع تخطيط مرن (Flexbox) لترتيب العناصر أفقياً أو رأسياً بسهولة.',
+  'grid':'وضع تخطيط شبكي لتقسيم الصفحة إلى صفوف وأعمدة.',
+  'margin':'المسافة الخارجية حول العنصر خارج حدوده.',
+  'padding':'المسافة الداخلية بين حدود العنصر ومحتواه.',
+  'position':'تحدد كيفية تموضع العنصر: static, relative, absolute, fixed.',
+  'color':'لون النص.',
+  'background':'لون أو صورة خلفية العنصر.',
+  'border-radius':'تدوير زوايا العنصر.',
+  'transition':'تحدد كيف يتغير العنصر بسلاسة عند تغيّر خاصية ما.',
+  // JS
+  'function':'كلمة لتعريف دالة (مجموعة أكواد تنفذ عند استدعائها).',
+  'const':'لتعريف متغير ثابت لا يمكن تغيير قيمته لاحقاً.',
+  'let':'لتعريف متغير قابل للتغيير ومحدود النطاق.',
+  'var':'طريقة قديمة لتعريف المتغيرات في JavaScript.',
+  'if':'جملة شرطية لتنفيذ كود عند تحقق شرط معين.',
+  'for':'حلقة تكرارية لتنفيذ كود عدة مرات.',
+  'async':'تجعل الدالة تعمل بشكل غير متزامن وتُستخدم مع await.',
+  'await':'تنتظر نتيجة Promise قبل متابعة تنفيذ الكود.',
+  'class':'تعريف كائن (Class) في JS يحتوي خصائص ودوال.',
+  'import':'لاستيراد كود أو وحدة من ملف آخر.',
+  '=>':'دالة سهمية (Arrow Function)، طريقة مختصرة لكتابة الدوال.',
+  // Python
+  'def':'كلمة لتعريف دالة في بايثون.',
+  'print':'دالة لطباعة نص أو قيمة في الكونسول.',
+  'lambda':'دالة مجهولة الاسم مختصرة في سطر واحد.',
+  'while':'حلقة تكرارية تعمل طالما الشرط صحيح.',
+  'class ':'تعريف كائن (Class) في بايثون.'
+};
+var aiResult = document.getElementById('ai-result');
+var aiInput = document.getElementById('ai-input');
+function askAI(term){
+  term = (term||'').trim().toLowerCase().replace(/[<>():{}\/]/g,'').trim();
+  if(!term){ aiResult.innerHTML = 'اكتب شيئاً أولاً 🙂'; return; }
+  var found = DICTIONARY[term];
+  if(found){
+    aiResult.innerHTML = '<b>'+term+'</b><br>'+found;
+  } else {
+    aiResult.innerHTML = 'لم أجد شرحاً جاهزاً لـ "<b>'+term+'</b>" — جرّب كتابة اسم وسم HTML أو خاصية CSS أو كلمة JS/Python معروفة.';
+  }
+}
+document.getElementById('ai-ask').addEventListener('click', function(){ askAI(aiInput.value); });
+aiInput.addEventListener('keydown', function(e){ if(e.key === 'Enter') askAI(aiInput.value); });
+
+var quickTerms = ['div','flex','function','const','print','async','margin','img'];
+var quickWrap = document.getElementById('ai-quick');
+quickTerms.forEach(function(t){
+  var chip = document.createElement('span');
+  chip.className = 'chip';
+  chip.textContent = t;
+  chip.addEventListener('click', function(){ aiInput.value = t; askAI(t); });
+  quickWrap.appendChild(chip);
+});
+
+document.getElementById('mini-preview').innerHTML =
+'<span class="grey">/* STUDY HOUSE */</span><br>'+
+'<span class="gold">function</span> welcome() {<br>'+
+'&nbsp;&nbsp;console.log(<span class="gold">"STUDY HOUSE"</span>);<br>'+
+'&nbsp;&nbsp;<span class="grey">// Designed by Ahmed Afify</span><br>'+
+'}';
+
+/* =========================================================
+   11) INITIAL RENDER
+   ========================================================= */
+renderTree();
+renderTabs();
+
+})();
+
+document.addEventListener("keydown", function (e) {
+    // منع Ctrl + U
+    if (e.ctrlKey && e.key.toLowerCase() === "u") {
+        e.preventDefault();
+        return false;
+    }
+});
+
+document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+});
+</script>
+</body>
+</html>

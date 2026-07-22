@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>منصة المعلم</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FDFBF6;
+    --bg-soft:#FFFFFF;
+    --text:#2B2620;
+    --text-dim:#7A7266;
+    --gold:#B8912B;
+    --gold-bright:#D4AF37;
+    --card:#FFFFFF;
+    --border:#E9DFC4;
+    --shadow: 0 10px 30px rgba(80,60,20,0.08);
+    --danger:#A5382E;
+  }
+  body.theme-brown{
+    --bg:#211610;
+    --bg-soft:#2B1D14;
+    --text:#F4E9D4;
+    --text-dim:#C9B392;
+    --gold:#D4AF37;
+    --gold-bright:#F0CC63;
+    --card:#2F2117;
+    --border:#4A3626;
+    --shadow: 0 10px 30px rgba(0,0,0,0.45);
+    --danger:#E0685A;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:'Cairo', sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    min-height:100vh;
+    transition:background .4s ease, color .4s ease;
+  }
+  .display-font{font-family:'Amiri', serif;}
+
+  /* ===== Top bar ===== */
+  .topbar{
+    position:fixed; top:0; left:0; right:0;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 22px;
+    z-index:50;
+    background:linear-gradient(to bottom, var(--bg) 70%, transparent);
+    pointer-events:none;
+  }
+  .topbar > *{pointer-events:auto;}
+  .brand{
+    font-family:'Amiri', serif;
+    font-weight:700;
+    font-size:22px;
+    color:var(--gold);
+    letter-spacing:1px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .brand .dot{width:6px;height:6px;border-radius:50%;background:var(--gold-bright);}
+
+  .icon-btn{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--card);
+    border:1px solid var(--border);
+    color:var(--text);
+    padding:9px 16px;
+    border-radius:30px;
+    font-family:'Cairo', sans-serif;
+    font-weight:600;
+    font-size:14px;
+    cursor:pointer;
+    box-shadow:var(--shadow);
+    transition:all .25s ease;
+  }
+  .icon-btn:hover{border-color:var(--gold); color:var(--gold);}
+  .icon-btn.gold{
+    background:linear-gradient(135deg, var(--gold), var(--gold-bright));
+    color:#241a08;
+    border:none;
+  }
+  .icon-btn.gold:hover{filter:brightness(1.08);}
+  .icon-btn.danger{color:var(--danger); border-color:var(--danger);}
+
+  #logoutBtn{display:none;}
+
+  /* ===== Layout containers ===== */
+  .screen{min-height:100vh; display:none; padding:100px 20px 60px;}
+  .screen.active{display:flex; flex-direction:column; align-items:center;}
+
+  /* ===== Login screen ===== */
+  #loginScreen .login-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:20px;
+    box-shadow:var(--shadow);
+    padding:44px 38px;
+    width:100%;
+    max-width:420px;
+    margin-top:6vh;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  #loginScreen .login-card::before{
+    content:"";
+    position:absolute; top:0; right:0; left:0; height:5px;
+    background:linear-gradient(90deg, transparent, var(--gold-bright), transparent);
+  }
+  .ornament{
+    font-size:28px; color:var(--gold); margin-bottom:6px;
+  }
+  #loginScreen h1{
+    font-family:'Amiri', serif;
+    font-size:28px;
+    margin-bottom:6px;
+    color:var(--text);
+  }
+  #loginScreen p.sub{
+    color:var(--text-dim);
+    font-size:14px;
+    margin-bottom:28px;
+  }
+  .field{
+    text-align:right;
+    margin-bottom:18px;
+  }
+  .field label{
+    display:block;
+    font-size:13px;
+    font-weight:700;
+    color:var(--gold);
+    margin-bottom:6px;
+  }
+  .field small{
+    display:block;
+    color:var(--text-dim);
+    font-size:11px;
+    margin-top:4px;
+  }
+  input[type="text"], input[type="password"], input[type="date"], input[type="time"], textarea{
+    width:100%;
+    padding:12px 14px;
+    border-radius:10px;
+    border:1px solid var(--border);
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Cairo', sans-serif;
+    font-size:14px;
+    outline:none;
+    transition:border-color .2s ease;
+  }
+  input:focus, textarea:focus{border-color:var(--gold);}
+  textarea{resize:vertical; min-height:70px;}
+
+  .btn-primary{
+    width:100%;
+    padding:13px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(135deg, var(--gold), var(--gold-bright));
+    color:#241a08;
+    font-family:'Cairo', sans-serif;
+    font-weight:800;
+    font-size:15px;
+    cursor:pointer;
+    margin-top:6px;
+    transition:filter .2s ease, transform .2s ease;
+  }
+  .btn-primary:hover{filter:brightness(1.07); transform:translateY(-1px);}
+  .btn-secondary{
+    width:100%;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid var(--gold);
+    background:transparent;
+    color:var(--gold);
+    font-family:'Cairo', sans-serif;
+    font-weight:700;
+    font-size:14px;
+    cursor:pointer;
+    margin-top:10px;
+  }
+  .btn-secondary:hover{background:rgba(212,175,55,0.1);}
+
+  /* ===== Dashboard ===== */
+  #dashboardScreen{max-width:960px; width:100%; margin:0 auto;}
+  .welcome{
+    text-align:center;
+    margin-bottom:34px;
+  }
+  .welcome h2{
+    font-family:'Amiri', serif;
+    font-size:30px;
+    color:var(--text);
+  }
+  .welcome span{color:var(--gold);}
+  .role-badge{
+    display:inline-block;
+    margin-top:8px;
+    padding:4px 14px;
+    border-radius:20px;
+    background:var(--card);
+    border:1px solid var(--gold);
+    color:var(--gold);
+    font-size:12px;
+    font-weight:700;
+  }
+
+  .menu-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    width:100%;
+    max-width:640px;
+    margin:0 auto 40px;
+  }
+  @media(max-width:600px){.menu-grid{grid-template-columns:1fr;}}
+  .menu-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:30px 20px;
+    text-align:center;
+    cursor:pointer;
+    box-shadow:var(--shadow);
+    transition:transform .25s ease, border-color .25s ease;
+  }
+  .menu-card:hover{transform:translateY(-4px); border-color:var(--gold);}
+  .menu-card .emoji{font-size:34px; margin-bottom:10px; display:block;}
+  .menu-card h3{font-family:'Amiri', serif; font-size:20px; margin-bottom:4px;}
+  .menu-card p{font-size:12.5px; color:var(--text-dim);}
+  .menu-card.active{border-color:var(--gold-bright); box-shadow:0 0 0 2px var(--gold-bright) inset;}
+
+  .section-panel{width:100%; max-width:760px; display:none;}
+  .section-panel.active{display:block;}
+  .section-header{
+    display:flex; align-items:center; justify-content:space-between;
+    margin-bottom:18px;
+    border-bottom:1px solid var(--border);
+    padding-bottom:12px;
+  }
+  .section-header h3{font-family:'Amiri', serif; font-size:22px; color:var(--gold);}
+
+  .empty-state{
+    text-align:center;
+    padding:40px 20px;
+    color:var(--text-dim);
+    font-size:14px;
+    border:1px dashed var(--border);
+    border-radius:14px;
+  }
+
+  /* ===== Cards (appointments / sessions) ===== */
+  .item-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:20px;
+    margin-bottom:16px;
+    box-shadow:var(--shadow);
+    position:relative;
+  }
+  .item-card h4{
+    font-family:'Amiri', serif;
+    font-size:19px;
+    color:var(--text);
+    margin-bottom:6px;
+  }
+  .item-card .desc{font-size:13.5px; color:var(--text-dim); margin-bottom:12px; line-height:1.7;}
+  .item-meta{
+    display:flex; flex-wrap:wrap; gap:10px;
+    font-size:12px; color:var(--gold);
+    margin-bottom:12px;
+  }
+  .item-meta span{
+    background:rgba(184,145,43,0.1);
+    padding:4px 10px;
+    border-radius:20px;
+    font-weight:700;
+  }
+  .countdown-box{
+    display:flex; align-items:center; gap:10px;
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:12px 16px;
+    font-weight:800;
+    font-size:15px;
+    color:var(--gold);
+    letter-spacing:1px;
+    direction:ltr;
+    justify-content:center;
+  }
+  .ready-msg{
+    display:flex; align-items:center; justify-content:center; gap:8px;
+    background:linear-gradient(135deg, var(--gold), var(--gold-bright));
+    color:#241a08;
+    padding:13px 16px;
+    border-radius:12px;
+    font-weight:800;
+    font-size:14px;
+    cursor:pointer;
+    text-align:center;
+    animation:pulse 1.8s infinite;
+  }
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.75;}}
+
+  .card-actions{
+    display:flex; gap:10px; margin-top:14px;
+  }
+  .btn-join{
+    flex:1;
+    padding:11px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(135deg, var(--gold), var(--gold-bright));
+    color:#241a08;
+    font-weight:800;
+    cursor:pointer;
+    font-size:14px;
+  }
+  .btn-delete{
+    padding:11px 16px;
+    border-radius:10px;
+    border:1px solid var(--danger);
+    background:transparent;
+    color:var(--danger);
+    cursor:pointer;
+    font-weight:700;
+    font-size:13px;
+  }
+  .btn-delete:hover{background:rgba(165,56,46,0.1);}
+
+  .add-toggle-btn{
+    display:block;
+    width:100%;
+    padding:13px;
+    border-radius:12px;
+    border:1.5px dashed var(--gold);
+    background:transparent;
+    color:var(--gold);
+    font-weight:800;
+    font-size:14px;
+    cursor:pointer;
+    margin-bottom:20px;
+  }
+  .add-toggle-btn:hover{background:rgba(212,175,55,0.08);}
+
+  .add-form{
+    background:var(--card);
+    border:1px solid var(--gold);
+    border-radius:16px;
+    padding:22px;
+    margin-bottom:24px;
+    display:none;
+  }
+  .add-form.active{display:block;}
+  .add-form h4{font-family:'Amiri', serif; color:var(--gold); margin-bottom:16px; font-size:18px;}
+  .row2{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  @media(max-width:520px){.row2{grid-template-columns:1fr;}}
+
+  .link-row{display:flex; gap:10px;}
+  .link-row input{flex:1;}
+  .jitsi-btn{
+    white-space:nowrap;
+    padding:0 16px;
+    border-radius:10px;
+    border:1px solid var(--gold);
+    background:transparent;
+    color:var(--gold);
+    font-weight:700;
+    cursor:pointer;
+    font-size:13px;
+  }
+  .jitsi-btn:hover{background:rgba(212,175,55,0.1);}
+
+  /* ===== Meeting overlay ===== */
+  #meetingOverlay{
+    display:none;
+    position:fixed; inset:0;
+    background:rgba(10,8,5,0.92);
+    z-index:200;
+    align-items:center; justify-content:center;
+    padding:24px;
+  }
+  #meetingOverlay.active{display:flex;}
+  .meeting-box{
+    width:100%; max-width:560px;
+    background:var(--card);
+    border-radius:20px;
+    overflow:hidden;
+    position:relative;
+    border:2px solid var(--gold);
+    box-shadow:0 0 60px rgba(212,175,55,0.25);
+    padding:44px 34px;
+    text-align:center;
+  }
+  .close-meeting{
+    position:absolute; top:14px; left:14px;
+    width:38px; height:38px;
+    border-radius:50%;
+    background:var(--gold-bright);
+    color:#241a08;
+    border:none;
+    font-size:18px;
+    font-weight:900;
+    cursor:pointer;
+    z-index:5;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .meeting-gate .ornament{font-size:26px; color:var(--gold); margin-bottom:10px;}
+  .meeting-gate h3{
+    font-family:'Amiri', serif;
+    font-size:24px;
+    margin-bottom:8px;
+    color:var(--text);
+  }
+  .meeting-gate p.mdesc{
+    color:var(--text-dim);
+    font-size:14px;
+    line-height:1.8;
+    margin-bottom:26px;
+    max-height:120px;
+    overflow-y:auto;
+  }
+  .btn-enter-meeting{
+    display:inline-flex; align-items:center; gap:10px; justify-content:center;
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(135deg, var(--gold), var(--gold-bright));
+    color:#241a08;
+    font-family:'Cairo', sans-serif;
+    font-weight:800;
+    font-size:15px;
+    cursor:pointer;
+    text-decoration:none;
+  }
+  .btn-enter-meeting:hover{filter:brightness(1.07);}
+  .meeting-hint{
+    margin-top:14px;
+    font-size:11.5px;
+    color:var(--text-dim);
+  }
+
+  /* ===== toast ===== */
+  #toast{
+    position:fixed; bottom:24px; left:50%; transform:translateX(-50%) translateY(20px);
+    background:var(--card);
+    border:1px solid var(--gold);
+    color:var(--text);
+    padding:12px 22px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:700;
+    box-shadow:var(--shadow);
+    opacity:0;
+    pointer-events:none;
+    transition:all .3s ease;
+    z-index:300;
+  }
+  #toast.show{opacity:1; transform:translateX(-50%) translateY(0);}
+
+  .loader{
+    display:inline-block; width:14px; height:14px;
+    border:2px solid rgba(0,0,0,0.2);
+    border-top-color:currentColor;
+    border-radius:50%;
+    animation:spin .7s linear infinite;
+  }
+  @keyframes spin{to{transform:rotate(360deg);}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <button id="logoutBtn" class="icon-btn danger">⎋ تسجيل خروج</button>
+  <button id="themeToggle" class="icon-btn gold">🎨 تبديل الألوان</button>
+</div>
+
+<!-- شاشة الدخول -->
+<div id="loginScreen" class="screen active">
+  <div class="login-card">
+    <div class="ornament">◆ ✦ ◆</div>
+    <h1 class="display-font">منصة المعلم</h1>
+    <p class="sub">سجّل دخولك لمتابعة مواعيدك وجلساتك</p>
+
+    <div class="field">
+      <label>الاسم السري (خاص بك، لا يظهر لأحد)</label>
+      <input type="password" id="secretInput" placeholder="اكتب اسمك السري">
+      <small>يُستخدم فقط لتسجيل الدخول.</small>
+    </div>
+
+    <div class="field">
+      <label>الاسم الظاهر للجميع</label>
+      <input type="text" id="displayInput" placeholder="اكتب اسمك الذي سيراه المعلم والطلاب">
+      <small>هذا هو الاسم الذي سيُستخدم لتحديد مواعيدك وجلساتك.</small>
+    </div>
+
+    <button class="btn-primary" id="loginBtn">دخول</button>
+    <div id="loginMsg" style="color:var(--danger); font-size:13px; margin-top:10px;"></div>
+  </div>
+</div>
+
+<!-- شاشة اللوحة الرئيسية -->
+<div id="dashboardScreen" class="screen">
+  <div class="welcome">
+    <h2 class="display-font">أهلاً، <span id="welcomeName"></span></h2>
+    <div class="role-badge" id="roleBadge"></div>
+  </div>
+
+  <div class="menu-grid">
+    <div class="menu-card" id="btnGoSessions">
+      <span class="emoji">🎥</span>
+      <h3 class="display-font">الجلسات المتاحة الآن</h3>
+      <p>انضم إلى جلساتك المباشرة</p>
+    </div>
+    <div class="menu-card" id="btnGoAppointments">
+      <span class="emoji">🗓️</span>
+      <h3 class="display-font">المواعيد</h3>
+      <p>تابع مواعيدك القادمة</p>
+    </div>
+  </div>
+
+  <!-- لوحة المواعيد -->
+  <div class="section-panel" id="panelAppointments">
+    <div class="section-header">
+      <h3 class="display-font">المواعيد</h3>
+    </div>
+
+    <button class="add-toggle-btn" id="toggleAddAppointment" style="display:none;">＋ إضافة موعد جديد</button>
+
+    <div class="add-form" id="formAddAppointment">
+      <h4>موعد جديد</h4>
+      <div class="field">
+        <label>اسم الموعد</label>
+        <input type="text" id="apName">
+      </div>
+      <div class="field">
+        <label>الوصف</label>
+        <textarea id="apDesc"></textarea>
+      </div>
+      <div class="row2">
+        <div class="field">
+          <label>التاريخ</label>
+          <input type="date" id="apDate">
+        </div>
+        <div class="field">
+          <label>الوقت</label>
+          <input type="time" id="apTime">
+        </div>
+      </div>
+      <div class="field">
+        <label>الأسماء السرية للطلاب المسموح لهم برؤية الموعد</label>
+        <input type="text" id="apStudents" placeholder="ahmed123-mohamed99-sara2026">
+        <small>افصل بين كل اسم سري وآخر بعلامة "-". هذه هي نفس الأسماء السرية التي يسجّل بها الطلاب دخولهم.</small>
+      </div>
+      <button class="btn-primary" id="submitAppointment">حفظ الموعد</button>
+    </div>
+
+    <div id="appointmentsList"></div>
+  </div>
+
+  <!-- لوحة الجلسات -->
+  <div class="section-panel" id="panelSessions">
+    <div class="section-header">
+      <h3 class="display-font">الجلسات المتاحة الآن</h3>
+    </div>
+
+    <button class="add-toggle-btn" id="toggleAddSession" style="display:none;">＋ إنشاء جلسة جديدة</button>
+
+    <div class="add-form" id="formAddSession">
+      <h4>جلسة جديدة</h4>
+      <div class="field">
+        <label>اسم الجلسة</label>
+        <input type="text" id="sesName">
+      </div>
+      <div class="field">
+        <label>وصف الجلسة</label>
+        <textarea id="sesDesc"></textarea>
+      </div>
+      <div class="field">
+        <label>رابط الجلسة</label>
+        <div class="link-row">
+          <input type="text" id="sesLink" placeholder="اكتب الرابط هنا أو أنشئه عبر Jitsi">
+          <button class="jitsi-btn" id="btnJitsi">إنشاء عبر Jitsi</button>
+        </div>
+      </div>
+      <div class="field">
+        <label>الأسماء السرية للطلاب المسموح لهم برؤية الجلسة</label>
+        <input type="text" id="sesStudents" placeholder="ahmed123-mohamed99-sara2026">
+        <small>افصل بين كل اسم سري وآخر بعلامة "-". هذه هي نفس الأسماء السرية التي يسجّل بها الطلاب دخولهم.</small>
+      </div>
+      <button class="btn-primary" id="submitSession">إنشاء الجلسة</button>
+    </div>
+
+    <div id="sessionsList"></div>
+  </div>
+</div>
+
+<!-- نافذة الاجتماع -->
+<div id="meetingOverlay">
+  <div class="meeting-box meeting-gate">
+    <button class="close-meeting" id="closeMeetingBtn">✕</button>
+    <div class="ornament">◆ ✦ ◆</div>
+    <h3 class="display-font" id="meetingGateName">اسم الجلسة</h3>
+    <p class="mdesc" id="meetingGateDesc"></p>
+    <a href="#" target="_blank" rel="noopener" id="meetingGateEnterBtn" class="btn-enter-meeting">🎥 دخول الاجتماع الآن</a>
+    <div class="meeting-hint">يفتح الاجتماع في نافذة جديدة حتى يستمر بدون أي حد زمني</div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+/* =======================================================
+   الإعدادات
+======================================================= */
+// ضع هنا رابط تطبيق ويب Google Apps Script (وليس رابط ملف Docs نفسه)
+// راجع تعليمات النشر المرفقة مع الكود
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycby9qouTV-TFhlGFeoc2Bfx4g0suSdKkR-B9LnRxv9GRkvqCTFn95uDX7D9ZJRWp6D_BSA/exec";
+const TEACHER_SECRET = "admin@333";
+
+let currentUser = null; // {secret, display, isTeacher}
+let appData = {appointments:[], sessions:[]};
+const countdownTimers = {};
+
+/* =======================================================
+   أدوات مساعدة
+======================================================= */
+function toast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(()=> t.classList.remove('show'), 2600);
+}
+
+function showScreen(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+function esc(str){
+  const d = document.createElement('div');
+  d.textContent = str == null ? '' : String(str);
+  return d.innerHTML;
+}
+
+/* =======================================================
+   الثيم (الألوان)
+======================================================= */
+document.getElementById('themeToggle').addEventListener('click', ()=>{
+  document.body.classList.toggle('theme-brown');
+  const isBrown = document.body.classList.contains('theme-brown');
+  localStorage.setItem('platformTheme', isBrown ? 'brown' : 'white');
+});
+(function initTheme(){
+  if(localStorage.getItem('platformTheme') === 'brown'){
+    document.body.classList.add('theme-brown');
+  }
+})();
+
+/* =======================================================
+   تسجيل الدخول / الخروج
+======================================================= */
+document.getElementById('loginBtn').addEventListener('click', doLogin);
+document.getElementById('secretInput').addEventListener('keydown', e=>{ if(e.key==='Enter') doLogin(); });
+document.getElementById('displayInput').addEventListener('keydown', e=>{ if(e.key==='Enter') doLogin(); });
+
+function doLogin(){
+  const secret = document.getElementById('secretInput').value.trim();
+  const display = document.getElementById('displayInput').value.trim();
+  const msg = document.getElementById('loginMsg');
+  msg.textContent = '';
+
+  if(!secret){
+    msg.textContent = 'يرجى إدخال الاسم السري';
+    return;
+  }
+
+  if(secret === TEACHER_SECRET){
+    currentUser = {secret, display: display || 'المعلم', isTeacher:true};
+  } else {
+    if(!display){
+      msg.textContent = 'يرجى إدخال الاسم الذي يظهر للجميع';
+      return;
+    }
+    currentUser = {secret, display, isTeacher:false};
+  }
+  sessionStorage.setItem('platformUser', JSON.stringify(currentUser));
+  enterDashboard();
+}
+
+document.getElementById('logoutBtn').addEventListener('click', ()=>{
+  Object.values(countdownTimers).forEach(clearInterval);
+  currentUser = null;
+  sessionStorage.removeItem('platformUser');
+  document.getElementById('logoutBtn').style.display = 'none';
+  document.getElementById('secretInput').value = '';
+  document.getElementById('displayInput').value = '';
+  document.getElementById('panelAppointments').classList.remove('active');
+  document.getElementById('panelSessions').classList.remove('active');
+  showScreen('loginScreen');
+});
+
+function enterDashboard(){
+  document.getElementById('logoutBtn').style.display = 'inline-flex';
+  document.getElementById('welcomeName').textContent = currentUser.display;
+  const badge = document.getElementById('roleBadge');
+  badge.textContent = currentUser.isTeacher ? 'المعلم' : 'طالب';
+
+  document.getElementById('toggleAddAppointment').style.display = currentUser.isTeacher ? 'block' : 'none';
+  document.getElementById('toggleAddSession').style.display = currentUser.isTeacher ? 'block' : 'none';
+
+  showScreen('dashboardScreen');
+  document.getElementById('panelAppointments').classList.remove('active');
+  document.getElementById('panelSessions').classList.remove('active');
+  loadData();
+}
+
+// استعادة الجلسة عند تحديث الصفحة
+(function restoreSession(){
+  const saved = sessionStorage.getItem('platformUser');
+  if(saved){
+    try{
+      currentUser = JSON.parse(saved);
+      enterDashboard();
+    }catch(e){}
+  }
+})();
+
+/* =======================================================
+   التنقل بين اللوحات
+======================================================= */
+document.getElementById('btnGoAppointments').addEventListener('click', ()=>{
+  document.getElementById('panelSessions').classList.remove('active');
+  document.getElementById('panelAppointments').classList.add('active');
+  document.getElementById('btnGoAppointments').classList.add('active');
+  document.getElementById('btnGoSessions').classList.remove('active');
+  window.scrollTo({top: document.getElementById('panelAppointments').offsetTop - 90, behavior:'smooth'});
+});
+document.getElementById('btnGoSessions').addEventListener('click', ()=>{
+  document.getElementById('panelAppointments').classList.remove('active');
+  document.getElementById('panelSessions').classList.add('active');
+  document.getElementById('btnGoSessions').classList.add('active');
+  document.getElementById('btnGoAppointments').classList.remove('active');
+  window.scrollTo({top: document.getElementById('panelSessions').offsetTop - 90, behavior:'smooth'});
+});
+
+document.getElementById('toggleAddAppointment').addEventListener('click', ()=>{
+  document.getElementById('formAddAppointment').classList.toggle('active');
+});
+document.getElementById('toggleAddSession').addEventListener('click', ()=>{
+  document.getElementById('formAddSession').classList.toggle('active');
+});
+
+/* =======================================================
+   الاتصال بالسيرفر (Google Apps Script)
+======================================================= */
+function callAPI(action, payload){
+  const params = new URLSearchParams();
+  params.append('action', action);
+  params.append('payload', JSON.stringify(payload || {}));
+  if(currentUser && currentUser.isTeacher){
+    params.append('teacherKey', currentUser.secret);
+  }
+  return fetch(WEB_APP_URL, {method:'POST', body: params})
+    .then(r=>r.json());
+}
+
+function loadData(){
+  if(WEB_APP_URL.indexOf('PASTE_YOUR') === 0){
+    toast('لم يتم ربط الموقع بالسيرفر بعد');
+    render();
+    return;
+  }
+  fetch(WEB_APP_URL)
+    .then(r=>r.json())
+    .then(data=>{
+      appData.appointments = data.appointments || [];
+      appData.sessions = data.sessions || [];
+      render();
+    })
+    .catch(()=>{ toast('تعذر الاتصال بالسيرفر'); });
+}
+
+/* =======================================================
+   عرض المواعيد
+======================================================= */
+function render(){
+  renderAppointments();
+  renderSessions();
+}
+
+function formatDateAr(dateStr){
+  const parts = dateStr.split('-');
+  if(parts.length !== 3) return dateStr;
+  const d = new Date(Number(parts[0]), Number(parts[1])-1, Number(parts[2]));
+  return d.toLocaleDateString('ar-EG', {year:'numeric', month:'long', day:'numeric'});
+}
+
+function visibleTo(item){
+  if(!currentUser) return false;
+  if(currentUser.isTeacher) return true;
+  const list = (item.students || []).map(s=>s.trim().toLowerCase());
+  return list.includes(currentUser.secret.trim().toLowerCase());
+}
+
+function renderAppointments(){
+  const list = document.getElementById('appointmentsList');
+  Object.keys(countdownTimers).forEach(id=>{
+    if(id.startsWith('ap_')){ clearInterval(countdownTimers[id]); delete countdownTimers[id]; }
+  });
+
+  const items = appData.appointments.filter(visibleTo);
+  if(items.length === 0){
+    list.innerHTML = '<div class="empty-state">لا توجد مواعيد لعرضها حالياً</div>';
+    return;
+  }
+
+  list.innerHTML = items.map(item=>{
+    const studentsBadge = currentUser.isTeacher ? `<span>👥 أسماء سرية: ${esc((item.students||[]).join('، '))}</span>` : '';
+    return `
+      <div class="item-card">
+        <h4>${esc(item.name)}</h4>
+        <p class="desc">${esc(item.description)}</p>
+        <div class="item-meta">
+          <span>📅 ${esc(formatDateAr(item.date))}</span>
+          <span>⏰ ${esc(item.time)}</span>
+          ${studentsBadge}
+        </div>
+        <div id="countdown_ap_${item.id}"></div>
+        ${currentUser.isTeacher ? `<div class="card-actions"><button class="btn-delete" onclick="deleteAppointment('${item.id}')">حذف الموعد</button></div>` : ''}
+      </div>
+    `;
+  }).join('');
+
+  items.forEach(item=> startCountdown(item, 'ap'));
+}
+
+function renderSessions(){
+  const list = document.getElementById('sessionsList');
+  const items = appData.sessions.filter(visibleTo);
+  if(items.length === 0){
+    list.innerHTML = '<div class="empty-state">لا توجد جلسات متاحة حالياً</div>';
+    return;
+  }
+
+  list.innerHTML = items.map(item=>{
+    const studentsBadge = currentUser.isTeacher ? `<span>👥 أسماء سرية: ${esc((item.students||[]).join('، '))}</span>` : '';
+    return `
+      <div class="item-card">
+        <h4>${esc(item.name)}</h4>
+        <p class="desc">${esc(item.description)}</p>
+        <div class="item-meta">${studentsBadge}</div>
+        <div class="card-actions">
+          <button class="btn-join" onclick="joinMeeting('${encodeURIComponent(item.link)}', '${encodeURIComponent(item.name)}', '${encodeURIComponent(item.description || '')}')">🎥 انضمام</button>
+          ${currentUser.isTeacher ? `<button class="btn-delete" onclick="deleteSession('${item.id}')">حذف</button>` : ''}
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+/* =======================================================
+   العد التنازلي
+======================================================= */
+function startCountdown(item, prefix){
+  const el = document.getElementById(`countdown_${prefix}_${item.id}`);
+  if(!el) return;
+
+  function tick(){
+    const target = new Date(`${item.date}T${item.time}:00`);
+    const now = new Date();
+    const diff = target - now;
+
+    if(diff <= 0){
+      el.innerHTML = `<div class="ready-msg" onclick="goToSessionsFromReady()">✨ يرجى رؤية الجلسات، المعلم في انتظارك</div>`;
+      clearInterval(countdownTimers[`${prefix}_${item.id}`]);
+      return;
+    }
+
+    const days = Math.floor(diff / (1000*60*60*24));
+    const hours = Math.floor((diff / (1000*60*60)) % 24);
+    const mins = Math.floor((diff / (1000*60)) % 60);
+    const secs = Math.floor((diff / 1000) % 60);
+
+    el.innerHTML = `<div class="countdown-box">⏳ ${String(days).padStart(2,'0')}:${String(hours).padStart(2,'0')}:${String(mins).padStart(2,'0')}:${String(secs).padStart(2,'0')}</div>`;
+  }
+
+  tick();
+  countdownTimers[`${prefix}_${item.id}`] = setInterval(tick, 1000);
+}
+
+function goToSessionsFromReady(){
+  document.getElementById('btnGoSessions').click();
+}
+
+/* =======================================================
+   إضافة / حذف موعد
+======================================================= */
+document.getElementById('submitAppointment').addEventListener('click', ()=>{
+  const name = document.getElementById('apName').value.trim();
+  const description = document.getElementById('apDesc').value.trim();
+  const date = document.getElementById('apDate').value; // YYYY-MM-DD كما هو، بدون أي تحويل
+  const time = document.getElementById('apTime').value; // HH:MM كما هو، بدون أي تحويل
+  const students = document.getElementById('apStudents').value.split('-').map(s=>s.trim()).filter(Boolean);
+
+  if(!name || !date || !time || students.length === 0){
+    toast('يرجى تعبئة جميع الحقول');
+    return;
+  }
+
+  callAPI('addAppointment', {name, description, date, time, students}).then(res=>{
+    if(res.success){
+      toast('تم إضافة الموعد بنجاح');
+      document.getElementById('apName').value='';
+      document.getElementById('apDesc').value='';
+      document.getElementById('apDate').value='';
+      document.getElementById('apTime').value='';
+      document.getElementById('apStudents').value='';
+      document.getElementById('formAddAppointment').classList.remove('active');
+      appData = res.data;
+      render();
+    } else {
+      toast(res.error || 'حدث خطأ');
+    }
+  }).catch(()=> toast('تعذر الاتصال بالسيرفر'));
+});
+
+function deleteAppointment(id){
+  if(!confirm('هل أنت متأكد من حذف هذا الموعد؟')) return;
+  callAPI('deleteAppointment', {id}).then(res=>{
+    if(res.success){
+      toast('تم حذف الموعد');
+      appData = res.data;
+      render();
+    } else {
+      toast(res.error || 'حدث خطأ');
+    }
+  });
+}
+
+/* =======================================================
+   إضافة / حذف جلسة
+======================================================= */
+document.getElementById('btnJitsi').addEventListener('click', ()=>{
+  const room = 'Room-' + Math.random().toString(36).substring(2,10) + Date.now().toString(36);
+  const link = 'https://meet.jit.si/' + room;
+  document.getElementById('sesLink').value = link;
+  window.open(link, '_blank');
+});
+
+document.getElementById('submitSession').addEventListener('click', ()=>{
+  const name = document.getElementById('sesName').value.trim();
+  const description = document.getElementById('sesDesc').value.trim();
+  const link = document.getElementById('sesLink').value.trim();
+  const students = document.getElementById('sesStudents').value.split('-').map(s=>s.trim()).filter(Boolean);
+
+  if(!name || !link || students.length === 0){
+    toast('يرجى تعبئة جميع الحقول');
+    return;
+  }
+
+  callAPI('addSession', {name, description, link, students}).then(res=>{
+    if(res.success){
+      toast('تم إنشاء الجلسة بنجاح');
+      document.getElementById('sesName').value='';
+      document.getElementById('sesDesc').value='';
+      document.getElementById('sesLink').value='';
+      document.getElementById('sesStudents').value='';
+      document.getElementById('formAddSession').classList.remove('active');
+      appData = res.data;
+      render();
+    } else {
+      toast(res.error || 'حدث خطأ');
+    }
+  }).catch(()=> toast('تعذر الاتصال بالسيرفر'));
+});
+
+function deleteSession(id){
+  if(!confirm('هل أنت متأكد من حذف هذه الجلسة؟')) return;
+  callAPI('deleteSession', {id}).then(res=>{
+    if(res.success){
+      toast('تم حذف الجلسة');
+      appData = res.data;
+      render();
+    } else {
+      toast(res.error || 'حدث خطأ');
+    }
+  });
+}
+
+/* =======================================================
+   نافذة الاجتماع
+======================================================= */
+function joinMeeting(encodedLink, encodedName, encodedDesc){
+  const link = decodeURIComponent(encodedLink);
+  const name = decodeURIComponent(encodedName || '');
+  const desc = decodeURIComponent(encodedDesc || '');
+
+  document.getElementById('meetingGateName').textContent = name || 'الجلسة';
+  document.getElementById('meetingGateDesc').textContent = desc;
+  const enterBtn = document.getElementById('meetingGateEnterBtn');
+  enterBtn.href = link;
+
+  document.getElementById('meetingOverlay').classList.add('active');
+}
+document.getElementById('closeMeetingBtn').addEventListener('click', ()=>{
+  document.getElementById('meetingOverlay').classList.remove('active');
+});
+</script>
+</body>
+</html>

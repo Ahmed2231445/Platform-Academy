@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>STUDY HOUSE</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        :root {
+
+            --bg: #ffffff;
+
+            --card: #ffffff;
+
+            --text: #252525;
+
+            --gold: #c89b3c;
+
+            --gold-light: #f5e8c7;
+
+            --border: rgba(200, 155, 60, 0.25);
+
+            --shadow: rgba(0, 0, 0, 0.10);
+
+        }
+
+
+        body.brown-theme {
+
+            --bg: #3b2418;
+
+            --card: #513222;
+
+            --text: #fff8ed;
+
+            --gold: #d9ad5b;
+
+            --gold-light: #765237;
+
+            --border: rgba(217, 173, 91, 0.35);
+
+            --shadow: rgba(0, 0, 0, 0.35);
+
+        }
+
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            font-family: "Cairo", sans-serif;
+
+            background: var(--bg);
+
+            color: var(--text);
+
+            transition: background 0.4s ease, color 0.4s ease;
+
+            overflow-x: hidden;
+
+        }
+
+
+        /* Header */
+
+        header {
+
+            height: 80px;
+
+            padding: 0 6%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            background: var(--bg);
+
+            border-bottom: 1px solid var(--border);
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 100;
+
+        }
+
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            color: var(--gold);
+
+            font-size: 22px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        .logo-icon {
+
+            width: 42px;
+
+            height: 42px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 14px;
+
+            background: var(--gold);
+
+            color: white;
+
+            font-size: 22px;
+
+            box-shadow: 0 8px 20px var(--shadow);
+
+        }
+
+
+        /* Theme Button */
+
+        .theme-btn {
+
+            border: 1px solid var(--border);
+
+            background: var(--card);
+
+            color: var(--text);
+
+            padding: 10px 18px;
+
+            border-radius: 30px;
+
+            font-family: inherit;
+
+            cursor: pointer;
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .theme-btn:hover {
+
+            transform: translateY(-3px);
+
+            border-color: var(--gold);
+
+            box-shadow: 0 8px 20px var(--shadow);
+
+        }
+
+
+        /* Hero */
+
+        .hero {
+
+            text-align: center;
+
+            padding: 70px 20px 40px;
+
+        }
+
+
+        .hero h1 {
+
+            color: var(--gold);
+
+            font-size: clamp(35px, 6vw, 60px);
+
+            font-weight: 800;
+
+            letter-spacing: 3px;
+
+            animation: floatingTitle 2.5s ease-in-out infinite;
+
+        }
+
+
+        .hero p {
+
+            margin-top: 10px;
+
+            opacity: 0.65;
+
+            font-size: 16px;
+
+        }
+
+
+        /* Cards */
+
+        .cards-container {
+
+            width: min(1100px, 92%);
+
+            margin: 20px auto 70px;
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 28px;
+
+        }
+
+
+        .card {
+
+            min-height: 245px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 28px;
+
+            background: var(--card);
+
+            color: var(--text);
+
+            font-family: inherit;
+
+            cursor: pointer;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+            box-shadow: 0 15px 35px var(--shadow);
+
+            transition: 0.4s ease;
+
+        }
+
+
+        .card:hover {
+
+            transform: translateY(-10px);
+
+            border-color: var(--gold);
+
+            box-shadow: 0 25px 55px var(--shadow);
+
+        }
+
+
+        .card::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 180px;
+
+            height: 180px;
+
+            border-radius: 50%;
+
+            background: var(--gold);
+
+            opacity: 0.08;
+
+            top: -80px;
+
+            right: -70px;
+
+            transition: 0.5s ease;
+
+        }
+
+
+        .card:hover::before {
+
+            transform: scale(2.5);
+
+        }
+
+
+        .card-icon {
+
+            width: 80px;
+
+            height: 80px;
+
+            border-radius: 24px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: var(--gold-light);
+
+            color: var(--gold);
+
+            font-size: 35px;
+
+            font-weight: 800;
+
+            margin-bottom: 18px;
+
+            transition: 0.4s ease;
+
+        }
+
+
+        .card:hover .card-icon {
+
+            transform: rotate(8deg) scale(1.1);
+
+        }
+
+
+        .card h2 {
+
+            color: var(--gold);
+
+            font-size: 25px;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        .card p {
+
+            margin-top: 5px;
+
+            opacity: 0.65;
+
+            font-size: 13px;
+
+        }
+
+
+        /* Study House Card */
+
+        .study-card {
+
+            background: linear-gradient(
+
+                135deg,
+
+                var(--card),
+
+                var(--gold-light)
+
+            );
+
+        }
+
+
+        .study-card .card-icon {
+
+            animation: floatingIcon 2.5s ease-in-out infinite;
+
+        }
+
+
+        .study-card h2 {
+
+            letter-spacing: 3px;
+
+            animation: glowText 2s ease-in-out infinite alternate;
+
+        }
+
+
+        /* Modal Viewer */
+
+        .viewer-overlay {
+
+            display: none;
+
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 999999;
+
+            padding: 20px;
+
+            background: rgba(0, 0, 0, 0.70);
+
+            backdrop-filter: blur(8px);
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+        .viewer-overlay.active {
+
+            display: flex;
+
+        }
+
+
+        .viewer-box {
+
+            width: min(1450px, 100%);
+
+            height: min(92vh, 900px);
+
+            background: var(--card);
+
+            border-radius: 22px;
+
+            overflow: hidden;
+
+            border: 1px solid var(--border);
+
+            box-shadow: 0 30px 100px rgba(0, 0, 0, 0.45);
+
+            animation: modalOpen 0.35s ease;
+
+        }
+
+
+        .viewer-header {
+
+            height: 65px;
+
+            padding: 0 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            background: var(--card);
+
+            border-bottom: 1px solid var(--border);
+
+        }
+
+
+        .viewer-title {
+
+            color: var(--gold);
+
+            font-size: 20px;
+
+            font-weight: 700;
+
+        }
+
+
+        .close-btn {
+
+            border: none;
+
+            background: var(--gold);
+
+            color: white;
+
+            padding: 9px 18px;
+
+            border-radius: 22px;
+
+            cursor: pointer;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .close-btn:hover {
+
+            transform: scale(1.06);
+
+        }
+
+
+        #pageFrame {
+
+            display: block;
+
+            width: 100%;
+
+            height: calc(100% - 65px);
+
+            border: none;
+
+            background: white;
+
+        }
+
+
+        /* Footer */
+
+        footer {
+
+            text-align: center;
+
+            padding: 25px;
+
+            border-top: 1px solid var(--border);
+
+            opacity: 0.6;
+
+            font-size: 13px;
+
+        }
+
+
+        /* Animations */
+
+        @keyframes floatingTitle {
+
+            0%, 100% {
+
+                transform: translateY(0);
+
+            }
+
+            50% {
+
+                transform: translateY(-6px);
+
+            }
+
+        }
+
+
+        @keyframes floatingIcon {
+
+            0%, 100% {
+
+                transform: translateY(0);
+
+            }
+
+            50% {
+
+                transform: translateY(-12px);
+
+            }
+
+        }
+
+
+        @keyframes glowText {
+
+            from {
+
+                text-shadow: 0 0 0 transparent;
+
+            }
+
+            to {
+
+                text-shadow: 0 0 22px var(--gold);
+
+            }
+
+        }
+
+
+        @keyframes modalOpen {
+
+            from {
+
+                opacity: 0;
+
+                transform: scale(0.92);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: scale(1);
+
+            }
+
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 700px) {
+
+            header {
+
+                padding: 0 16px;
+
+            }
+
+
+            .logo {
+
+                font-size: 16px;
+
+            }
+
+
+            .logo-icon {
+
+                width: 36px;
+
+                height: 36px;
+
+            }
+
+
+            .theme-btn {
+
+                padding: 8px 12px;
+
+                font-size: 12px;
+
+            }
+
+
+            .cards-container {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .card {
+
+                min-height: 215px;
+
+            }
+
+
+            .viewer-overlay {
+
+                padding: 8px;
+
+            }
+
+
+            .viewer-box {
+
+                height: 96vh;
+
+                border-radius: 16px;
+
+            }
+
+
+            .viewer-header {
+
+                height: 58px;
+
+                padding: 0 12px;
+
+            }
+
+
+            .viewer-title {
+
+                font-size: 16px;
+
+            }
+
+
+            .close-btn {
+
+                padding: 8px 13px;
+
+                font-size: 12px;
+
+            }
+
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <header>
+
+
+        <div class="logo">
+
+            <div class="logo-icon">S</div>
+
+            STUDY HOUSE
+
+        </div>
+
+
+        <button
+
+            id="themeButton"
+
+            class="theme-btn"
+
+            type="button"
+
+            onclick="changeTheme()">
+
+            🌙 الوضع البني
+
+        </button>
+
+
+    </header>
+
+
+    <main>
+
+
+        <section class="hero">
+
+            <h1>STUDY HOUSE</h1>
+
+            <p>Learn • Create • Achieve</p>
+
+        </section>
+
+
+        <section class="cards-container">
+
+
+            <button
+
+                class="card"
+
+                type="button"
+
+                onclick="openPage('https://docs.google.com/document/d/1uZ353KELFg8lSJwKSXVGdGRso6khaYH7cc8Ot4T3fgY/edit?usp=sharing', 'WORD')">
+
+
+                <div class="card-icon">W</div>
+
+                <h2>WORD</h2>
+
+                <p>فتح قسم Word</p>
+
+
+            </button>
+
+
+            <button
+
+                class="card"
+
+                type="button"
+
+                onclick="openPage('https://docs.google.com/spreadsheets/d/1nDOUH_cI2aeOrhTzdIpAFMrMcubVsuVcSPHBAkfeLnk/edit?usp=sharing', 'EXCEL')">
+
+
+                <div class="card-icon">X</div>
+
+                <h2>EXCEL</h2>
+
+                <p>فتح قسم Excel</p>
+
+
+            </button>
+
+
+            <button
+
+                class="card"
+
+                type="button"
+
+                onclick="openPage('https://docs.google.com/presentation/d/1TSmftTfXCutD_ZYYvbTY3tdK9X8SVzcemQ0DJf4-KTo/edit?usp=sharing', 'POWERPOINT')">
+
+
+                <div class="card-icon">P</div>
+
+                <h2>POWERPOINT</h2>
+
+                <p>فتح قسم PowerPoint</p>
+
+
+            </button>
+
+
+            <button
+
+                class="card study-card"
+
+                type="button"
+
+                onclick="studyHouseAnimation()">
+
+
+                <div class="card-icon">✦</div>
+
+                <h2>STUDY HOUSE</h2>
+
+                <p>Learn • Create • Achieve</p>
+
+
+            </button>
+
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        © 2026 STUDY HOUSE —  AHMED AFIFY
+
+    </footer>
+
+
+    <!-- نافذة تظهر فوق كل شيء -->
+
+
+    <section
+
+        id="viewerOverlay"
+
+        class="viewer-overlay"
+
+
+        onclick="closeByOverlay(event)">
+
+
+        <div
+
+            class="viewer-box"
+
+
+            onclick="event.stopPropagation()">
+
+
+            <div class="viewer-header">
+
+
+                <div
+
+                    id="viewerTitle"
+
+                    class="viewer-title">
+
+                    المحتوى
+
+                </div>
+
+
+                <button
+
+                    class="close-btn"
+
+                    type="button"
+
+                    onclick="closePage()">
+
+
+                    ✕ إغلاق
+
+
+                </button>
+
+
+            </div>
+
+
+            <iframe
+
+                id="pageFrame"
+
+                title="Page Viewer"
+
+                src=""
+
+                loading="lazy">
+
+            </iframe>
+
+
+        </div>
+
+
+    </section>
+
+
+    <script>
+
+
+        /* فتح الملف فوق الصفحة */
+
+        function openPage(file, title) {
+
+
+            const overlay = document.getElementById("viewerOverlay");
+
+            const frame = document.getElementById("pageFrame");
+
+            const titleElement = document.getElementById("viewerTitle");
+
+
+            titleElement.textContent = title;
+
+
+            overlay.classList.add("active");
+
+
+            document.body.style.overflow = "hidden";
+
+
+            frame.src = file;
+
+        }
+
+
+        /* إغلاق النافذة */
+
+        function closePage() {
+
+
+            const overlay = document.getElementById("viewerOverlay");
+
+            const frame = document.getElementById("pageFrame");
+
+
+            frame.src = "";
+
+
+            overlay.classList.remove("active");
+
+
+            document.body.style.overflow = "";
+
+        }
+
+
+        /* إغلاق عند الضغط على الخلفية */
+
+        function closeByOverlay(event) {
+
+
+            if (event.target.id === "viewerOverlay") {
+
+                closePage();
+
+            }
+
+        }
+
+
+        /* تغيير الألوان */
+
+        function changeTheme() {
+
+
+            const body = document.body;
+
+            const button = document.getElementById("themeButton");
+
+
+            body.classList.toggle("brown-theme");
+
+
+            if (body.classList.contains("brown-theme")) {
+
+
+                button.textContent = "☀️ الوضع الأبيض";
+
+
+                localStorage.setItem("studyHouseTheme", "brown");
+
+
+            } else {
+
+
+                button.textContent = "🌙 الوضع البني";
+
+
+                localStorage.setItem("studyHouseTheme", "white");
+
+            }
+
+        }
+
+
+        /* حفظ الثيم */
+
+        function loadTheme() {
+
+
+            const savedTheme = localStorage.getItem("studyHouseTheme");
+
+            const button = document.getElementById("themeButton");
+
+
+            if (savedTheme === "brown") {
+
+
+                document.body.classList.add("brown-theme");
+
+
+                button.textContent = "☀️ الوضع الأبيض";
+
+            }
+
+        }
+
+
+        /* حركة STUDY HOUSE */
+
+        function studyHouseAnimation() {
+
+
+            const title = document.querySelector(".hero h1");
+
+
+            title.style.transform = "scale(1.15)";
+
+            title.style.textShadow = "0 0 35px var(--gold)";
+
+
+            setTimeout(function () {
+
+
+                title.style.transform = "";
+
+                title.style.textShadow = "";
+
+
+            }, 1000);
+
+        }
+
+
+        /* زر ESC للإغلاق */
+
+        document.addEventListener("keydown", function(event) {
+
+
+            if (event.key === "Escape") {
+
+                closePage();
+
+            }
+
+        });
+
+
+        /* تشغيل الثيم المحفوظ */
+
+        loadTheme();
+
+
+    </script>
+
+
+</body>
+
+</html>
