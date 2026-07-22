@@ -1013,6 +1013,18 @@ function joinMeeting(encodedLink, encodedName, encodedDesc){
 document.getElementById('closeMeetingBtn').addEventListener('click', ()=>{
   document.getElementById('meetingOverlay').classList.remove('active');
 });
+
+  document.addEventListener("keydown", function (e) {
+    // منع Ctrl + U
+    if (e.ctrlKey && e.key.toLowerCase() === "u") {
+        e.preventDefault();
+        return false;
+    }
+});
+
+document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+});
 </script>
 </body>
 </html>
