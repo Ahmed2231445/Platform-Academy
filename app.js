@@ -438,6 +438,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const id = watchMatch ? watchMatch[1] : shortMatch ? shortMatch[1] : null;
     return id ? `https://www.youtube.com/embed/${id}` : null;
   }
+  function toYoutubeEmbed(url) {
+    if (!url) return null;
+    const watchMatch = url.match(/[?&]v=([\w-]+)/);
+    const shortMatch = url.match(/youtu\.be\/([\w-]+)/);
+    const id = watchMatch ? watchMatch[1] : shortMatch ? shortMatch[1] : null;
+    return id ? `https://www.youtube.com/embed/${id}` : null;
+  }
+
+  // ✅ الدالة الجديدة
+  function toGoogleDriveEmbed(url) {
+    if (!url) return null;
+    // يدعم صيغ: /file/d/ID/view  ,  ?id=ID  ,  /uc?id=ID
+    const fileMatch = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
+    const idParamMatch = url.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+    const id = fileMatch ? fileMatch[1] : idParamMatch ? idParamMatch[1] : null;
+    return id && url.includes("drive.google.com")
+      ? `https://drive.google.com/file/d/${id}/preview`
+      : null;
+  }
 
   document.querySelectorAll(".app-course-body-hub").forEach((body) => {
   const courseKey = body.dataset.courseKey;
@@ -528,12 +547,13 @@ document.addEventListener("DOMContentLoaded", () => {
     hubPlayerFrame.innerHTML = "";
  
     if (type === "video") {
-      const embedUrl = toYoutubeEmbed(item.link);
+      const embedUrl = toYoutubeEmbed(item.link) || toGoogleDriveEmbed(item.link); // ✅ عدّل هنا
       if (embedUrl) {
         const iframe = document.createElement("iframe");
         iframe.src = embedUrl;
         iframe.allowFullscreen = true;
         iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("allow", "autoplay"); // ✅ اختياري لتشغيل تلقائي أفضل
         hubPlayerFrame.appendChild(iframe);
       } else {
         const a = document.createElement("a");
