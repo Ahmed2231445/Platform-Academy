@@ -441,6 +441,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
 
   // ✅ الدالة الجديدة
+  // ✅ الدالة الجديدة
   function toGoogleDriveEmbed(url) {
     if (!url) return null;
     // يدعم صيغ: /file/d/ID/view  ,  ?id=ID  ,  /uc?id=ID
@@ -450,6 +451,36 @@ document.addEventListener("DOMContentLoaded", () => {
     return id && url.includes("drive.google.com")
       ? `https://drive.google.com/file/d/${id}/preview`
       : null;
+  }
+
+  // ✅ مستندات/شيتس/سلايدز جوجل (روابط docs.google.com مباشرة)
+  function toGoogleDocsPreview(url) {
+    if (!url) return null;
+    const match = url.match(/docs\.google\.com\/(document|spreadsheets|presentation)\/d\/([a-zA-Z0-9_-]+)/);
+    if (!match) return null;
+    return `https://docs.google.com/${match[1]}/d/${match[2]}/preview`;
+  }
+
+  // ✅ عارض أوفيس أونلاين لملفات Word/Excel/PowerPoint من روابط مباشرة (غير جوجل درايف)
+  function toOfficeOnlineEmbed(url) {
+    if (!url) return null;
+    const ext = (url.split("?")[0].split(".").pop() || "").toLowerCase();
+    const officeExts = ["doc", "docx", "xls", "xlsx", "ppt", "pptx"];
+    if (!officeExts.includes(ext)) return null;
+    return `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(url)}`;
+  }
+
+  // ✅ الدالة الموحّدة لأي نوع ملف (PDF / Word / Excel / PowerPoint)
+  function toFileEmbed(url) {
+    if (!url) return null;
+    const drive = toGoogleDriveEmbed(url);
+    if (drive) return drive;
+    const gdocs = toGoogleDocsPreview(url);
+    if (gdocs) return gdocs;
+    if (/\.pdf($|\?)/i.test(url)) return url;
+    const office = toOfficeOnlineEmbed(url);
+    if (office) return office;
+    return null;
   }
 
   document.querySelectorAll(".app-course-body-hub").forEach((body) => {
@@ -463,6 +494,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const hubPlayerFrame = body.querySelector("[data-hub-player-frame]");
   const hubPlayerMeta = body.querySelector("[data-hub-player-meta]");
   const hubEditor = body.querySelector("[data-hub-editor]");
+
+  // ✅ زر ملء الشاشة لمشغل الفيديو/الملفات (يفضل جوه المنصة برضو)
+  const playerFsBtn = document.createElement("button");
+  playerFsBtn.type = "button";
+  playerFsBtn.className = "course-hub-fullscreen-btn";
+  playerFsBtn.style.marginInlineStart = "auto";
+  playerFsBtn.innerHTML = `<svg viewBox="0 0 24 24" width="16" height="16"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>${isArabicNow() ? "ملء الشاشة" : "Fullscreen"}</span>`;
+
+  const playerCloseBtn = document.createElement("button");
+  playerCloseBtn.type = "button";
+  playerCloseBtn.className = "course-hub-player-fs-close";
+  playerCloseBtn.setAttribute("aria-label", "إغلاق");
+  playerCloseBtn.innerHTML = "&times;";
+
+  function setPlayerFullscreen(on) {
+    hubPlayerFrame.classList.toggle("fullscreen", on);
+    document.body.classList.toggle("editor-fullscreen-lock", on);
+  }
+  playerFsBtn.addEventListener("click", () => setPlayerFullscreen(true));
+  playerCloseBtn.addEventListener("click", () => setPlayerFullscreen(false));
   const hubEditorFrameWrap = body.querySelector("[data-hub-editor-framewrap]");
   const hubFullscreenToggle = body.querySelector("[data-hub-fullscreen-toggle]");
   const hubFullscreenClose = body.querySelector("[data-hub-fullscreen-close]");
@@ -504,6 +555,8 @@ document.addEventListener("DOMContentLoaded", () => {
     hubPlayer.style.display = view === "player" ? "" : "none";
     if (hubEditor) hubEditor.style.display = view === "editor" ? "" : "none";
   }
+    const playerBackBtn = hubPlayer.querySelector("[data-hub-back-to-list]");
+  if (playerBackBtn) playerBackBtn.insertAdjacentElement("afterend", playerFsBtn);
  
   function renderList(type) {
     hubListTitle.textContent = type === "video"
@@ -539,16 +592,19 @@ document.addEventListener("DOMContentLoaded", () => {
  
   function openPlayer(type, item, total) {
     hubPlayerFrame.innerHTML = "";
+    setPlayerFullscreen(false);
+    let hasEmbed = false;
  
     if (type === "video") {
-      const embedUrl = toYoutubeEmbed(item.link) || toGoogleDriveEmbed(item.link); // ✅ عدّل هنا
+      const embedUrl = toYoutubeEmbed(item.link) || toGoogleDriveEmbed(item.link);
       if (embedUrl) {
         const iframe = document.createElement("iframe");
         iframe.src = embedUrl;
         iframe.allowFullscreen = true;
         iframe.setAttribute("frameborder", "0");
-        iframe.setAttribute("allow", "autoplay"); // ✅ اختياري لتشغيل تلقائي أفضل
+        iframe.setAttribute("allow", "autoplay");
         hubPlayerFrame.appendChild(iframe);
+        hasEmbed = true;
       } else {
         const a = document.createElement("a");
         a.href = item.link;
@@ -559,14 +615,27 @@ document.addEventListener("DOMContentLoaded", () => {
         hubPlayerFrame.appendChild(a);
       }
     } else {
-      const a = document.createElement("a");
-      a.href = item.link;
-      a.target = "_blank";
-      a.rel = "noopener noreferrer";
-      a.className = "btn btn-primary";
-      a.textContent = isArabicNow() ? "فتح الملف" : "Open File";
-      hubPlayerFrame.appendChild(a);
+      const embedUrl = toFileEmbed(item.link);
+      if (embedUrl) {
+        const iframe = document.createElement("iframe");
+        iframe.src = embedUrl;
+        iframe.allowFullscreen = true;
+        iframe.setAttribute("frameborder", "0");
+        hubPlayerFrame.appendChild(iframe);
+        hasEmbed = true;
+      } else {
+        const a = document.createElement("a");
+        a.href = item.link;
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.className = "btn btn-primary";
+        a.textContent = isArabicNow() ? "فتح الملف" : "Open File";
+        hubPlayerFrame.appendChild(a);
+      }
     }
+ 
+    playerFsBtn.style.display = hasEmbed ? "" : "none";
+    if (hasEmbed) hubPlayerFrame.appendChild(playerCloseBtn);
  
     hubPlayerMeta.textContent = isArabicNow()
       ? `رقم ${item.number} من ${total}`
