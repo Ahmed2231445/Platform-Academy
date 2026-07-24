@@ -4329,3 +4329,49 @@ body.theme-brown .course-hub-switch-btn:hover {
     grid-template-columns: 1fr;
   }
 }
+/* ===== ملء الشاشة لمشغل الفيديو/الملفات داخل المنصة ===== */
+.course-hub-player-frame {
+  position: relative;
+}
+.course-hub-player-frame.fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  max-width: 100%;
+  aspect-ratio: auto;
+  margin: 0;
+  border-radius: 0;
+}
+.course-hub-player-frame.fullscreen iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.course-hub-player-fs-close { display: none; }
+.course-hub-player-frame.fullscreen .course-hub-player-fs-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 18px;
+  inset-inline-end: 18px;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 10001;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.course-hub-player-frame.fullscreen .course-hub-player-fs-close:hover {
+  background: rgba(0,0,0,0.7);
+  transform: scale(1.06);
+}
+
+@media (max-width: 600px) {
+  .course-hub-fullscreen-btn span { display: none; }
+}
