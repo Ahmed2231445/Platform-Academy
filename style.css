@@ -4278,3 +4278,54 @@ body.theme-brown .course-hub-switch-btn:hover {
   color: var(--gold);
   border-color: rgba(219, 167, 88, 0.4);
 }
+/* ===== إصلاح السكرول في قسم الاختبارات على الموبايل ===== */
+@media (max-width: 720px) {
+  #appExamContent {
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    max-height: 100%;
+  }
+
+  /* نخلي كل الشاشات الفرعية جوه الاختبارات تقدر تكبر وتعمل سكرول لوحدها لو احتاجت */
+  #appExamContent .community-chooser,
+  #appExamContent .course-hub-list,
+  #appExamContent .course-hub-player,
+  #appExamContent .exam-run,
+  #appExamContent .exam-result,
+  #appExamContent .exam-teacher-gate {
+    overflow-y: visible;
+    max-height: none;
+  }
+
+  #appExamContent .course-hub-items,
+  #appExamContent .exam-question-box {
+    max-height: 46vh; /* بدل ما تاخد نص الشاشة زي الديسكتوب */
+  }
+}
+
+/* ===== أيقونات أكثر تجاوب على الشاشات الصغيرة جدًا ===== */
+@media (max-width: 480px) {
+  #appExamContent .community-chooser-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  #appExamContent .community-course-btn {
+    min-height: 120px;
+    padding: 16px 10px;
+  }
+  #appExamContent .community-course-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+  }
+  #appExamContent .community-course-btn span:last-child {
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 360px) {
+  #appExamContent .community-chooser-grid {
+    grid-template-columns: 1fr;
+  }
+}
