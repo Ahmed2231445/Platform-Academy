@@ -958,6 +958,7 @@ function refreshAllEditorSwitchLabels() {
     if (appCommunityLink) appCommunityLink.classList.toggle("active", section === "community");
     if (appExamLink) appExamLink.classList.toggle("active", section === "exam");
     if (appSessionLink) appSessionLink.classList.toggle("active", section === "session");
+    if (appPronunciationLink) appPronunciationLink.classList.toggle("active", section === "pronunciation");
 
     if (section !== "community") stopCommunityPolling();
 
