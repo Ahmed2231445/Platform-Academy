@@ -438,13 +438,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const id = watchMatch ? watchMatch[1] : shortMatch ? shortMatch[1] : null;
     return id ? `https://www.youtube.com/embed/${id}` : null;
   }
-  function toYoutubeEmbed(url) {
-    if (!url) return null;
-    const watchMatch = url.match(/[?&]v=([\w-]+)/);
-    const shortMatch = url.match(/youtu\.be\/([\w-]+)/);
-    const id = watchMatch ? watchMatch[1] : shortMatch ? shortMatch[1] : null;
-    return id ? `https://www.youtube.com/embed/${id}` : null;
-  }
+  
 
   // ✅ الدالة الجديدة
   function toGoogleDriveEmbed(url) {
