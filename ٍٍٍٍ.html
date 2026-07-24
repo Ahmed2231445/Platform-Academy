@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="gold">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STUDY HOUSE ADMIN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gold:#c9a227;
+    --gold-deep:#9c7a17;
+    --gold-bright:#e6c860;
+  }
+
+  html[data-theme="gold"]{
+    --bg:#fdfbf5;
+    --bg-soft:#f8f1e0;
+    --card:#ffffff;
+    --ink:#2a2420;
+    --ink-soft:#6b5f4f;
+    --border:#ecdfba;
+    --ribbon:#ffffff;
+    --shadow: 0 10px 30px rgba(156,122,23,.12);
+  }
+  html[data-theme="brown"]{
+    --bg:#160c08;
+    --bg-soft:#22140d;
+    --card:#2b1a11;
+    --ink:#f4e9d6;
+    --ink-soft:#c8ac89;
+    --border:#4a2f1c;
+    --ribbon:#c9a227;
+    --shadow: 0 10px 30px rgba(0,0,0,.55);
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:'Tajawal', sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    min-height:100vh;
+    overflow-x:hidden;
+    transition:background .5s ease, color .5s ease;
+    position:relative;
+  }
+  .display{ font-family:'Cormorant Garamond', serif; }
+
+  /* ---------- Balloons (signature element) ---------- */
+  .balloons{ position:fixed; inset:0; pointer-events:none; z-index:1; overflow:hidden; }
+  .balloon{ position:absolute; bottom:-220px; opacity:.85; animation:float linear infinite; }
+  .balloon svg{ display:block; filter:drop-shadow(0 8px 14px rgba(0,0,0,.12)); }
+  .balloon .string{ stroke:var(--ink-soft); stroke-width:1.4; opacity:.5; }
+  @keyframes float{
+    0%{ transform:translateY(0) rotate(-4deg); }
+    50%{ transform:translateY(-58vh) rotate(4deg); }
+    100%{ transform:translateY(-118vh) rotate(-4deg); }
+  }
+
+  /* ---------- Theme toggle ---------- */
+  .theme-toggle{
+    position:fixed; top:18px; left:18px; z-index:50;
+    display:flex; align-items:center; gap:8px;
+    background:var(--card); border:1px solid var(--border);
+    padding:8px 14px; border-radius:999px; cursor:pointer;
+    box-shadow:var(--shadow); font-size:13px; color:var(--ink);
+    transition:.3s;
+  }
+  .theme-toggle:hover{ transform:translateY(-2px); }
+  .theme-dot{ width:14px; height:14px; border-radius:50%; background:linear-gradient(135deg,var(--gold-bright),var(--gold-deep)); }
+
+  /* ---------- Screens ---------- */
+  .screen{
+    position:relative; z-index:2;
+    min-height:100vh; display:flex; align-items:center; justify-content:center;
+    flex-direction:column; text-align:center; padding:24px;
+  }
+  .hidden{ display:none !important; }
+
+  /* Splash */
+  #splash{ transition:opacity .7s ease, transform .7s ease; }
+  #splash.fade-out{ opacity:0; transform:scale(1.04); pointer-events:none; }
+  .splash-badge{
+    width:86px; height:86px; border-radius:50%;
+    background:linear-gradient(135deg,var(--gold-bright),var(--gold-deep));
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:22px; box-shadow:var(--shadow);
+  }
+  .splash-badge svg{ width:44px; height:44px; }
+  .eyebrow{
+    letter-spacing:.35em; font-size:12px; color:var(--gold-deep);
+    font-weight:700; margin-bottom:10px; text-transform:uppercase;
+  }
+  #splash h1{ font-size:clamp(30px,6vw,48px); font-weight:700; }
+  #splash h2{
+    font-family:'Cormorant Garamond', serif; font-weight:700;
+    font-size:clamp(38px,8vw,64px); letter-spacing:.06em;
+    background:linear-gradient(135deg,var(--gold-deep),var(--gold-bright));
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    margin-top:4px;
+  }
+
+  /* Login */
+  .card{
+    background:var(--card); border:1px solid var(--border);
+    border-radius:22px; padding:40px 34px; width:100%; max-width:380px;
+    box-shadow:var(--shadow);
+  }
+  .card .eyebrow{ margin-bottom:4px; }
+  .card h2{ font-family:'Cormorant Garamond', serif; font-size:30px; margin-bottom:22px; }
+  .field{ text-align:right; margin-bottom:16px; }
+  .field label{ font-size:12px; color:var(--ink-soft); display:block; margin-bottom:6px; }
+  input[type="text"], input[type="password"]{
+    width:100%; padding:13px 15px; border-radius:12px;
+    border:1px solid var(--border); background:var(--bg);
+    color:var(--ink); font-family:'Tajawal',sans-serif; font-size:15px;
+    outline:none; transition:.25s;
+  }
+  input:focus{ border-color:var(--gold); box-shadow:0 0 0 3px rgba(201,162,39,.18); }
+  .btn{
+    width:100%; padding:13px 18px; border:none; border-radius:12px;
+    background:linear-gradient(135deg,var(--gold-bright),var(--gold-deep));
+    color:#2a2007; font-weight:800; font-size:15px; cursor:pointer;
+    transition:.25s; box-shadow:0 8px 18px rgba(156,122,23,.28);
+  }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn:active{ transform:translateY(0); }
+  .btn.ghost{
+    background:transparent; color:var(--ink); border:1px solid var(--border);
+    box-shadow:none; font-weight:600;
+  }
+  .btn.danger{ background:linear-gradient(135deg,#e07a5f,#c1502f); color:#fff; box-shadow:0 8px 18px rgba(193,80,47,.28);}
+  .error-msg{ color:#c1502f; font-size:13px; margin-top:10px; min-height:16px; }
+  .hint{ font-size:12px; color:var(--ink-soft); margin-top:16px; }
+
+  /* ---------- Admin ---------- */
+  #admin{ align-items:stretch; padding:90px 18px 60px; }
+  .admin-wrap{ width:100%; max-width:760px; margin:0 auto; text-align:right; }
+  .admin-header{ display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:28px; gap:12px; flex-wrap:wrap;}
+  .admin-header h1{ font-family:'Cormorant Garamond', serif; font-size:clamp(28px,4vw,38px); }
+  .admin-header p{ color:var(--ink-soft); font-size:13.5px; margin-top:4px; }
+  .icon-btn{
+    width:40px; height:40px; border-radius:12px; border:1px solid var(--border);
+    background:var(--card); display:flex; align-items:center; justify-content:center;
+    cursor:pointer; color:var(--ink); transition:.25s; flex-shrink:0;
+  }
+  .icon-btn:hover{ border-color:var(--gold); }
+  .toolbar{ display:flex; gap:10px; align-items:center; }
+
+  .search-row{ display:flex; gap:10px; margin-bottom:18px; }
+  .search-row input{ flex:1; }
+
+  #list{ display:flex; flex-direction:column; gap:10px; margin-bottom:20px; }
+  .row{
+    background:var(--card); border:1px solid var(--border); border-radius:16px;
+    padding:14px 18px; display:flex; align-items:center; justify-content:space-between;
+    gap:10px; flex-wrap:wrap;
+  }
+  .row-info{ display:flex; align-items:center; gap:12px; }
+  .avatar{
+    width:38px; height:38px; border-radius:50%; flex-shrink:0;
+    background:linear-gradient(135deg,var(--gold-bright),var(--gold-deep));
+    display:flex; align-items:center; justify-content:center;
+    color:#2a2007; font-weight:800; font-size:14px;
+  }
+  .row-name{ font-weight:700; font-size:15.5px; }
+  .row-courses{ font-size:12px; color:var(--ink-soft); margin-top:2px; display:flex; gap:6px; flex-wrap:wrap;}
+  .chip{
+    background:var(--bg-soft); border:1px solid var(--border); border-radius:999px;
+    padding:2px 10px; font-size:11.5px; color:var(--ink-soft);
+  }
+  .row-actions{ display:flex; gap:8px; }
+  .row-actions button{
+    border:none; border-radius:10px; padding:8px 14px; font-size:13px; font-weight:700;
+    cursor:pointer; transition:.2s;
+  }
+  .edit-btn{ background:var(--bg-soft); color:var(--ink); }
+  .edit-btn:hover{ background:var(--gold); color:#2a2007; }
+  .del-btn{ background:transparent; color:#c1502f; border:1px solid #c1502f55 !important; }
+  .del-btn:hover{ background:#c1502f; color:#fff; }
+
+  .add-btn{
+    width:100%; padding:15px; border-radius:14px; border:2px dashed var(--border);
+    background:transparent; color:var(--ink-soft); font-weight:700; cursor:pointer;
+    transition:.25s; display:flex; align-items:center; justify-content:center; gap:8px;
+  }
+  .add-btn:hover{ border-color:var(--gold); color:var(--gold-deep); }
+
+  .notes-box{
+    margin-top:26px; background:var(--bg-soft); border:1px solid var(--border);
+    border-radius:16px; padding:16px 18px;
+  }
+  .notes-box h3{ font-size:13px; color:var(--ink-soft); margin-bottom:8px; font-weight:700;}
+  .notes-box ul{ list-style:none; display:flex; flex-direction:column; gap:4px; }
+  .notes-box li{ font-size:13px; color:var(--ink-soft); }
+
+  .state-msg{ text-align:center; padding:40px 10px; color:var(--ink-soft); font-size:14px; }
+
+  /* ---------- Modal ---------- */
+  .modal-backdrop{
+    position:fixed; inset:0; background:rgba(20,14,8,.55); backdrop-filter:blur(3px);
+    display:flex; align-items:center; justify-content:center; z-index:100; padding:20px;
+  }
+  .modal{
+    background:var(--card); border-radius:20px; padding:30px 28px; width:100%; max-width:420px;
+    box-shadow:var(--shadow); max-height:88vh; overflow-y:auto;
+  }
+  .modal h3{ font-family:'Cormorant Garamond', serif; font-size:26px; margin-bottom:18px; text-align:right;}
+  .courses-grid{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:8px;}
+  .course-opt{
+    border:1px solid var(--border); border-radius:12px; padding:11px 12px;
+    display:flex; align-items:center; gap:8px; cursor:pointer; font-size:13.5px;
+    transition:.2s; user-select:none;
+  }
+  .course-opt input{ accent-color:var(--gold-deep); width:16px; height:16px; }
+  .course-opt.checked{ border-color:var(--gold); background:var(--bg-soft); }
+  .modal-actions{ display:flex; gap:10px; margin-top:22px; }
+  .field-error{ color:#c1502f; font-size:12.5px; margin-top:6px; min-height:14px;}
+
+  .courses-modal{
+    max-width:900px; width:94vw; height:86vh; padding:18px 18px 22px;
+    display:flex; flex-direction:column;
+  }
+  .courses-modal-head{
+    display:flex; align-items:center; justify-content:space-between;
+    margin-bottom:12px; flex-shrink:0;
+  }
+  .courses-modal-head h3{ margin:0; }
+  .courses-frame{
+    flex:1; width:100%; border:1px solid var(--border); border-radius:14px;
+    background:#fff;
+  }
+
+  @media (max-width:520px){
+    .admin-header{ flex-direction:column; align-items:flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<div class="balloons" id="balloons"></div>
+
+<button class="theme-toggle" id="themeToggle" title="تغيير الألوان">
+  <span class="theme-dot"></span>
+  <span id="themeLabel">أبيض وذهبي</span>
+</button>
+
+<!-- ---------------- Splash ---------------- -->
+<div class="screen" id="splash">
+  <div class="splash-badge">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M12 3c-4 0-6.5 3.2-6.5 6.8 0 4 3 6.5 5 8.7.6.6.9 1.3.9 1.3h1.2s.3-.7.9-1.3c2-2.2 5-4.7 5-8.7C18.5 6.2 16 3 12 3Z" stroke="#2a2007" stroke-width="1.4"/><path d="M12 19.8V22M10.5 22h3" stroke="#2a2007" stroke-width="1.4" stroke-linecap="round"/></svg>
+  </div>
+  <div class="eyebrow">STUDY HOUSE</div>
+  <h1 class="display">أهلاً بك في</h1>
+  <h2>STUDY HOUSE ADMIN</h2>
+</div>
+
+<!-- ---------------- Login ---------------- -->
+<div class="screen hidden" id="login">
+  <div class="card">
+    <div class="eyebrow">STUDY HOUSE ADMIN</div>
+    <h2>الدخول للوحة التحكم</h2>
+    <div class="field">
+      <label for="codeInput">رمز الدخول</label>
+      <input type="password" id="codeInput" placeholder="ادخل الرمز" autocomplete="off">
+    </div>
+    <button class="btn" id="loginBtn">دخول</button>
+    <div class="error-msg" id="loginError"></div>
+  </div>
+</div>
+
+<!-- ---------------- Admin ---------------- -->
+<div class="screen hidden" id="admin">
+  <div class="admin-wrap">
+    <div class="admin-header">
+      <div>
+        <h1>بيانات الطلاب</h1>
+        <p>يمكنك إضافة أو تعديل بيانات الطلاب في القائمة</p>
+      </div>
+      <div class="toolbar">
+        <button class="icon-btn" id="coursesBtn" title="تعديل الكورسات">📚</button>
+        <button class="icon-btn" id="refreshBtn" title="تحديث">⟳</button>
+        <button class="icon-btn" id="logoutBtn" title="خروج">⏏</button>
+      </div>
+    </div>
+
+    <div class="search-row">
+      <input type="text" id="searchInput" placeholder="ابحث باسم الطالب...">
+    </div>
+
+    <div id="list"><div class="state-msg">جارِ تحميل البيانات...</div></div>
+
+    <button class="add-btn" id="addBtn">+ إضافة طالب جديد</button>
+
+    <div class="notes-box hidden" id="notesBox">
+      <h3>رموز / ملاحظات إضافية</h3>
+      <ul id="notesList"></ul>
+    </div>
+  </div>
+</div>
+
+<!-- ---------------- Modal: Add / Edit ---------------- -->
+<div class="modal-backdrop hidden" id="modalBackdrop">
+  <div class="modal">
+    <h3 id="modalTitle">إضافة طالب</h3>
+    <div class="field">
+      <label>اسم الطالب</label>
+      <input type="text" id="formName" placeholder="مثال: Ahmed">
+    </div>
+    <div class="field">
+      <label>الباسورد</label>
+      <input type="text" id="formPassword" placeholder="مثال: Ahmed">
+    </div>
+    <div class="field">
+      <label>الكورسات المتاحة</label>
+      <div class="courses-grid" id="coursesGrid"></div>
+    </div>
+    <div class="field-error" id="formError"></div>
+    <div class="modal-actions">
+      <button class="btn ghost" id="modalCancel">إلغاء</button>
+      <button class="btn" id="modalSave">حفظ</button>
+    </div>
+  </div>
+</div>
+
+<!-- ---------------- Modal: Courses doc (inline box on top of everything) ---------------- -->
+<div class="modal-backdrop hidden" id="coursesBackdrop">
+  <div class="modal courses-modal">
+    <div class="courses-modal-head">
+      <h3>تعديل الكورسات</h3>
+      <button class="icon-btn" id="coursesClose" title="إغلاق">✕</button>
+    </div>
+    <iframe id="coursesFrame" class="courses-frame" src="" title="تعديل الكورسات" loading="lazy"></iframe>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var ACCESS_CODE = "DECI@00ACADEMY";
+  var COURSES = [
+    { id:"arabic",  label:"عربي" },
+    { id:"english", label:"إنجليزي" },
+    { id:"coding",  label:"Coding" },
+    { id:"other",   label:"أخرى" }
+  ];
+
+  var STORAGE_THEME_KEY = "sha_theme";
+  var DEFAULT_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzVNINaQo46CQdhiwJ6g-CjDjLYBLvlW7WKXukW9oRmStZg-VptTzGjkstjvMlXJWWecw/exec";
+  var COURSES_DOC_URL = "https://docs.google.com/document/d/1PNxSEAKVkF4gHaMxzMxeVVhrPlHLy7O8m6piocSCH7M/edit?usp=sharing";
+
+  var state = {
+    students: [],
+    notes: [],
+    editingIndex: null // null = وضع الإضافة، رقم = وضع التعديل
+  };
+
+  // ---------- Elements ----------
+  var $ = function(id){ return document.getElementById(id); };
+  var splash = $("splash"), loginScreen = $("login"), adminScreen = $("admin");
+  var codeInput = $("codeInput"), loginBtn = $("loginBtn"), loginError = $("loginError");
+  var listEl = $("list"), notesBox = $("notesBox"), notesList = $("notesList");
+  var addBtn = $("addBtn"), refreshBtn = $("refreshBtn"), logoutBtn = $("logoutBtn");
+  var coursesBtn = $("coursesBtn"), coursesBackdrop = $("coursesBackdrop"), coursesFrame = $("coursesFrame"), coursesClose = $("coursesClose");
+  var searchInput = $("searchInput");
+
+  var modalBackdrop = $("modalBackdrop"), modalTitle = $("modalTitle");
+  var formName = $("formName"), formPassword = $("formPassword"), formError = $("formError");
+  var coursesGrid = $("coursesGrid");
+  var modalCancel = $("modalCancel"), modalSave = $("modalSave");
+
+  var themeToggle = $("themeToggle"), themeLabel = $("themeLabel");
+
+  // ---------- Theme ----------
+  function applyTheme(theme){
+    document.documentElement.setAttribute("data-theme", theme);
+    themeLabel.textContent = theme === "gold" ? "أبيض وذهبي" : "بني وذهبي";
+    localStorage.setItem(STORAGE_THEME_KEY, theme);
+  }
+  themeToggle.addEventListener("click", function(){
+    var cur = document.documentElement.getAttribute("data-theme");
+    applyTheme(cur === "gold" ? "brown" : "gold");
+  });
+  applyTheme(localStorage.getItem(STORAGE_THEME_KEY) || "gold");
+
+  // ---------- Balloons background ----------
+  function buildBalloons(){
+    var wrap = $("balloons");
+    var palette = ["var(--gold-bright)","var(--gold)","var(--gold-deep)"];
+    var count = window.innerWidth < 600 ? 6 : 10;
+    for (var i=0;i<count;i++){
+      var b = document.createElement("div");
+      b.className = "balloon";
+      var size = 46 + Math.random()*40;
+      var left = Math.random()*100;
+      var duration = 16 + Math.random()*14;
+      var delay = Math.random()*-20;
+      var color = palette[i % palette.length];
+      b.style.left = left + "vw";
+      b.style.width = size + "px";
+      b.style.animationDuration = duration + "s";
+      b.style.animationDelay = delay + "s";
+      b.innerHTML =
+        '<svg width="'+size+'" height="'+(size*1.7)+'" viewBox="0 0 60 100">' +
+          '<line x1="30" y1="70" x2="30" y2="100" class="string"/>' +
+          '<ellipse cx="30" cy="38" rx="28" ry="34" fill="'+color+'"/>' +
+          '<ellipse cx="20" cy="24" rx="8" ry="12" fill="#ffffff" opacity="0.35"/>' +
+          '<path d="M26 70 L34 70 L30 78 Z" fill="'+color+'"/>' +
+        '</svg>';
+      wrap.appendChild(b);
+    }
+  }
+  buildBalloons();
+
+  // ---------- Splash ----------
+  setTimeout(function(){
+    splash.classList.add("fade-out");
+    setTimeout(function(){
+      splash.classList.add("hidden");
+      loginScreen.classList.remove("hidden");
+      codeInput.focus();
+    }, 700);
+  }, 2400);
+
+  // ---------- Script URL ----------
+  // الرابط ثابت في الكود، مفيش أي واجهة لتعديله من الموقع.
+  function getScriptUrl(){ return DEFAULT_SCRIPT_URL; }
+
+  // ---------- Login ----------
+  function doLogin(){
+    var val = codeInput.value.trim();
+    if (val === ACCESS_CODE){
+      loginError.textContent = "";
+      loginScreen.classList.add("hidden");
+      adminScreen.classList.remove("hidden");
+      loadStudents();
+    } else {
+      loginError.textContent = "الرمز غير صحيح، حاول مرة أخرى";
+    }
+  }
+  loginBtn.addEventListener("click", doLogin);
+  codeInput.addEventListener("keydown", function(e){ if (e.key === "Enter") doLogin(); });
+
+  logoutBtn.addEventListener("click", function(){
+    adminScreen.classList.add("hidden");
+    loginScreen.classList.remove("hidden");
+    codeInput.value = "";
+  });
+  refreshBtn.addEventListener("click", loadStudents);
+
+  coursesBtn.addEventListener("click", function(){
+    if (!coursesFrame.getAttribute("src")) coursesFrame.setAttribute("src", COURSES_DOC_URL);
+    coursesBackdrop.classList.remove("hidden");
+  });
+  function closeCoursesModal(){ coursesBackdrop.classList.add("hidden"); }
+  coursesClose.addEventListener("click", closeCoursesModal);
+  coursesBackdrop.addEventListener("click", function(e){
+    if (e.target === coursesBackdrop) closeCoursesModal();
+  });
+  document.addEventListener("keydown", function(e){
+    if (e.key === "Escape") closeCoursesModal();
+  });
+
+  // ---------- Data loading ----------
+  function loadStudents(){
+    var url = getScriptUrl();
+    if (!url){
+      listEl.innerHTML = '<div class="state-msg">من فضلك أضف رابط السكربت من إعدادات الاتصال (⚙) أولاً.</div>';
+      return;
+    }
+    listEl.innerHTML = '<div class="state-msg">جارِ تحميل البيانات...</div>';
+    fetch(url + "?action=list")
+      .then(function(res){ return res.json(); })
+      .then(function(json){
+        if (!json.success) throw new Error(json.error || "تعذر تحميل البيانات");
+        state.students = json.data.students || [];
+        state.notes = json.data.notes || [];
+        renderList();
+        renderNotes();
+      })
+      .catch(function(err){
+        listEl.innerHTML = '<div class="state-msg">حدث خطأ أثناء تحميل البيانات: ' + escapeHtml(err.message) + '</div>';
+      });
+  }
+
+  function escapeHtml(s){
+    return String(s).replace(/[&<>"']/g, function(c){
+      return { "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;" }[c];
+    });
+  }
+
+  function courseLabel(id){
+    var found = COURSES.filter(function(c){ return c.id === id; })[0];
+    return found ? found.label : id;
+  }
+
+  function renderList(){
+    var q = (searchInput.value || "").trim().toLowerCase();
+    var items = state.students.filter(function(s){
+      return !q || s.name.toLowerCase().indexOf(q) !== -1;
+    });
+
+    if (items.length === 0){
+      listEl.innerHTML = '<div class="state-msg">لا يوجد طلاب مطابقين.</div>';
+      return;
+    }
+
+    listEl.innerHTML = "";
+    items.forEach(function(s){
+      var row = document.createElement("div");
+      row.className = "row";
+
+      var coursesHtml = (s.courses || []).map(function(c){
+        return '<span class="chip">' + escapeHtml(courseLabel(c)) + '</span>';
+      }).join("");
+
+      row.innerHTML =
+        '<div class="row-info">' +
+          '<div class="avatar">' + escapeHtml((s.name || "?").charAt(0).toUpperCase()) + '</div>' +
+          '<div>' +
+            '<div class="row-name">' + escapeHtml(s.name) + '</div>' +
+            '<div class="row-courses">' + (coursesHtml || '<span class="chip">بدون كورسات</span>') + '</div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="row-actions">' +
+          '<button class="edit-btn" data-idx="' + s.index + '">تعديل</button>' +
+          '<button class="del-btn" data-idx="' + s.index + '">حذف</button>' +
+        '</div>';
+
+      row.querySelector(".edit-btn").addEventListener("click", function(){ openEditModal(s); });
+      row.querySelector(".del-btn").addEventListener("click", function(){ confirmDelete(s); });
+
+      listEl.appendChild(row);
+    });
+  }
+  searchInput.addEventListener("input", renderList);
+
+  function renderNotes(){
+    if (!state.notes.length){ notesBox.classList.add("hidden"); return; }
+    notesBox.classList.remove("hidden");
+    notesList.innerHTML = "";
+    state.notes.forEach(function(n){
+      var li = document.createElement("li");
+      li.textContent = n.text;
+      notesList.appendChild(li);
+    });
+  }
+
+  // ---------- Modal: add / edit ----------
+  function buildCoursesGrid(selected){
+    coursesGrid.innerHTML = "";
+    COURSES.forEach(function(c){
+      var label = document.createElement("label");
+      label.className = "course-opt" + (selected.indexOf(c.id) !== -1 ? " checked" : "");
+      label.innerHTML = '<input type="checkbox" value="' + c.id + '" ' + (selected.indexOf(c.id) !== -1 ? "checked" : "") + '> ' + c.label;
+      var input = label.querySelector("input");
+      input.addEventListener("change", function(){
+        label.classList.toggle("checked", input.checked);
+      });
+      coursesGrid.appendChild(label);
+    });
+  }
+
+  function openAddModal(){
+    state.editingIndex = null;
+    modalTitle.textContent = "إضافة طالب";
+    formName.value = "";
+    formPassword.value = "";
+    formError.textContent = "";
+    buildCoursesGrid([]);
+    modalBackdrop.classList.remove("hidden");
+  }
+  function openEditModal(student){
+    state.editingIndex = student.index;
+    modalTitle.textContent = "تعديل بيانات " + student.name;
+    formName.value = student.name;
+    formPassword.value = student.password;
+    formError.textContent = "";
+    buildCoursesGrid(student.courses || []);
+    modalBackdrop.classList.remove("hidden");
+  }
+  function closeModal(){ modalBackdrop.classList.add("hidden"); }
+
+  addBtn.addEventListener("click", openAddModal);
+  modalCancel.addEventListener("click", closeModal);
+
+  modalSave.addEventListener("click", function(){
+    var url = getScriptUrl();
+    if (!url){ formError.textContent = "أضف رابط السكربت من الإعدادات أولاً."; return; }
+
+    var name = formName.value.trim();
+    var password = formPassword.value.trim();
+    if (!name || !password){
+      formError.textContent = "الاسم والباسورد مطلوبين.";
+      return;
+    }
+    var courses = Array.prototype.slice.call(coursesGrid.querySelectorAll("input:checked")).map(function(i){ return i.value; });
+
+    var payload = {
+      action: state.editingIndex === null ? "add" : "edit",
+      name: name,
+      password: password,
+      courses: courses
+    };
+    if (state.editingIndex !== null) payload.index = state.editingIndex;
+
+    modalSave.disabled = true;
+    modalSave.textContent = "جارِ الحفظ...";
+
+    fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(payload)
+    })
+      .then(function(res){ return res.json(); })
+      .then(function(json){
+        modalSave.disabled = false;
+        modalSave.textContent = "حفظ";
+        if (!json.success) throw new Error(json.error || "تعذر الحفظ");
+        state.students = json.data.students || [];
+        state.notes = json.data.notes || [];
+        renderList();
+        renderNotes();
+        closeModal();
+      })
+      .catch(function(err){
+        modalSave.disabled = false;
+        modalSave.textContent = "حفظ";
+        formError.textContent = "خطأ: " + err.message;
+      });
+  });
+
+  function confirmDelete(student){
+    if (!window.confirm('هل أنت متأكد من حذف الطالب "' + student.name + '"؟')) return;
+    var url = getScriptUrl();
+    if (!url) return;
+
+    fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify({ action: "delete", index: student.index })
+    })
+      .then(function(res){ return res.json(); })
+      .then(function(json){
+        if (!json.success) throw new Error(json.error || "تعذر الحذف");
+        state.students = json.data.students || [];
+        state.notes = json.data.notes || [];
+        renderList();
+        renderNotes();
+      })
+      .catch(function(err){ alert("خطأ أثناء الحذف: " + err.message); });
+  }
+
+})();
+</script>
+</body>
+</html>
