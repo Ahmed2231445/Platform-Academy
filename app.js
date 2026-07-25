@@ -1451,6 +1451,119 @@ window.setLoggedInUI = function(username) {
     });
   }
 
+/* ===== نموذج الانضمام (Signup) ===== */
+  const signupOverlay = document.getElementById("signupOverlay");
+  const signupClose = document.getElementById("signupClose");
+  const signupForm = document.getElementById("signupForm");
+  const signupError = document.getElementById("signupError");
+  const signupBtnText = document.getElementById("signupBtnText");
+  const signupSubmitBtn = signupForm ? signupForm.querySelector(".login-submit") : null;
+  const joinNowTrigger = document.getElementById("joinNowTrigger");
+
+  function openSignup(e) {
+    if (e) e.preventDefault();
+    if (signupOverlay) {
+      signupOverlay.classList.add("open");
+      if (signupError) signupError.textContent = "";
+      if (signupForm) { signupForm.reset(); signupForm.style.display = "flex"; }
+      const oldSuccess = signupOverlay.querySelector(".signup-success");
+      if (oldSuccess) oldSuccess.remove();
+    }
+  }
+  function closeSignup() {
+    if (signupOverlay) signupOverlay.classList.remove("open");
+  }
+
+  if (joinNowTrigger) joinNowTrigger.addEventListener("click", openSignup);
+  if (signupClose) signupClose.addEventListener("click", closeSignup);
+  if (signupOverlay) {
+    signupOverlay.addEventListener("click", (e) => {
+      if (e.target === signupOverlay) closeSignup();
+    });
+  }
+
+  function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  if (signupForm) {
+    signupForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      if (signupError) signupError.textContent = "";
+
+      const fullName = document.getElementById("signupFullName").value.trim();
+      const username = document.getElementById("signupUsername").value.trim();
+      const password = document.getElementById("signupPassword").value.trim();
+      const confirmPassword = document.getElementById("signupConfirmPassword").value.trim();
+      const email = document.getElementById("signupEmail").value.trim();
+      const courses = Array.from(signupForm.querySelectorAll('input[name="signupCourses"]:checked')).map((el) => el.value);
+
+      const nameParts = fullName.split(/\s+/).filter(Boolean);
+      if (nameParts.length < 4) {
+        signupError.textContent = "يرجى إدخال الاسم الرباعي كاملاً";
+        return;
+      }
+      if (!username) {
+        signupError.textContent = "يرجى إدخال اسم المستخدم";
+        return;
+      }
+      if (password.length < 6) {
+        signupError.textContent = "كلمة المرور يجب أن تكون 6 أحرف على الأقل";
+        return;
+      }
+      if (password !== confirmPassword) {
+        signupError.textContent = "كلمتا المرور غير متطابقتين";
+        return;
+      }
+      if (!isValidEmail(email)) {
+        signupError.textContent = "يرجى إدخال بريد إلكتروني صحيح";
+        return;
+      }
+      if (courses.length === 0) {
+        signupError.textContent = "يرجى اختيار كورس واحد على الأقل";
+        return;
+      }
+
+      if (signupBtnText) signupBtnText.textContent = "جارٍ الإرسال...";
+      if (signupSubmitBtn) signupSubmitBtn.disabled = true;
+
+      try {
+        const res = await fetch(LOGIN_DOC_EXPORT_URL, {
+          method: "POST",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify({
+            action: "signup",
+            fullName,
+            username,
+            password,
+            email,
+            courses,
+          }),
+        });
+        const result = await res.json();
+        if (!result.success) throw new Error(result.error || "فشل الإرسال");
+
+        signupForm.style.display = "none";
+        const successMsg = document.createElement("div");
+        successMsg.className = "signup-success";
+        successMsg.innerHTML = `
+          <span class="signup-success-icon">✓</span>
+          <h3>تم الإرسال</h3>
+          <p>شكرًا لتسجيلك، سيتم الرد عليك عبر بريدك الإلكتروني قريبًا.</p>
+        `;
+        signupOverlay.querySelector(".signup-panel").appendChild(successMsg);
+      } catch (err) {
+        signupError.textContent = "تعذر إرسال البيانات، حاول مرة أخرى";
+      } finally {
+        if (signupBtnText) signupBtnText.textContent = "إرسال";
+        if (signupSubmitBtn) signupSubmitBtn.disabled = false;
+      }
+    });
+  }
+
+  /* ===== الاختبارات ===== */
+
+  
   /* ===== الاختبارات ===== */
   const appExamLink = document.getElementById("appExamLink");
   const appExamContent = document.getElementById("appExamContent");
