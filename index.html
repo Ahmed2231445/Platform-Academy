@@ -53,9 +53,9 @@
         <p class="hero-subtitle" data-i18n="hero-subtitle">Learn English &amp; Coding, Build Your Future.</p>
         <p class="hero-desc" data-i18n="hero-desc">Improve your English and programming skills with interactive lessons, hands-on practice, and a supportive community made for everyone.</p>
         <div class="hero-actions">
-          <a href="#courses" class="btn btn-primary"><span data-i18n="btn-start">Start Learning</span>
-            <svg viewBox="0 0 24 24" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+          <a href="#courses" class="btn btn-primary" id="joinNowTrigger"><span data-i18n="btn-join">Join Now</span>
+          <svg viewBox="0 0 24 24" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
           <a href="#courses" class="btn btn-outline" data-i18n="btn-explore">Explore Courses</a>
         </div>
         <div class="hero-trust">
@@ -343,6 +343,71 @@
         </button>
       </form>
     </div>
+  </div>
+</div>
+
+<!-- Signup overlay -->
+<div class="login-overlay" id="signupOverlay">
+  <div class="signup-panel">
+    <button class="login-close" id="signupClose" aria-label="إغلاق">&times;</button>
+    <div class="signup-header">
+      <img src="logo.png" alt="Study House logo" class="login-logo">
+      <h2>انضم إلى <span class="accent">Study House</span></h2>
+      <p class="login-sub">املأ بياناتك وسنتواصل معك عبر البريد الإلكتروني</p>
+    </div>
+
+    <form id="signupForm" class="signup-form">
+      <label>
+        الاسم الرباعي
+        <input type="text" id="signupFullName" placeholder="مثال: أحمد محمد علي سيد" required>
+      </label>
+      <label>
+        اسم المستخدم
+        <input type="text" id="signupUsername" required>
+      </label>
+      <div class="signup-row">
+        <label>
+          كلمة المرور
+          <input type="password" id="signupPassword" required>
+        </label>
+        <label>
+          تأكيد كلمة المرور
+          <input type="password" id="signupConfirmPassword" required>
+        </label>
+      </div>
+      <label>
+        البريد الإلكتروني
+        <input type="email" id="signupEmail" required>
+      </label>
+
+      <div class="signup-courses">
+        <span class="signup-courses-label">اختر الكورس أو أكثر</span>
+        <div class="signup-courses-grid">
+          <label class="signup-course-check">
+            <input type="checkbox" name="signupCourses" value="english">
+            <span>اللغة الإنجليزية</span>
+          </label>
+          <label class="signup-course-check">
+            <input type="checkbox" name="signupCourses" value="arabic">
+            <span>اللغة العربية</span>
+          </label>
+          <label class="signup-course-check">
+            <input type="checkbox" name="signupCourses" value="coding">
+            <span>البرمجة</span>
+          </label>
+          <label class="signup-course-check">
+            <input type="checkbox" name="signupCourses" value="other">
+            <span>الخط العربي والقرآن</span>
+          </label>
+        </div>
+      </div>
+
+      <p class="signup-note">سيتم الرد عليك عبر بريدك الإلكتروني، تأكد من صحة البريد الإلكتروني قبل الإرسال.</p>
+      <p class="login-error" id="signupError"></p>
+      <button type="submit" class="btn btn-primary login-submit">
+        <span id="signupBtnText">إرسال</span>
+      </button>
+    </form>
   </div>
 </div>
 
