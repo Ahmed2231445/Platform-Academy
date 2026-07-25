@@ -4380,8 +4380,6 @@ body.theme-brown .course-hub-switch-btn:hover {
   width: min(560px, 100%);
   max-height: 92vh;
   overflow-y: auto;
-  background: var(--card);
-  border: 1px solid var(--border);
   border-radius: 28px;
   padding: 40px 36px;
   position: relative;
@@ -4392,102 +4390,112 @@ body.theme-brown .course-hub-switch-btn:hover {
 }
 .login-overlay.open .signup-panel { transform: translateY(0) scale(1); opacity: 1; }
 
+/* الحالة الافتراضية: بني وذهبي */
+body:not(.theme-brown) .signup-panel,
+body.theme-brown .signup-panel {
+  background: #241811;
+  border: 1px solid rgba(219, 167, 88, 0.25);
+}
+body.theme-brown .signup-panel {
+  background: #241811;
+  border: 1px solid rgba(219, 167, 88, 0.25);
+}
+
 .signup-header { text-align: center; margin-bottom: 22px; }
 .signup-header .login-logo { width: 64px; height: 64px; margin: 0 auto 12px; }
-.signup-header h2 { margin: 0 0 6px; font-size: 1.35rem; font-weight: 800; color: var(--ink); }
-.signup-header h2 .accent { color: var(--gold); }
-.signup-header .login-sub { color: var(--muted); }
+.signup-header h2 { margin: 0 0 6px; font-size: 1.35rem; font-weight: 800; color: #f5efe8; }
+.signup-header h2 .accent { color: #e3a335; }
+.signup-header .login-sub { color: #c9bfb4; }
 
 .signup-form { display: flex; flex-direction: column; gap: 16px; }
-.signup-form label { display: flex; flex-direction: column; gap: 6px; font-size: 0.86rem; color: var(--ink-soft); font-weight: 600; }
+.signup-form label { display: flex; flex-direction: column; gap: 6px; font-size: 0.86rem; color: #d6cdc4; font-weight: 600; }
 .signup-form input[type="text"],
 .signup-form input[type="password"],
 .signup-form input[type="email"] {
   padding: 12px 14px;
   border-radius: 12px;
-  border: 1.5px solid var(--border);
-  background: var(--bg);
-  color: var(--ink);
+  border: 1.5px solid rgba(219, 167, 88, 0.25);
+  background: rgba(255, 255, 255, 0.06);
+  color: #f5efe8;
   font-size: 0.95rem;
   font-family: inherit;
   outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
-.signup-form input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(227,163,53,0.18); }
+.signup-form input::placeholder { color: #9c9089; }
+.signup-form input:focus { border-color: #e3a335; box-shadow: 0 0 0 3px rgba(227,163,53,0.2); }
 
 .signup-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 @media (max-width: 480px) { .signup-row { grid-template-columns: 1fr; } }
 
 .signup-courses { display: flex; flex-direction: column; gap: 10px; }
-.signup-courses-label { font-size: 0.86rem; font-weight: 700; color: var(--ink); }
+.signup-courses-label { font-size: 0.86rem; font-weight: 700; color: #f5efe8; }
 .signup-courses-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 @media (max-width: 480px) { .signup-courses-grid { grid-template-columns: 1fr; } }
 .signup-course-check {
   display: flex; align-items: center; gap: 10px;
   padding: 10px 14px;
-  border: 1.5px solid var(--border);
+  border: 1.5px solid rgba(219, 167, 88, 0.25);
   border-radius: 12px;
-  background: var(--bg);
+  background: rgba(255, 255, 255, 0.05);
   cursor: pointer;
   font-size: 0.88rem;
   font-weight: 600;
-  color: var(--ink-soft);
+  color: #d6cdc4;
   transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
-.signup-course-check input { width: 17px; height: 17px; accent-color: var(--gold-dark); }
+.signup-course-check input { width: 17px; height: 17px; accent-color: #e3a335; }
 .signup-course-check:has(input:checked) {
-  border-color: var(--gold);
-  background: var(--gold-light);
-  color: var(--gold-dark);
+  border-color: #e3a335;
+  background: rgba(227, 163, 53, 0.15);
+  color: #e3a335;
 }
 
-.signup-note { font-size: 0.8rem; color: var(--muted); margin: 0; line-height: 1.6; }
+.signup-note { font-size: 0.8rem; color: #b3a69a; margin: 0; line-height: 1.6; }
 
 .signup-success { text-align: center; padding: 30px 10px 10px; }
 .signup-success-icon {
   display: inline-flex; align-items: center; justify-content: center;
   width: 56px; height: 56px;
   border-radius: 50%;
-  background: #e5f4ea; color: #2f7a54;
+  background: rgba(47, 158, 92, 0.15); color: #4cbf7d;
   font-size: 1.6rem; font-weight: 800;
   margin-bottom: 14px;
 }
-.signup-success h3 { margin: 0 0 8px; font-size: 1.15rem; font-weight: 800; color: var(--ink); }
-.signup-success p { margin: 0; color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
+.signup-success h3 { margin: 0 0 8px; font-size: 1.15rem; font-weight: 800; color: #f5efe8; }
+.signup-success p { margin: 0; color: #b3a69a; font-size: 0.9rem; line-height: 1.6; }
+
+/* ✅ الحالة البديلة: لما الزرار يبقى على الثيم الذهبي (أبيض + ذهبي) */
+body:not(.theme-brown) .signup-panel {
+  background: #ffffff;
+  border: 1px solid #ece7dd;
+}
+body:not(.theme-brown) .signup-header h2 { color: #1b1b1b; }
+body:not(.theme-brown) .signup-header .login-sub { color: #767676; }
+body:not(.theme-brown) .signup-form label { color: #4a4a4a; }
+body:not(.theme-brown) .signup-form input[type="text"],
+body:not(.theme-brown) .signup-form input[type="password"],
+body:not(.theme-brown) .signup-form input[type="email"] {
+  background: #faf8f4;
+  border-color: #ece7dd;
+  color: #1b1b1b;
+}
+body:not(.theme-brown) .signup-form input::placeholder { color: #9a9a9a; }
+body:not(.theme-brown) .signup-courses-label { color: #1b1b1b; }
+body:not(.theme-brown) .signup-course-check {
+  background: #faf8f4;
+  border-color: #ece7dd;
+  color: #4a4a4a;
+}
+body:not(.theme-brown) .signup-course-check:has(input:checked) {
+  border-color: #e3a335;
+  background: #f6dfae;
+  color: #c9821f;
+}
+body:not(.theme-brown) .signup-note { color: #767676; }
+body:not(.theme-brown) .signup-success h3 { color: #1b1b1b; }
+body:not(.theme-brown) .signup-success p { color: #767676; }
 
 @media (max-width: 640px) {
   .signup-panel { padding: 30px 22px; border-radius: 22px; }
-}
-
-/* ===== الثيم البني الفاخر - نموذج الانضمام ===== */
-body.theme-brown .signup-panel {
-  background: rgba(30, 20, 16, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-color: rgba(180, 150, 130, 0.2);
-  box-shadow: 0 30px 70px -30px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255, 215, 150, 0.08);
-}
-body.theme-brown .signup-form input[type="text"],
-body.theme-brown .signup-form input[type="password"],
-body.theme-brown .signup-form input[type="email"] {
-  background: rgba(50, 35, 28, 0.5);
-  border-color: rgba(180, 150, 130, 0.25);
-  color: var(--ink);
-}
-body.theme-brown .signup-form input:focus {
-  border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(219, 167, 88, 0.15);
-}
-body.theme-brown .signup-course-check {
-  background: rgba(50, 35, 28, 0.4);
-  border-color: rgba(180, 150, 130, 0.2);
-}
-body.theme-brown .signup-course-check:has(input:checked) {
-  background: rgba(219, 167, 88, 0.15);
-  border-color: var(--gold);
-  color: var(--gold);
-}
-body.theme-brown .signup-success-icon {
-  background: rgba(47, 158, 92, 0.15);
-  color: #4cbf7d;
 }
