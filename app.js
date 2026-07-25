@@ -311,7 +311,6 @@ function cachedFetchText(url, ttlMs = 4000) {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-document.addEventListener("DOMContentLoaded", () => {
   /* ===== Menu toggle (mobile nav) ===== */
   const menuToggle = document.getElementById("menuToggle");
   const mainNav = document.getElementById("mainNav");
