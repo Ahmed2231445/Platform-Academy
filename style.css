@@ -4387,19 +4387,12 @@ body.theme-brown .course-hub-switch-btn:hover {
   transform: translateY(24px) scale(0.97);
   opacity: 0;
   transition: transform 0.4s ease, opacity 0.4s ease, background 0.3s ease, border-color 0.3s ease;
+
+  /* الحالة الافتراضية: بني وذهبي دايمًا */
+  background: #241811;
+  border: 1px solid rgba(219, 167, 88, 0.25);
 }
 .login-overlay.open .signup-panel { transform: translateY(0) scale(1); opacity: 1; }
-
-/* الحالة الافتراضية: بني وذهبي */
-body:not(.theme-brown) .signup-panel,
-body.theme-brown .signup-panel {
-  background: #241811;
-  border: 1px solid rgba(219, 167, 88, 0.25);
-}
-body.theme-brown .signup-panel {
-  background: #241811;
-  border: 1px solid rgba(219, 167, 88, 0.25);
-}
 
 .signup-header { text-align: center; margin-bottom: 22px; }
 .signup-header .login-logo { width: 64px; height: 64px; margin: 0 auto 12px; }
@@ -4420,7 +4413,7 @@ body.theme-brown .signup-panel {
   font-size: 0.95rem;
   font-family: inherit;
   outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
 .signup-form input::placeholder { color: #9c9089; }
 .signup-form input:focus { border-color: #e3a335; box-shadow: 0 0 0 3px rgba(227,163,53,0.2); }
@@ -4465,7 +4458,9 @@ body.theme-brown .signup-panel {
 .signup-success h3 { margin: 0 0 8px; font-size: 1.15rem; font-weight: 800; color: #f5efe8; }
 .signup-success p { margin: 0; color: #b3a69a; font-size: 0.9rem; line-height: 1.6; }
 
-/* ✅ الحالة البديلة: لما الزرار يبقى على الثيم الذهبي (أبيض + ذهبي) */
+/* ===================================================================
+   ✅ التبديل الوحيد: لما الثيم يبقى أبيض/ذهبي (theme-brown مش موجودة)
+   =================================================================== */
 body:not(.theme-brown) .signup-panel {
   background: #ffffff;
   border: 1px solid #ece7dd;
