@@ -4380,20 +4380,23 @@ body.theme-brown .course-hub-switch-btn:hover {
   width: min(560px, 100%);
   max-height: 92vh;
   overflow-y: auto;
-  background: #fff;
+  background: var(--card);
+  border: 1px solid var(--border);
   border-radius: 28px;
   padding: 40px 36px;
   position: relative;
   box-shadow: 0 40px 80px -30px rgba(27,27,27,0.35);
   transform: translateY(24px) scale(0.97);
   opacity: 0;
-  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition: transform 0.4s ease, opacity 0.4s ease, background 0.3s ease, border-color 0.3s ease;
 }
 .login-overlay.open .signup-panel { transform: translateY(0) scale(1); opacity: 1; }
 
 .signup-header { text-align: center; margin-bottom: 22px; }
 .signup-header .login-logo { width: 64px; height: 64px; margin: 0 auto 12px; }
-.signup-header h2 { margin: 0 0 6px; font-size: 1.35rem; font-weight: 800; }
+.signup-header h2 { margin: 0 0 6px; font-size: 1.35rem; font-weight: 800; color: var(--ink); }
+.signup-header h2 .accent { color: var(--gold); }
+.signup-header .login-sub { color: var(--muted); }
 
 .signup-form { display: flex; flex-direction: column; gap: 16px; }
 .signup-form label { display: flex; flex-direction: column; gap: 6px; font-size: 0.86rem; color: var(--ink-soft); font-weight: 600; }
@@ -4403,10 +4406,12 @@ body.theme-brown .course-hub-switch-btn:hover {
   padding: 12px 14px;
   border-radius: 12px;
   border: 1.5px solid var(--border);
+  background: var(--bg);
+  color: var(--ink);
   font-size: 0.95rem;
   font-family: inherit;
   outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
 .signup-form input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(227,163,53,0.18); }
 
@@ -4422,6 +4427,7 @@ body.theme-brown .course-hub-switch-btn:hover {
   padding: 10px 14px;
   border: 1.5px solid var(--border);
   border-radius: 12px;
+  background: var(--bg);
   cursor: pointer;
   font-size: 0.88rem;
   font-weight: 600;
@@ -4446,9 +4452,42 @@ body.theme-brown .course-hub-switch-btn:hover {
   font-size: 1.6rem; font-weight: 800;
   margin-bottom: 14px;
 }
-.signup-success h3 { margin: 0 0 8px; font-size: 1.15rem; font-weight: 800; }
+.signup-success h3 { margin: 0 0 8px; font-size: 1.15rem; font-weight: 800; color: var(--ink); }
 .signup-success p { margin: 0; color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
 
 @media (max-width: 640px) {
   .signup-panel { padding: 30px 22px; border-radius: 22px; }
+}
+
+/* ===== الثيم البني الفاخر - نموذج الانضمام ===== */
+body.theme-brown .signup-panel {
+  background: rgba(30, 20, 16, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-color: rgba(180, 150, 130, 0.2);
+  box-shadow: 0 30px 70px -30px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255, 215, 150, 0.08);
+}
+body.theme-brown .signup-form input[type="text"],
+body.theme-brown .signup-form input[type="password"],
+body.theme-brown .signup-form input[type="email"] {
+  background: rgba(50, 35, 28, 0.5);
+  border-color: rgba(180, 150, 130, 0.25);
+  color: var(--ink);
+}
+body.theme-brown .signup-form input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(219, 167, 88, 0.15);
+}
+body.theme-brown .signup-course-check {
+  background: rgba(50, 35, 28, 0.4);
+  border-color: rgba(180, 150, 130, 0.2);
+}
+body.theme-brown .signup-course-check:has(input:checked) {
+  background: rgba(219, 167, 88, 0.15);
+  border-color: var(--gold);
+  color: var(--gold);
+}
+body.theme-brown .signup-success-icon {
+  background: rgba(47, 158, 92, 0.15);
+  color: #4cbf7d;
 }
