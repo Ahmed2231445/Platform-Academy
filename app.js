@@ -255,9 +255,7 @@ function parseCommunityText(text) {
 }
 
 async function fetchCommunityMessages() {
-  const res = await fetch(COMMUNITY_DOC_EXPORT_URL, { cache: "no-store" });
-  if (!res.ok) throw new Error("تعذر تحميل رسائل المجتمع");
-  const text = await res.text();
+  const text = await cachedFetchText(COMMUNITY_DOC_EXPORT_URL, 4000);
   return parseCommunityText(text);
 }
 
@@ -289,6 +287,29 @@ async function deleteCommunityMessage(courseKey, index, username) {
   }
 }
 
+
+/* ===== Shared short-TTL request cache ===== */
+const _requestCache = new Map();
+function cachedFetchText(url, ttlMs = 4000) {
+  const now = Date.now();
+  const cached = _requestCache.get(url);
+  if (cached && (now - cached.time) < ttlMs) {
+    return cached.promise;
+  }
+  const promise = fetch(url, { cache: "no-store" })
+    .then((res) => {
+      if (!res.ok) throw new Error("fetch_failed");
+      return res.text();
+    })
+    .catch((err) => {
+      _requestCache.delete(url);
+      throw err;
+    });
+  _requestCache.set(url, { time: now, promise });
+  return promise;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   /* ===== Menu toggle (mobile nav) ===== */
@@ -700,6 +721,10 @@ function refreshAllEditorSwitchLabels() {
   /* ===== Community section ===== */
   let communityData = null;
   let communityPollTimer = null;
+  let communityPollDelay = 4000;
+  let communityLastCount = -1;
+  const COMMUNITY_POLL_MIN = 4000;
+  const COMMUNITY_POLL_MAX = 15000;
   let activeCommunityCourse = null;
 
   function getAllowedCommunityCourses() {
@@ -785,6 +810,17 @@ function refreshAllEditorSwitchLabels() {
   async function refreshCommunity(silent) {
     try {
       communityData = await fetchCommunityMessages();
+      const count = activeCommunityCourse
+        ? (communityData[activeCommunityCourse] || []).length
+        : 0;
+
+      if (count !== communityLastCount) {
+        communityPollDelay = COMMUNITY_POLL_MIN;
+      } else {
+        communityPollDelay = Math.min(communityPollDelay + 2000, COMMUNITY_POLL_MAX);
+      }
+      communityLastCount = count;
+
       if (activeCommunityCourse) renderCommunityMessages(activeCommunityCourse);
     } catch (err) {
       if (!silent && communityMessagesEl) {
@@ -793,17 +829,24 @@ function refreshAllEditorSwitchLabels() {
     }
   }
 
+  function scheduleNextCommunityPoll() {
+    clearTimeout(communityPollTimer);
+    communityPollTimer = setTimeout(async () => {
+      await refreshCommunity(true);
+      scheduleNextCommunityPoll();
+    }, communityPollDelay);
+  }
+
   function startCommunityPolling() {
     stopCommunityPolling();
-    refreshCommunity(false);
-    communityPollTimer = setInterval(() => refreshCommunity(true), 3000);
+    communityPollDelay = COMMUNITY_POLL_MIN;
+    communityLastCount = -1;
+    refreshCommunity(false).then(scheduleNextCommunityPoll);
   }
 
   function stopCommunityPolling() {
-    if (communityPollTimer) {
-      clearInterval(communityPollTimer);
-      communityPollTimer = null;
-    }
+    clearTimeout(communityPollTimer);
+    communityPollTimer = null;
   }
 
   function communityTitleFor(courseKey) {
@@ -1604,9 +1647,7 @@ const appPronunciationContent = document.getElementById("appPronunciationContent
   }
 
   async function fetchAcademyRaw() {
-    const res = await fetch(COMMUNITY_DOC_EXPORT_URL, { cache: "no-store" });
-    if (!res.ok) throw new Error("fetch_failed");
-    return await res.text();
+    return await cachedFetchText(COMMUNITY_DOC_EXPORT_URL, 4000);
   }
 
   function parseExamLines(lines) {
@@ -2654,7 +2695,7 @@ document.addEventListener("contextmenu", function (e) {
    ====================================================== */
 
 (function () {
-  const CHECK_INTERVAL_MS = 30000; // كل 30 ثانية، غيّرها براحتك
+  const CHECK_INTERVAL_MS = 120000; // كل دقيقتين، كافية لفحص الطرد كل 30 ثانية، غيّرها براحتك
   let watcherTimer = null;
 
   function isUserStillValid(creds, username, savedCourses) {
