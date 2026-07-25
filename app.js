@@ -179,6 +179,21 @@ async function fetchCourseContent() {
   return parseCourseContentText(text);
 }
 
+async function fetchCourseContentRaw() {
+  const res = await fetch(CONTENT_DOC_EXPORT_URL, { cache: "no-store" });
+  if (!res.ok) throw new Error("تعذر تحميل محتوى الكورسات");
+  return await res.text();
+}
+
+function simpleHashText(str) {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    hash = ((hash << 5) - hash) + str.charCodeAt(i);
+    hash |= 0;
+  }
+  return hash + ":" + str.length;
+}
+
 const LOGIN_DOC_EXPORT_URL =
   "https://script.google.com/macros/s/AKfycbzVNINaQo46CQdhiwJ6g-CjDjLYBLvlW7WKXukW9oRmStZg-VptTzGjkstjvMlXJWWecw/exec";
 
@@ -429,15 +444,48 @@ document.addEventListener("DOMContentLoaded", () => {
   
 
   /* ===== Course content hub (videos / files / editor) ===== */
-  let courseContentData = null;
+let courseContentData = null;
   let courseContentPromise = null;
+
+  const COURSE_CONTENT_CACHE_KEY = "studyhouse-course-content-cache";
+
+  function loadCachedCourseContentEntry() {
+    try {
+      const raw = localStorage.getItem(COURSE_CONTENT_CACHE_KEY);
+      if (!raw) return null;
+      const parsed = JSON.parse(raw);
+      return (parsed && parsed.data) ? parsed : null;
+    } catch (e) { return null; }
+  }
+
+  function saveCourseContentCache(data, hash) {
+    try {
+      localStorage.setItem(COURSE_CONTENT_CACHE_KEY, JSON.stringify({ time: Date.now(), hash, data }));
+    } catch (e) {}
+  }
+
+  function clearCourseContentCache() {
+    try { localStorage.removeItem(COURSE_CONTENT_CACHE_KEY); } catch (e) {}
+    courseContentData = null;
+    courseContentPromise = null;
+  }
 
   function ensureCourseContentLoaded() {
     if (courseContentData) return Promise.resolve(courseContentData);
     if (courseContentPromise) return courseContentPromise;
-    courseContentPromise = fetchCourseContent()
-      .then((data) => {
+
+    const cachedEntry = loadCachedCourseContentEntry();
+    if (cachedEntry) {
+      courseContentData = cachedEntry.data;
+      return Promise.resolve(cachedEntry.data);
+    }
+
+    courseContentPromise = fetchCourseContentRaw()
+      .then((text) => {
+        const data = parseCourseContentText(text);
+        const hash = simpleHashText(text);
         courseContentData = data;
+        saveCourseContentCache(data, hash);
         return data;
       })
       .catch((err) => {
@@ -446,6 +494,31 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     return courseContentPromise;
   }
+
+  async function syncCourseContentOnReload() {
+    const username = getSavedUser();
+    if (!username) return;
+
+    try {
+      const text = await fetchCourseContentRaw();
+      const newHash = simpleHashText(text);
+      const cachedEntry = loadCachedCourseContentEntry();
+
+      if (cachedEntry && cachedEntry.hash === newHash) {
+        courseContentData = cachedEntry.data;
+        return;
+      }
+
+      const data = parseCourseContentText(text);
+      courseContentData = data;
+      saveCourseContentCache(data, newHash);
+    } catch (err) {
+      const cachedEntry = loadCachedCourseContentEntry();
+      if (cachedEntry) courseContentData = cachedEntry.data;
+    }
+  }
+
+  syncCourseContentOnReload();
 
   function isArabicNow() {
     return document.documentElement.getAttribute("lang") === "ar";
@@ -569,11 +642,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   // ===== نهاية إضافة السويتش =====
  
-  function showHubView(view) {
+  function showHubView(view, mediaType) {
     hubIcons.style.display = view === "hub" ? "" : "none";
     hubList.style.display = view === "list" ? "" : "none";
     hubPlayer.style.display = view === "player" ? "" : "none";
     if (hubEditor) hubEditor.style.display = view === "editor" ? "" : "none";
+    window.__siteVideoOpen = (view === "player" && mediaType === "video");
   }
     const playerBackBtn = hubPlayer.querySelector("[data-hub-back-to-list]");
   if (playerBackBtn) playerBackBtn.insertAdjacentElement("afterend", playerFsBtn);
@@ -661,7 +735,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ? `رقم ${item.number} من ${total}`
       : `Item ${item.number} of ${total}`;
  
-    showHubView("player");
+    showHubView("player", type);
   }
  
   hubIcons.querySelectorAll("[data-hub-action]").forEach((btn) => {
@@ -976,7 +1050,10 @@ function refreshAllEditorSwitchLabels() {
     }
   }
 
+let currentAppSection = null;
+
   function showAppSection(section) {
+    currentAppSection = section;
     const sectionsMap = {
       home: appHomeContent,
       settings: appSettingsContent,
@@ -1173,6 +1250,7 @@ function refreshAllEditorSwitchLabels() {
         localStorage.removeItem("studyhouse-user");
         localStorage.removeItem("studyhouse-courses");
       } catch (e) {}
+      clearCourseContentCache();
       setLoggedOutUI();
       goToSiteView();
     });
@@ -2523,9 +2601,95 @@ if (appPronunciationLink) {
   document.head.appendChild(styleAI);
 
   // استدعاء تحديث النص عند التحميل
+// استدعاء تحديث النص عند التحميل
   updateAIPulseText();
 
-  
+  /* ===== نظام قفل الموقع عند عدم النشاط ===== */
+  const IDLE_LOCK_MS = 40000;
+  const HIDDEN_LOCK_MS = 40000;
+  let idleLockTimer = null;
+  let hiddenLockTimer = null;
+  let siteLocked = false;
+  let idleLockOverlay = null;
+
+  function isVideoCurrentlyPlaying() {
+    return !!window.__siteVideoOpen || currentAppSection === "session";
+  }
+
+  function createIdleLockOverlay() {
+    const overlay = document.createElement("div");
+    overlay.id = "idleLockOverlay";
+    overlay.style.cssText = `
+      position:fixed; inset:0; z-index:999999; display:none;
+      align-items:center; justify-content:center;
+      background:rgba(20,14,11,0.94); backdrop-filter:blur(8px);
+      color:#fff; text-align:center; padding:20px;
+    `;
+    overlay.innerHTML = `
+      <div style="max-width:380px;">
+        <div style="font-size:2.4rem; margin-bottom:14px;">⏸️</div>
+        <h2 style="margin:0 0 10px; font-size:1.25rem;">تم إيقاف الجلسة مؤقتًا</h2>
+        <p style="margin:0 0 22px; color:#d6cdc4; line-height:1.7; font-size:0.92rem;">
+          لعدم وجود أي نشاط، تم إيقاف الاتصال بالسيرفر لحماية الموقع.
+          اضغط الزر للمتابعة.
+        </p>
+        <button id="idleLockReloadBtn" style="
+          padding:14px 30px; border-radius:999px; border:none;
+          background:linear-gradient(135deg,#e3a335,#c9821f);
+          color:#fff; font-weight:800; font-size:1rem; cursor:pointer;
+        ">إعادة تحميل الصفحة</button>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+    overlay.querySelector("#idleLockReloadBtn").addEventListener("click", () => {
+      location.reload();
+    });
+    return overlay;
+  }
+
+  function lockSiteDueToInactivity() {
+    if (siteLocked) return;
+    if (isVideoCurrentlyPlaying()) return;
+
+    siteLocked = true;
+    stopCommunityPolling();
+    if (window.stopUserWatcher) window.stopUserWatcher();
+    clearTimeout(idleLockTimer);
+    clearTimeout(hiddenLockTimer);
+
+    if (!idleLockOverlay) idleLockOverlay = createIdleLockOverlay();
+    idleLockOverlay.style.display = "flex";
+  }
+
+  function resetIdleTimer() {
+    if (siteLocked) return;
+    clearTimeout(idleLockTimer);
+    idleLockTimer = setTimeout(() => {
+      if (isVideoCurrentlyPlaying()) {
+        resetIdleTimer();
+      } else {
+        lockSiteDueToInactivity();
+      }
+    }, IDLE_LOCK_MS);
+  }
+
+  ["mousemove", "keydown", "click", "scroll", "touchstart", "wheel"].forEach((evt) => {
+    document.addEventListener(evt, resetIdleTimer, { passive: true });
+  });
+  resetIdleTimer();
+
+  document.addEventListener("visibilitychange", () => {
+    if (siteLocked) return;
+    if (document.hidden) {
+      clearTimeout(hiddenLockTimer);
+      hiddenLockTimer = setTimeout(() => {
+        if (!isVideoCurrentlyPlaying()) lockSiteDueToInactivity();
+      }, HIDDEN_LOCK_MS);
+    } else {
+      clearTimeout(hiddenLockTimer);
+      resetIdleTimer();
+    }
+  });
 });
 // ===== Pronunciation Module =====
 (function() {
@@ -2747,6 +2911,7 @@ document.addEventListener("contextmenu", function (e) {
     try {
       localStorage.removeItem("studyhouse-user");
       localStorage.removeItem("studyhouse-courses");
+      localStorage.removeItem("studyhouse-course-content-cache");
     } catch (e) {}
 
     // إعادة ضبط شكل زر تسجيل الدخول
